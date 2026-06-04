@@ -42,7 +42,7 @@ Pontificia Universidad Javeriana}
 \thispagestyle{fancy}
 
 \begin{abstract}
-\noindent Las proyecciones oficiales de población del DANE asumen que el saldo migratorio internacional de Colombia converge a cero después de 2030. Este supuesto trata la migración como un fenómeno transitorio que se extingue. El presente documento propone un escenario alternativo donde la inmigración se extingue pero la emigración anual se mantiene en niveles similares a los del quinquenio 2020-2025. A partir de la descomposición de esta emigración por edades, se cuantifica su impacto sobre la población total, la población en edad de trabajar, la fuerza laboral, tasa de dependencia, el índice de envejecimiento y otras variables sociodemográficas en el horizonte 2025--2070. \\[0.3cm]
+\noindent Las proyecciones oficiales de población del DANE asumen que el saldo migratorio internacional de Colombia converge a valores cercanos a cero en el largo plazo. Este supuesto trata la migración como un fenómeno transitorio que se extingue. El presente documento compara esa trayectoria con dos escenarios alternativos: uno donde la emigración neta se mantiene elevada de forma persistente y otro donde la inmigración neta permanece en niveles similares a los observados en el quinquenio 2020--2025. A partir de la descomposición de los flujos migratorios por edad y sexo, se cuantifica su impacto sobre la población total, la población en edad de trabajar, la fuerza laboral, las tasas de dependencia y el índice de envejecimiento en el horizonte 2025--2070. \\[0.3cm]
 \noindent \textbf{Palabras clave:} proyecciones de población, migración internacional, tasa de dependencia, envejecimiento, bono demográfico, Colombia.
 \end{abstract}
 
@@ -56,7 +56,7 @@ Pontificia Universidad Javeriana}
 
 Las proyecciones de población constituyen un insumo fundamental para la planificación fiscal, el diseño del sistema pensional y la formulación de política migratoria. No obstante, estas dinámicas se ven afectadas por la migración internacional. Colombia alberga aproximadamente 2,8 millones de migrantes venezolanos, al tiempo que alrededor de 5 millones de colombianos residen en el exterior. El efecto neto de la migración sobre la población residente en Colombia afecta variables sociales económicas y demográficas como las remesas, la tasa de participación laboral y la tasa de dependencia, entre otros.
 
-Las proyecciones oficiales del DANE asumen que el saldo migratorio internacional converge gradualmente a cero después de 2030. Esta proyección implica que la migración deja de ser un factor relevante en la dinámica poblacional a partir de la próxima década. Sin embargo, vale la pena evaluar un escenario de riesgo donde la inmigración se reduce a cero pero las tendencias de emigración se mantienen.  Ese es el objetivo del presente trabajo.
+Las proyecciones oficiales del DANE asumen que el saldo migratorio internacional converge gradualmente a valores cercanos a cero en el largo plazo. Esta trayectoria implica que la migración deja de ser un factor decisivo en la dinámica poblacional después de la próxima década. Sin embargo, vale la pena evaluar escenarios alternativos en los que los flujos migratorios no se extinguen: uno de emigración neta persistente y otro de inmigración neta sostenida. Ese es el objetivo del presente trabajo.
 
 % ============================================================
 \section{Modelo demográfico}
@@ -64,7 +64,7 @@ Las proyecciones oficiales del DANE asumen que el saldo migratorio internacional
 
 \subsection{Ecuación de componentes por cohorte}
 
-Para ambos escenarios se asume que la población de cada edad y sexo se actualiza anualmente en función de la población del año anterior, la sobrevivencia y la migración neta:
+Para los escenarios considerados se asume que la población de cada edad y sexo se actualiza anualmente en función de la población del año anterior, la sobrevivencia y la migración neta:
 
 \begin{equation}
 \label{eq:cohorte}
@@ -129,21 +129,27 @@ B_m(t) = B(t) \cdot \frac{\rho}{1 + \rho}, \qquad B_f(t) = B(t) \cdot \frac{1}{1
 \subsection{Escenarios para la migración neta}
 % ============================================================
 
+El ejercicio toma como escenario base las proyecciones de población del DANE y construye dos escenarios alternativos que modifican únicamente la trayectoria del saldo migratorio internacional. En ambos casos, la población proyectada por el DANE se conserva como trayectoria de referencia y el efecto de cada supuesto migratorio se introduce como una desviación por edad y sexo que se propaga en el tiempo mediante las razones de sobrevivencia.
 
-El ejercicio consiste en tomar como escenario base las proyecciones de población del DANE y construir un escenario alternativo donde la población se ve afectada por una emigración mayor a la proyectada por el DANE. En el escenario alternativo, la migración neta es la misma que la del escenario base hasta el 2028. A partir de ese año, la migración neta continúa cayendo al mismo ritmo anual observado entre 2027 y 2028 (50\%): 
+El primer escenario alternativo corresponde a una \textit{emigración constante}. En este caso, la migración neta coincide con la trayectoria base hasta 2027. A partir de 2028, el saldo migratorio continúa deteriorándose al mismo ritmo observado entre 2026 y 2027, y se trunca cuando alcanza un piso de $-140{.}000$ personas anuales:
 
 \begin{equation}
-\label{eq:ascmig}
-\sum_s \sum_x M_{x,\, s}(t+1)= (1+0.5)\times \sum_s \sum_x M_{x,\, s}(t)
-%\sum_x M_{x}(t+1)= (1+0.5)\times \sum_x M_{x}(t)
+\label{eq:ascmig_emig}
+M^{E}(t+1)=\max\left\lbrace 1{,}5\,M^{E}(t),-140{.}000\right\rbrace .
 \end{equation}
 
-La caída en la migración neta se frena cuando la emigración neta alcanza las 140 mil personas, lo cual corresponde al negativo del saldo migratorio neto si la inmigración fuese cero y la emigración anual fuese cercana a la observada entre 2019 y 2024 según la ENDS 2025. %La Figura \ref{fig:saldo_migratorio_escenarios} presenta la migración neta anual bajo los dos escenarios.
+El segundo escenario corresponde a una \textit{inmigración constante}. Dado que el libro de cálculo no separa de manera directa inmigración bruta y emigración bruta, se adopta un supuesto operativo simétrico al ejercicio anterior: hasta 2027 la trayectoria coincide con la base, y desde 2028 el saldo migratorio alternativo se fija en un flujo positivo constante igual al promedio observado en la serie base entre 2020 y 2025. Este valor es de aproximadamente 154.500 personas por año:
 
+\begin{equation}
+\label{eq:ascmig_inmig}
+M^{I}(t)=\bar{M}_{2020-2025}=154{.}500, \qquad t\geq 2028 .
+\end{equation}
+
+La Figura \ref{fig:saldo_migratorio_escenarios} presenta las trayectorias migratorias utilizadas en el ejercicio.
 
 \begin{figure}[htbp]
 \centering
-\caption{Saldo neto migratorio en los escenarios base y alternativo, 2018--2070.}
+\caption{Saldo neto migratorio en los escenarios base, emigración constante e inmigración constante, 2018--2070.}
 \label{fig:saldo_migratorio_escenarios}
 \begin{tikzpicture}
 \begin{axis}[
@@ -168,16 +174,13 @@ La caída en la migración neta se frena cuando la emigración neta alcanza las 
     legend style={
         at={(0.5,-0.18)},
         anchor=north,
-        legend columns=2,
+        legend columns=3,
         draw=none
     },
     line width=1pt
 ]
 
-\addplot[
-    blue,
-    mark=none
-] coordinates {
+\addplot[blue, mark=none] coordinates {
     (2018,630000)
     (2019,740000)
     (2020,370000)
@@ -234,11 +237,7 @@ La caída en la migración neta se frena cuando la emigración neta alcanza las 
 };
 \addlegendentry{Escenario base}
 
-\addplot[
-    red,
-    dashed,
-    mark=none
-] coordinates {
+\addplot[red, dashed, mark=none] coordinates {
     (2018,630000)
     (2019,740000)
     (2020,370000)
@@ -293,7 +292,64 @@ La caída en la migración neta se frena cuando la emigración neta alcanza las 
     (2069,-140000)
     (2070,-140000)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+    (2018,630000)
+    (2019,740000)
+    (2020,370000)
+    (2021,190000)
+    (2022,130000)
+    (2023,132000)
+    (2024,100000)
+    (2025,5000)
+    (2026,-8000)
+    (2027,-12000)
+    (2028,154500)
+    (2029,154500)
+    (2030,154500)
+    (2031,154500)
+    (2032,154500)
+    (2033,154500)
+    (2034,154500)
+    (2035,154500)
+    (2036,154500)
+    (2037,154500)
+    (2038,154500)
+    (2039,154500)
+    (2040,154500)
+    (2041,154500)
+    (2042,154500)
+    (2043,154500)
+    (2044,154500)
+    (2045,154500)
+    (2046,154500)
+    (2047,154500)
+    (2048,154500)
+    (2049,154500)
+    (2050,154500)
+    (2051,154500)
+    (2052,154500)
+    (2053,154500)
+    (2054,154500)
+    (2055,154500)
+    (2056,154500)
+    (2057,154500)
+    (2058,154500)
+    (2059,154500)
+    (2060,154500)
+    (2061,154500)
+    (2062,154500)
+    (2063,154500)
+    (2064,154500)
+    (2065,154500)
+    (2066,154500)
+    (2067,154500)
+    (2068,154500)
+    (2069,154500)
+    (2070,154500)
+};
+\addlegendentry{Inmigración constante}
 
 \end{axis}
 \end{tikzpicture}
@@ -301,10 +357,8 @@ La caída en la migración neta se frena cuando la emigración neta alcanza las 
 \par\footnotesize{\textit{Fuente: DANE y cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:saldo_migratorio_escenarios} compara la trayectoria del saldo neto migratorio en el escenario base y en el escenario alternativo. En ambos casos se mantiene la misma trayectoria observada y proyectada hasta 2027. A partir de 2028, sin embargo, el escenario alternativo introduce un supuesto de deterioro progresivo del saldo migratorio frente al escenario base: en lugar de converger gradualmente hacia valores cercanos a cero al final del horizonte, el saldo neto migratorio se vuelve crecientemente más negativo hasta alcanzar un piso de $-140{,}000$ personas anuales en 2034, nivel que se mantiene constante hasta 2070. En este sentido, el escenario alternativo no representa simplemente una variación puntual, sino un régimen migratorio persistentemente más adverso, caracterizado por una emigración neta significativamente mayor en el largo plazo. Este supuesto busca capturar un escenario en el que Colombia enfrente, de manera sostenida, una salida neta de población muy superior a la incorporada en la trayectoria base.
+La comparación entre escenarios permite aislar dos riesgos migratorios de signo opuesto. El escenario de emigración constante captura una salida neta persistente de población, mientras que el escenario de inmigración constante representa una entrada neta positiva sostenida. En ambos casos, el efecto relevante no proviene solo del número agregado de migrantes, sino también de su composición por edad y sexo y de la forma como esa desviación se acumula en las cohortes futuras.
 
-
-% ============================================================
 \subsection{Descomposición de la migración neta}
 % ============================================================
 
@@ -321,6 +375,8 @@ La migración neta de cada grupo etario para cada instante del tiempo se obtiene
 \label{eq:descmig}
 M_{x,s}(t) = \pi_{x,s} \sum_s \sum_x M_{x}(t)
 \end{equation}
+
+En el escenario de inmigración constante se aplica la misma matriz de distribución por edad y sexo como supuesto operativo. Esta decisión mantiene la comparabilidad con el escenario de emigración constante, aunque debe interpretarse como una aproximación ante la ausencia de una matriz separada de inmigración bruta por edad y sexo en el libro de cálculo.
 
 
 \begin{figure}[htbp]
@@ -755,7 +811,7 @@ A partir de la pirámide poblacional $P_{x,s}(t)$ resultante de cada escenario, 
 \begin{align}
 \text{Población Total }(t) &= \sum_s\sum_{x=0}^{+100} P_{x,s}(t) \label{eq:pop_total} \\[10pt]
 \text{PET }(t) &= \sum_s\sum_{x=15}^{+100} P_{x,s}(t) \label{eq:pet} \\[10pt]
-\text{PEA }(t) &= \sum_s\sum_{x=15}^{+100} \lambda_{x,s}(t)P_{x,s}(t) \label{eq:pet} \\[10pt]
+\text{PEA }(t) &= \sum_s\sum_{x=15}^{+100} \lambda_{x,s}(t)P_{x,s}(t) \label{eq:pea} \\[10pt]
 \text{Dependencia total }(t) &= \frac{\displaystyle\sum_s\sum_{x=0}^{14} P_{x,s}(t) + \sum_s\sum_{x=65}^{+100} P_{x,s}(t)}{\displaystyle\sum_s\sum_{x=15}^{64} P_{x,s}(t)} \times 100 \label{eq:dep_total} \\[10pt]
 \text{Dependencia juvenil}(t) &= \frac{\displaystyle\sum_s\sum_{x=0}^{14} P_{x,s}(t)}{\displaystyle\sum_s\sum_{x=15}^{64} P_{x,s}(t)} \times 100 \label{eq:dep_juv} \\[10pt]
 \text{Dependencia senil }(t) &= \frac{\displaystyle\sum_s\sum_{x=65}^{+100} P_{x,s}(t)}{\displaystyle\sum_s\sum_{x=15}^{64} P_{x,s}(t)} \times 100 \label{eq:dep_sen}
@@ -779,7 +835,7 @@ A partir de la pirámide poblacional $P_{x,s}(t)$ resultante de cada escenario, 
 %La tasa de participación laboral agregada depende no solo del tamaño de la PET sino de la composición de la población por origen migratorio, dado que las tasas de participación difieren entre nativos, inmigrantes venezolanos y colombianos retornados:
 
 %\begin{equation}
-%\label{eq:pea}
+%\label{eq:pea_origen}
 %\text{PEA}(t) = \sum_{x,s} P^{\text{nat}}_{x,s}(t) \cdot \lambda^{\text{nat}}_{x,s} + \sum_{x,s} P^{\text{ven}}_{x,s}(t) \cdot \lambda^{\text{ven}}_{x,s} + \sum_{x,s} P^{\text{ret}}_{x,s}(t) \cdot \lambda^{\text{ret}}_{x,s}
 %\end{equation}
 
@@ -801,7 +857,7 @@ El bono demográfico se define como el período durante el cual la tasa de depen
 
 \section{Resultados}
 
-La presente sección compara la evolución de un conjunto de indicadores demográficos y laborales bajo el escenario base y el escenario alternativo. En todos los casos, la comparación sugiere que una mayor emigración reduce el tamaño de la población y de la fuerza laboral potencial, y además acelera el deterioro de varios indicadores de envejecimiento y dependencia en el largo plazo. %Los valores reportados a continuación provienen de la matriz consolidada de resultados por escenario. :contentReference[oaicite:0]{index=0}
+La presente sección compara la evolución de los principales indicadores demográficos y laborales bajo tres trayectorias: el escenario base del DANE, un escenario de emigración constante y un escenario de inmigración constante. En todos los casos, los escenarios alternativos preservan la estructura metodológica del ejercicio inicial: se modifica el saldo migratorio agregado, se distribuye el diferencial por edad y sexo, y luego se propaga el efecto por cohortes mediante razones de sobrevivencia.
 
 \subsection{Población total}
 
@@ -814,7 +870,7 @@ La presente sección compara la evolución de un conjunto de indicadores demogr�
     xlabel={Año},
     ylabel={Población total},
     xmin=2018, xmax=2070,
-    ymin=45500000, ymax=56200000,
+    ymin=45000000, ymax=60000000,
     xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
     yticklabel style={/pgf/number format/.cd,fixed,precision=0,1000 sep={,}},
@@ -822,7 +878,7 @@ La presente sección compara la evolución de un conjunto de indicadores demogr�
     grid=both,
     major grid style={dashed, gray!50},
     minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
 \addplot[blue, mark=none] coordinates {
@@ -848,16 +904,28 @@ La presente sección compara la evolución de un conjunto de indicadores demogr�
 (2060,50269696)(2061,49896011)(2062,49509852)(2063,49111340)(2064,48700633)(2065,48277864)
 (2066,47843156)(2067,47396672)(2068,46938633)(2069,46469100)(2070,45988329)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+(2018,48258494)(2019,49266526)(2020,50390790)(2021,51115637)(2022,51643565)(2023,52117067)
+(2024,52613753)(2025,53057212)(2026,53399171)(2027,53712233)(2028,54170002)(2029,54605994)
+(2030,55022031)(2031,55417791)(2032,55793480)(2033,56149176)(2034,56484827)(2035,56800495)
+(2036,57096276)(2037,57372308)(2038,57628661)(2039,57865629)(2040,58083459)(2041,58282377)
+(2042,58462525)(2043,58624126)(2044,58767379)(2045,58892486)(2046,58999631)(2047,59089015)
+(2048,59160830)(2049,59215282)(2050,59252555)(2051,59272842)(2052,59276310)(2053,59263123)
+(2054,59233448)(2055,59187429)(2056,59125188)(2057,59046817)(2058,58952391)(2059,58841973)
+(2060,58715568)(2061,58573193)(2062,58414846)(2063,58240505)(2064,58050173)(2065,57843829)
+(2066,57621440)(2067,57383009)(2068,57128598)(2069,56858102)(2070,56571614)
+};
+\addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Población total en los escenarios base y alternativo, 2018--2070.}
+\caption{Población total en los escenarios base, emigración constante e inmigración constante, 2018--2070.}
 \label{fig:res_pob_total}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:res_pob_total} muestra la trayectoria de la población total en ambos escenarios. Este indicador resume el tamaño agregado de la población y permite identificar si un mayor flujo emigratorio altera únicamente la composición por edades o también el volumen total de habitantes. La gráfica sugiere que la mayor emigración del escenario alternativo termina reduciendo de forma persistente el tamaño de la población, sin modificar la forma general del ciclo demográfico: en ambos casos la población sigue creciendo durante varias décadas, alcanza un máximo hacia mediados del siglo y luego entra en una fase de descenso. La diferencia clave es que en el escenario alternativo ese descenso parte de un nivel más bajo y se vuelve más pronunciado en el largo plazo. Hacia 2070, la población total es de 50.592.097 personas en el escenario base y de 45.988.329 en el alternativo. 
+La población total resume el volumen agregado de habitantes bajo cada trayectoria migratoria. La emigración constante reduce de forma persistente el tamaño de la población, mientras que la inmigración constante desplaza la trayectoria hacia arriba y retrasa parcialmente la caída demográfica de largo plazo. En 2070, los valores correspondientes al escenario base, al escenario de emigración constante y al escenario de inmigración constante son, respectivamente, 50.592.097, 45.988.329 y 56.571.614.
 
 \subsection{Población en edad de trabajar (PET)}
 
@@ -870,7 +938,7 @@ La Figura \ref{fig:res_pob_total} muestra la trayectoria de la población total 
     xlabel={Año},
     ylabel={PET},
     xmin=2018, xmax=2070,
-    ymin=40000000, ymax=48500000,
+    ymin=40000000, ymax=52500000,
     xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
     yticklabel style={/pgf/number format/.cd,fixed,precision=0,1000 sep={,}},
@@ -878,7 +946,7 @@ La Figura \ref{fig:res_pob_total} muestra la trayectoria de la población total 
     grid=both,
     major grid style={dashed, gray!50},
     minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
 \addplot[blue, mark=none] coordinates {
@@ -904,16 +972,28 @@ La Figura \ref{fig:res_pob_total} muestra la trayectoria de la población total 
 (2060,44005550)(2061,43748293)(2062,43476662)(2063,43190837)(2064,42891011)(2065,42577337)
 (2066,42249934)(2067,41908965)(2068,41554622)(2069,41186953)(2070,40806187)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+(2018,36107311)(2019,37094982)(2020,38170369)(2021,38942373)(2022,39568377)(2023,40150571)
+(2024,40752623)(2025,41310792)(2026,41790456)(2027,42247198)(2028,42849642)(2029,43436105)
+(2030,44008157)(2031,44565193)(2032,45107451)(2033,45633426)(2034,46140573)(2035,46635529)
+(2036,47109537)(2037,47565110)(2038,48003104)(2039,48423161)(2040,48823551)(2041,49202988)
+(2042,49561522)(2043,49898754)(2044,50214307)(2045,50507996)(2046,50779732)(2047,51029554)
+(2048,51257590)(2049,51464070)(2050,51649254)(2051,51813500)(2052,51957166)(2053,52080646)
+(2054,52184353)(2055,52268689)(2056,52334025)(2057,52380678)(2058,52408916)(2059,52418961)
+(2060,52410951)(2061,52385002)(2062,52341182)(2063,52279525)(2064,52200071)(2065,52102822)
+(2066,51987735)(2067,51854817)(2068,51704100)(2069,51535466)(2070,51348981)
+};
+\addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Población en edad de trabajar (PET) en los escenarios base y alternativo, 2018--2070.}
+\caption{Población en edad de trabajar (PET) en los escenarios base, emigración constante e inmigración constante, 2018--2070.}
 \label{fig:res_pet}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:res_pet} presenta la evolución de la población en edad de trabajar, definida aquí como la población de 15 años o más en sentido laboral. Este indicador es relevante porque aproxima el universo potencial de personas que podrían participar en el mercado de trabajo, independientemente de que efectivamente lo hagan. La gráfica muestra que en ambos escenarios la PET continúa creciendo durante varias décadas, pero en el escenario alternativo lo hace a un ritmo menor y luego comienza a reducirse antes y con mayor intensidad. En otras palabras, una mayor emigración no solo reduce la población total, sino que erosiona de forma persistente la base demográfica potencial del mercado laboral. En el largo plazo, este efecto se vuelve especialmente relevante porque disminuye la capacidad potencial de sostener económicamente a una población más envejecida. En 2070, la PET asciende a 45.390.881 personas en el escenario base y a 40.806.187 en el alternativo. 
+La PET, definida en este ejercicio como la población de 15 años o más, aproxima la base demográfica potencial del mercado laboral. El escenario de emigración constante erosiona esa base, mientras que el escenario de inmigración constante la amplía de manera sostenida. En 2070, los valores correspondientes al escenario base, al escenario de emigración constante y al escenario de inmigración constante son, respectivamente, 45.390.881, 40.806.187 y 51.348.981.
 
 \subsection{Población económicamente activa (PEA)}
 
@@ -926,7 +1006,7 @@ La Figura \ref{fig:res_pet} presenta la evolución de la población en edad de t
     xlabel={Año},
     ylabel={PEA},
     xmin=2023, xmax=2070,
-    ymin=24000000, ymax=33000000,
+    ymin=24000000, ymax=36500000,
     xtick={2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
     yticklabel style={/pgf/number format/.cd,fixed,precision=0,1000 sep={,}},
@@ -934,7 +1014,7 @@ La Figura \ref{fig:res_pet} presenta la evolución de la población en edad de t
     grid=both,
     major grid style={dashed, gray!50},
     minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
 \addplot[blue, mark=none] coordinates {
@@ -958,68 +1038,27 @@ La Figura \ref{fig:res_pet} presenta la evolución de la población en edad de t
 (2059,28635306)(2060,28315720)(2061,27982761)(2062,27636762)(2063,27278780)(2064,26909719)
 (2065,26531002)(2066,26143542)(2067,25748967)(2068,25348163)(2069,24942277)(2070,24531948)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+(2023,25518483)(2024,26006738)(2025,26467393)(2026,26876351)(2027,27267966)(2028,27771037)
+(2029,28262603)(2030,28744677)(2031,29214468)(2032,29673204)(2033,30119734)(2034,30554390)
+(2035,30977355)(2036,31387046)(2037,31783134)(2038,32165801)(2039,32535708)(2040,32890559)
+(2041,33229952)(2042,33554958)(2043,33863696)(2044,34157328)(2045,34432526)(2046,34690243)
+(2047,34929446)(2048,35150936)(2049,35351523)(2050,35533245)(2051,35561286)(2052,35565329)
+(2053,35545549)(2054,35501722)(2055,35434299)(2056,35343330)(2057,35229619)(2058,35093276)
+(2059,34935136)(2060,34755455)(2061,34555202)(2062,34334514)(2063,34094404)(2064,33835665)
+(2065,33559767)(2066,33267628)(2067,32961021)(2068,32640947)(2069,32308823)(2070,31965465)
+};
+\addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Población económicamente activa (PEA) en los escenarios base y alternativo, 2023--2070.}
+\caption{Población económicamente activa (PEA) en los escenarios base, emigración constante e inmigración constante, 2023--2070.}
 \label{fig:res_pea}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:res_pea} muestra la evolución de la población económicamente activa, es decir, la fuerza de trabajo compuesta por ocupados y desocupados que buscan empleo. Este indicador es central porque aproxima la oferta laboral efectiva y, por tanto, la capacidad productiva potencial de la economía. En ambos escenarios la PEA crece durante un período largo y luego se reduce, pero el escenario alternativo conduce a un punto máximo más bajo y a una caída posterior más acelerada. Esto sugiere que una mayor emigración termina afectando no solo el tamaño de la población, sino también el número de personas efectivamente vinculadas o disponibles para vincularse al mercado laboral. En el largo plazo, este efecto puede traducirse en menores posibilidades de crecimiento y en mayores presiones sobre el financiamiento de pensiones, salud y cuidado. En 2070, la PEA es de 27.844.721 personas en el escenario base y de 24.531.948 en el alternativo. 
-
-\begin{comment}
-\subsection{Razón de masculinidad}
-
-\begin{figure}[htbp]
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    width=15cm,
-    height=8cm,
-    xlabel={Año},
-    ylabel={Razón de masculinidad},
-    xmin=2018, xmax=2070,
-    ymin=0.95, ymax=0.99,
-    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
-    xticklabel style={rotate=45, anchor=east},
-    grid=both,
-    major grid style={dashed, gray!50},
-    minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
-    line width=1pt
-]
-\addplot[blue, mark=none] coordinates {
-(2018,0.96)(2019,0.96)(2020,0.96)(2021,0.96)(2022,0.96)(2023,0.96)(2024,0.96)(2025,0.96)
-(2026,0.96)(2027,0.96)(2028,0.96)(2029,0.96)(2030,0.96)(2031,0.96)(2032,0.96)(2033,0.96)
-(2034,0.96)(2035,0.96)(2036,0.97)(2037,0.97)(2038,0.97)(2039,0.97)(2040,0.97)(2041,0.97)
-(2042,0.97)(2043,0.97)(2044,0.97)(2045,0.97)(2046,0.97)(2047,0.97)(2048,0.97)(2049,0.97)
-(2050,0.97)(2051,0.97)(2052,0.97)(2053,0.97)(2054,0.97)(2055,0.97)(2056,0.97)(2057,0.98)
-(2058,0.98)(2059,0.98)(2060,0.98)(2061,0.98)(2062,0.98)(2063,0.98)(2064,0.98)(2065,0.98)
-(2066,0.98)(2067,0.98)(2068,0.98)(2069,0.98)(2070,0.98)
-};
-\addlegendentry{Escenario base}
-\addplot[red, dashed, mark=none] coordinates {
-(2018,0.96)(2019,0.96)(2020,0.96)(2021,0.96)(2022,0.96)(2023,0.96)(2024,0.96)(2025,0.96)
-(2026,0.96)(2027,0.96)(2028,0.96)(2029,0.96)(2030,0.96)(2031,0.96)(2032,0.96)(2033,0.96)
-(2034,0.96)(2035,0.96)(2036,0.96)(2037,0.96)(2038,0.96)(2039,0.96)(2040,0.96)(2041,0.96)
-(2042,0.96)(2043,0.96)(2044,0.96)(2045,0.96)(2046,0.96)(2047,0.96)(2048,0.96)(2049,0.96)
-(2050,0.96)(2051,0.96)(2052,0.96)(2053,0.96)(2054,0.96)(2055,0.96)(2056,0.96)(2057,0.96)
-(2058,0.96)(2059,0.96)(2060,0.96)(2061,0.96)(2062,0.96)(2063,0.96)(2064,0.96)(2065,0.96)
-(2066,0.96)(2067,0.96)(2068,0.96)(2069,0.96)(2070,0.96)
-};
-\addlegendentry{Escenario alternativo}
-\end{axis}
-\end{tikzpicture}
-\caption{Razón de masculinidad en los escenarios base y alternativo, 2018--2070.}
-\label{fig:res_masc}
-\vspace{0.2cm}
-\par\footnotesize{\textit{Fuente: cálculos propios.}}
-\end{figure}
-
-La Figura \ref{fig:res_masc} presenta la razón de masculinidad, entendida como la relación entre la población masculina y la femenina. Este indicador permite identificar cambios en la composición por sexo de la población total y es útil para evaluar si la emigración altera de manera diferenciada a hombres y mujeres. La gráfica muestra que las diferencias entre escenarios son pequeñas en comparación con otros indicadores, lo que sugiere que el principal efecto de una mayor emigración en este ejercicio no opera a través de una fuerte modificación de la estructura por sexo, sino a través del tamaño y la estructura por edades de la población. Aun así, en el largo plazo el escenario alternativo mantiene una razón de masculinidad ligeramente menor que el escenario base, lo que indica una composición relativamente más femenina. En 2070, la razón de masculinidad es 0,98 en el escenario base y 0,96 en el alternativo. :contentReference[oaicite:4]{index=4}
-\end{comment}
+La PEA combina la estructura demográfica con las matrices de participación laboral por edad y sexo. Por esta razón, el efecto migratorio se transmite tanto por el tamaño de las cohortes como por su localización dentro del ciclo laboral. En 2070, los valores correspondientes al escenario base, al escenario de emigración constante y al escenario de inmigración constante son, respectivamente, 27.844.721, 24.531.948 y 31.965.465.
 
 \subsection{Dependencia total}
 
@@ -1032,52 +1071,61 @@ La Figura \ref{fig:res_masc} presenta la razón de masculinidad, entendida como 
     xlabel={Año},
     ylabel={Dependencia total},
     xmin=2018, xmax=2070,
-    ymin=0.45, ymax=0.71,
+    ymin=0.43, ymax=0.72,
     xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
+    scaled y ticks=false,
     grid=both,
     major grid style={dashed, gray!50},
     minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
 \addplot[blue, mark=none] coordinates {
-(2018,0.524820659)(2019,0.516057962)(2020,0.507897079)(2021,0.500511941)(2022,0.493998124)
-(2023,0.48886223)(2024,0.484929492)(2025,0.481770652)(2026,0.479379676)(2027,0.477497203)
-(2028,0.476009419)(2029,0.474742616)(2030,0.473547487)(2031,0.472367337)(2032,0.471135701)
-(2033,0.469855261)(2034,0.468602442)(2035,0.467094175)(2036,0.46556049)(2037,0.46390745)
-(2038,0.462194816)(2039,0.460505741)(2040,0.45899596)(2041,0.457926699)(2042,0.457483438)
-(2043,0.457696569)(2044,0.458591534)(2045,0.460155795)(2046,0.462205177)(2047,0.464612573)
-(2048,0.467338634)(2049,0.470288741)(2050,0.473457961)(2051,0.47701185)(2052,0.48102839)
-(2053,0.485605743)(2054,0.490911481)(2055,0.497024446)(2056,0.503966759)(2057,0.511770021)
-(2058,0.520427966)(2059,0.529829818)(2060,0.539730635)(2061,0.549922587)(2062,0.560400204)
-(2063,0.571239473)(2064,0.582334601)(2065,0.593660474)(2066,0.605191403)(2067,0.61667942)
-(2068,0.628175911)(2069,0.63976851)(2070,0.651524306)
+(2018,0.524820659)(2019,0.516057962)(2020,0.507897079)(2021,0.500511941)(2022,0.493998124)(2023,0.48886223)
+(2024,0.484929492)(2025,0.481770652)(2026,0.479379676)(2027,0.477497203)(2028,0.476009419)(2029,0.474742616)
+(2030,0.473547487)(2031,0.472367337)(2032,0.471135701)(2033,0.469855261)(2034,0.468602442)(2035,0.467094175)
+(2036,0.46556049)(2037,0.46390745)(2038,0.462194816)(2039,0.460505741)(2040,0.45899596)(2041,0.457926699)
+(2042,0.457483438)(2043,0.457696569)(2044,0.458591534)(2045,0.460155795)(2046,0.462205177)(2047,0.464612573)
+(2048,0.467338634)(2049,0.470288741)(2050,0.473457961)(2051,0.47701185)(2052,0.48102839)(2053,0.485605743)
+(2054,0.490911481)(2055,0.497024446)(2056,0.503966759)(2057,0.511770021)(2058,0.520427966)(2059,0.529829818)
+(2060,0.539730635)(2061,0.549922587)(2062,0.560400204)(2063,0.571239473)(2064,0.582334601)(2065,0.593660474)
+(2066,0.605191403)(2067,0.61667942)(2068,0.628175911)(2069,0.63976851)(2070,0.651524306)
 };
 \addlegendentry{Escenario base}
 \addplot[red, dashed, mark=none] coordinates {
-(2018,0.524820659)(2019,0.516057962)(2020,0.507897079)(2021,0.500511941)(2022,0.493998124)
-(2023,0.48886223)(2024,0.484929492)(2025,0.481770652)(2026,0.479379676)(2027,0.477497203)
-(2028,0.476049771)(2029,0.474907766)(2030,0.473969785)(2031,0.473245272)(2032,0.472763997)
-(2033,0.472674175)(2034,0.472636894)(2035,0.472329512)(2036,0.471981423)(2037,0.471493679)
-(2038,0.470924939)(2039,0.47035691)(2040,0.469949212)(2041,0.469973656)(2042,0.470627898)
-(2043,0.471948887)(2044,0.473968651)(2045,0.476679233)(2046,0.479890208)(2047,0.483468521)
-(2048,0.487372151)(2049,0.491498133)(2050,0.495840075)(2051,0.500575617)(2052,0.505789846)
-(2053,0.511590979)(2054,0.518162973)(2055,0.525593013)(2056,0.533904671)(2057,0.54312886)
-(2058,0.553249422)(2059,0.564124734)(2060,0.575479554)(2061,0.587078011)(2062,0.598910096)
-(2063,0.611058918)(2064,0.623402975)(2065,0.635913512)(2066,0.648562489)(2067,0.661067309)
-(2068,0.673491119)(2069,0.685947079)(2070,0.69851469)
+(2018,0.524820659)(2019,0.516057962)(2020,0.507897079)(2021,0.500511941)(2022,0.493998124)(2023,0.48886223)
+(2024,0.484929492)(2025,0.481770652)(2026,0.479379676)(2027,0.477497203)(2028,0.476049771)(2029,0.474907766)
+(2030,0.473969785)(2031,0.473245272)(2032,0.472763997)(2033,0.472674175)(2034,0.472636894)(2035,0.472329512)
+(2036,0.471981423)(2037,0.471493679)(2038,0.470924939)(2039,0.47035691)(2040,0.469949212)(2041,0.469973656)
+(2042,0.470627898)(2043,0.471948887)(2044,0.473968651)(2045,0.476679233)(2046,0.479890208)(2047,0.483468521)
+(2048,0.487372151)(2049,0.491498133)(2050,0.495840075)(2051,0.500575617)(2052,0.505789846)(2053,0.511590979)
+(2054,0.518162973)(2055,0.525593013)(2056,0.533904671)(2057,0.54312886)(2058,0.553249422)(2059,0.564124734)
+(2060,0.575479554)(2061,0.587078011)(2062,0.598910096)(2063,0.611058918)(2064,0.623402975)(2065,0.635913512)
+(2066,0.648562489)(2067,0.661067309)(2068,0.673491119)(2069,0.685947079)(2070,0.69851469)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+(2018,0.524820659)(2019,0.516057962)(2020,0.507897079)(2021,0.500511941)(2022,0.493998124)(2023,0.48886223)
+(2024,0.484929492)(2025,0.481770652)(2026,0.479379676)(2027,0.477497203)(2028,0.474316972)(2029,0.471391498)
+(2030,0.468578519)(2031,0.465825342)(2032,0.463068658)(2033,0.460313268)(2034,0.457637363)(2035,0.454769806)
+(2036,0.451934872)(2037,0.449044392)(2038,0.446158247)(2039,0.443355661)(2040,0.440783694)(2041,0.438685832)
+(2042,0.437232182)(2043,0.43644568)(2044,0.436350882)(2045,0.436931403)(2046,0.438014112)(2047,0.439480962)
+(2048,0.441295921)(2049,0.443373751)(2050,0.445711602)(2051,0.448460404)(2052,0.451690606)(2053,0.455489752)
+(2054,0.460066466)(2055,0.465491211)(2056,0.471783061)(2057,0.478968991)(2058,0.487042191)(2059,0.495904)
+(2060,0.505338872)(2061,0.51516486)(2062,0.525376546)(2063,0.536038333)(2064,0.54703049)(2065,0.558327682)
+(2066,0.569903903)(2067,0.581542007)(2068,0.593278655)(2069,0.605185279)(2070,0.617310821)
+};
+\addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Dependencia total en los escenarios base y alternativo, 2018--2070.}
+\caption{Dependencia total en los escenarios base, emigración constante e inmigración constante, 2018--2070.}
 \label{fig:res_dep_total}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:res_dep_total} muestra la tasa de dependencia total, definida como la relación entre la población en edades potencialmente dependientes y la población de 15 a 64 años. Este indicador resume la carga demográfica agregada sobre la población en edades centrales de trabajo. La gráfica sugiere una dinámica de dos etapas: primero, una reducción asociada a la caída del peso relativo de la población joven, y posteriormente un aumento sostenido impulsado por el envejecimiento. La mayor emigración del escenario alternativo hace que este deterioro posterior sea más fuerte, porque reduce en mayor medida la base poblacional que sostiene a los grupos dependientes. En el largo plazo, por tanto, la emigración agrava la carga demográfica total. En 2070, la dependencia total es 0,6515 en el escenario base y 0,6985 en el alternativo.
+La dependencia total relaciona la población de 0 a 14 años y de 65 años o más con la población de 15 a 64 años. La emigración constante aumenta esta carga relativa en el largo plazo, mientras que la inmigración constante la modera al ampliar la población en edades centrales. En 2070, los valores correspondientes al escenario base, al escenario de emigración constante y al escenario de inmigración constante son, respectivamente, 0.6515, 0.6985 y 0.6173.
 
 \subsection{Dependencia juvenil}
 
@@ -1090,52 +1138,61 @@ La Figura \ref{fig:res_dep_total} muestra la tasa de dependencia total, definida
     xlabel={Año},
     ylabel={Dependencia juvenil},
     xmin=2018, xmax=2070,
-    ymin=0.16, ymax=0.39,
+    ymin=0.14, ymax=0.39,
     xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
+    scaled y ticks=false,
     grid=both,
     major grid style={dashed, gray!50},
     minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
 \addplot[blue, mark=none] coordinates {
-(2018,0.38394018)(2019,0.374549774)(2020,0.365684625)(2021,0.357349122)(2022,0.349323448)
-(2023,0.341854693)(2024,0.334759274)(2025,0.328051546)(2026,0.321609806)(2027,0.315376148)
-(2028,0.309298409)(2029,0.303318582)(2030,0.297389117)(2031,0.291498129)(2032,0.285622521)
-(2033,0.279797604)(2034,0.274096379)(2035,0.268284437)(2036,0.262632794)(2037,0.257054211)
-(2038,0.251532014)(2039,0.246090529)(2040,0.24079946)(2041,0.235731413)(2042,0.230906982)
-(2043,0.226334776)(2044,0.222020389)(2045,0.217961127)(2046,0.214127284)(2047,0.210497147)
-(2048,0.207060855)(2049,0.203799522)(2050,0.200706464)(2051,0.197795894)(2052,0.195068728)
-(2053,0.192527159)(2054,0.190181255)(2055,0.1880287)(2056,0.186060183)(2057,0.184268415)
-(2058,0.182642524)(2059,0.181160501)(2060,0.179786637)(2061,0.178492019)(2062,0.17727313)
-(2063,0.176136121)(2064,0.175067226)(2065,0.174062669)(2066,0.173119831)(2067,0.172212333)
-(2068,0.171347752)(2069,0.170536766)(2070,0.169788073)
+(2018,0.38394018)(2019,0.374549774)(2020,0.365684625)(2021,0.357349122)(2022,0.349323448)(2023,0.341854693)
+(2024,0.334759274)(2025,0.328051546)(2026,0.321609806)(2027,0.315376148)(2028,0.309298409)(2029,0.303318582)
+(2030,0.297389117)(2031,0.291498129)(2032,0.285622521)(2033,0.279797604)(2034,0.274096379)(2035,0.268284437)
+(2036,0.262632794)(2037,0.257054211)(2038,0.251532014)(2039,0.246090529)(2040,0.24079946)(2041,0.235731413)
+(2042,0.230906982)(2043,0.226334776)(2044,0.222020389)(2045,0.217961127)(2046,0.214127284)(2047,0.210497147)
+(2048,0.207060855)(2049,0.203799522)(2050,0.200706464)(2051,0.197795894)(2052,0.195068728)(2053,0.192527159)
+(2054,0.190181255)(2055,0.1880287)(2056,0.186060183)(2057,0.184268415)(2058,0.182642524)(2059,0.181160501)
+(2060,0.179786637)(2061,0.178492019)(2062,0.17727313)(2063,0.176136121)(2064,0.175067226)(2065,0.174062669)
+(2066,0.173119831)(2067,0.172212333)(2068,0.171347752)(2069,0.170536766)(2070,0.169788073)
 };
 \addlegendentry{Escenario base}
 \addplot[red, dashed, mark=none] coordinates {
-(2018,0.38394018)(2019,0.374549774)(2020,0.365684625)(2021,0.357349122)(2022,0.349323448)
-(2023,0.341854693)(2024,0.334759274)(2025,0.328051546)(2026,0.321609806)(2027,0.315376148)
-(2028,0.309326973)(2029,0.303433608)(2030,0.297678452)(2031,0.292089672)(2032,0.28670115)
-(2033,0.281633008)(2034,0.276683333)(2035,0.27159293)(2036,0.266635494)(2037,0.26172232)
-(2038,0.256836857)(2039,0.252003531)(2040,0.247294973)(2041,0.242788522)(2042,0.238509147)
-(2043,0.234468502)(2044,0.230675168)(2045,0.227128866)(2046,0.223799716)(2047,0.220665912)
-(2048,0.217718219)(2049,0.214937007)(2050,0.212316701)(2051,0.20987538)(2052,0.207616522)
-(2053,0.20554527)(2054,0.203675832)(2055,0.202008274)(2056,0.200534305)(2057,0.199247431)
-(2058,0.198136145)(2059,0.197174436)(2060,0.196321741)(2061,0.195544862)(2062,0.194840568)
-(2063,0.194217438)(2064,0.193659882)(2065,0.193164489)(2066,0.192729258)(2067,0.192322592)
-(2068,0.191954795)(2069,0.191641761)(2070,0.191395154)
+(2018,0.38394018)(2019,0.374549774)(2020,0.365684625)(2021,0.357349122)(2022,0.349323448)(2023,0.341854693)
+(2024,0.334759274)(2025,0.328051546)(2026,0.321609806)(2027,0.315376148)(2028,0.309326973)(2029,0.303433608)
+(2030,0.297678452)(2031,0.292089672)(2032,0.28670115)(2033,0.281633008)(2034,0.276683333)(2035,0.27159293)
+(2036,0.266635494)(2037,0.26172232)(2038,0.256836857)(2039,0.252003531)(2040,0.247294973)(2041,0.242788522)
+(2042,0.238509147)(2043,0.234468502)(2044,0.230675168)(2045,0.227128866)(2046,0.223799716)(2047,0.220665912)
+(2048,0.217718219)(2049,0.214937007)(2050,0.212316701)(2051,0.20987538)(2052,0.207616522)(2053,0.20554527)
+(2054,0.203675832)(2055,0.202008274)(2056,0.200534305)(2057,0.199247431)(2058,0.198136145)(2059,0.197174436)
+(2060,0.196321741)(2061,0.195544862)(2062,0.194840568)(2063,0.194217438)(2064,0.193659882)(2065,0.193164489)
+(2066,0.192729258)(2067,0.192322592)(2068,0.191954795)(2069,0.191641761)(2070,0.191395154)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+(2018,0.38394018)(2019,0.374549774)(2020,0.365684625)(2021,0.357349122)(2022,0.349323448)(2023,0.341854693)
+(2024,0.334759274)(2025,0.328051546)(2026,0.321609806)(2027,0.315376148)(2028,0.308100392)(2029,0.300979416)
+(2030,0.293968406)(2031,0.287056077)(2032,0.280219018)(2033,0.27349092)(2034,0.266941976)(2035,0.260344308)
+(2036,0.253958664)(2037,0.24769902)(2038,0.241547834)(2039,0.235525649)(2040,0.229695776)(2041,0.224122442)
+(2042,0.218820653)(2043,0.213794618)(2044,0.209048163)(2045,0.204575106)(2046,0.200345843)(2047,0.19633837)
+(2048,0.192541365)(2049,0.188935962)(2050,0.185514043)(2051,0.182285199)(2052,0.179247531)(2053,0.176400116)
+(2054,0.173755672)(2055,0.171309233)(2056,0.169050102)(2057,0.166969429)(2058,0.165055627)(2059,0.163288346)
+(2060,0.161636614)(2061,0.160075449)(2062,0.158600526)(2063,0.157215209)(2064,0.155904542)(2065,0.154664229)
+(2066,0.153491047)(2067,0.152363354)(2068,0.151285663)(2069,0.150265601)(2070,0.149308448)
+};
+\addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Dependencia juvenil en los escenarios base y alternativo, 2018--2070.}
+\caption{Dependencia juvenil en los escenarios base, emigración constante e inmigración constante, 2018--2070.}
 \label{fig:res_dep_juv}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:res_dep_juv} presenta la tasa de dependencia juvenil, que relaciona la población de 0 a 14 años con la población de 15 a 64 años. Este indicador capta la carga asociada a la población infantil y adolescente. En ambos escenarios, la tendencia es claramente descendente, lo que refleja la pérdida de peso relativo de las cohortes jóvenes dentro de la estructura demográfica. La mayor emigración del escenario alternativo no revierte esta tendencia, pero sí la hace menos pronunciada: al reducir la población de 15 a 64 años en mayor medida que la población infantil, el cociente termina siendo más alto que en el escenario base. Por ello, incluso cuando la presión juvenil cae en términos generales, una mayor emigración puede impedir que esa reducción se traduzca plenamente en una mejora de la carga demográfica. En 2070, la dependencia juvenil es 0,1698 en el escenario base y 0,1914 en el alternativo. 
+La dependencia juvenil mantiene una tendencia descendente en todos los escenarios. La emigración constante atenúa esa reducción porque disminuye la población de 15 a 64 años, mientras que la inmigración constante refuerza la caída relativa del indicador. En 2070, los valores correspondientes al escenario base, al escenario de emigración constante y al escenario de inmigración constante son, respectivamente, 0.1698, 0.1914 y 0.1493.
 
 \subsection{Dependencia senil}
 
@@ -1148,52 +1205,61 @@ La Figura \ref{fig:res_dep_juv} presenta la tasa de dependencia juvenil, que rel
     xlabel={Año},
     ylabel={Dependencia senil},
     xmin=2018, xmax=2070,
-    ymin=0.14, ymax=0.52,
+    ymin=0.13, ymax=0.52,
     xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
+    scaled y ticks=false,
     grid=both,
     major grid style={dashed, gray!50},
     minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
 \addplot[blue, mark=none] coordinates {
-(2018,0.140880479)(2019,0.141508187)(2020,0.142212455)(2021,0.143162819)(2022,0.144674675)
-(2023,0.147007537)(2024,0.150170218)(2025,0.153719106)(2026,0.15776987)(2027,0.162121055)
-(2028,0.166711009)(2029,0.171424034)(2030,0.176158371)(2031,0.180869208)(2032,0.185513181)
-(2033,0.190057657)(2034,0.194506062)(2035,0.198809738)(2036,0.202927696)(2037,0.20685324)
-(2038,0.210662802)(2039,0.214415213)(2040,0.2181965)(2041,0.222195285)(2042,0.226576456)
-(2043,0.231361793)(2044,0.236571145)(2045,0.242194667)(2046,0.248077892)(2047,0.254115427)
-(2048,0.260277779)(2049,0.266489219)(2050,0.272751498)(2051,0.279215956)(2052,0.285959662)
-(2053,0.293078584)(2054,0.300730225)(2055,0.308995745)(2056,0.317906576)(2057,0.327501605)
-(2058,0.337785442)(2059,0.348669317)(2060,0.359943998)(2061,0.371430568)(2062,0.383127073)
-(2063,0.395103351)(2064,0.407267375)(2065,0.419597805)(2066,0.432071572)(2067,0.444467087)
-(2068,0.456828159)(2069,0.469231743)(2070,0.481736233)
+(2018,0.140880479)(2019,0.141508187)(2020,0.142212455)(2021,0.143162819)(2022,0.144674675)(2023,0.147007537)
+(2024,0.150170218)(2025,0.153719106)(2026,0.15776987)(2027,0.162121055)(2028,0.166711009)(2029,0.171424034)
+(2030,0.176158371)(2031,0.180869208)(2032,0.185513181)(2033,0.190057657)(2034,0.194506062)(2035,0.198809738)
+(2036,0.202927696)(2037,0.20685324)(2038,0.210662802)(2039,0.214415213)(2040,0.2181965)(2041,0.222195285)
+(2042,0.226576456)(2043,0.231361793)(2044,0.236571145)(2045,0.242194667)(2046,0.248077892)(2047,0.254115427)
+(2048,0.260277779)(2049,0.266489219)(2050,0.272751498)(2051,0.279215956)(2052,0.285959662)(2053,0.293078584)
+(2054,0.300730225)(2055,0.308995745)(2056,0.317906576)(2057,0.327501605)(2058,0.337785442)(2059,0.348669317)
+(2060,0.359943998)(2061,0.371430568)(2062,0.383127073)(2063,0.395103351)(2064,0.407267375)(2065,0.419597805)
+(2066,0.432071572)(2067,0.444467087)(2068,0.456828159)(2069,0.469231743)(2070,0.481736233)
 };
 \addlegendentry{Escenario base}
 \addplot[red, dashed, mark=none] coordinates {
-(2018,0.140880479)(2019,0.141508187)(2020,0.142212455)(2021,0.143162819)(2022,0.144674675)
-(2023,0.147007537)(2024,0.150170218)(2025,0.153719106)(2026,0.15776987)(2027,0.162121055)
-(2028,0.166722798)(2029,0.171474158)(2030,0.176291333)(2031,0.1811556)(2032,0.186062847)
-(2033,0.191041167)(2034,0.195953561)(2035,0.200736582)(2036,0.205345929)(2037,0.209771359)
-(2038,0.214088083)(2039,0.21835338)(2040,0.222654239)(2041,0.227185134)(2042,0.232118751)
-(2043,0.237480386)(2044,0.243293483)(2045,0.249550368)(2046,0.256090492)(2047,0.26280261)
-(2048,0.269653932)(2049,0.276561127)(2050,0.283523374)(2051,0.290700237)(2052,0.298173324)
-(2053,0.306045709)(2054,0.314487141)(2055,0.323584739)(2056,0.333370365)(2057,0.343881429)
-(2058,0.355113277)(2059,0.366950298)(2060,0.379157813)(2061,0.391533149)(2062,0.404069527)
-(2063,0.416841481)(2064,0.429743093)(2065,0.442749023)(2066,0.455833232)(2067,0.468744717)
-(2068,0.481536324)(2069,0.494305318)(2070,0.507119536)
+(2018,0.140880479)(2019,0.141508187)(2020,0.142212455)(2021,0.143162819)(2022,0.144674675)(2023,0.147007537)
+(2024,0.150170218)(2025,0.153719106)(2026,0.15776987)(2027,0.162121055)(2028,0.166722798)(2029,0.171474158)
+(2030,0.176291333)(2031,0.1811556)(2032,0.186062847)(2033,0.191041167)(2034,0.195953561)(2035,0.200736582)
+(2036,0.205345929)(2037,0.209771359)(2038,0.214088083)(2039,0.21835338)(2040,0.222654239)(2041,0.227185134)
+(2042,0.232118751)(2043,0.237480386)(2044,0.243293483)(2045,0.249550368)(2046,0.256090492)(2047,0.26280261)
+(2048,0.269653932)(2049,0.276561127)(2050,0.283523374)(2051,0.290700237)(2052,0.298173324)(2053,0.306045709)
+(2054,0.314487141)(2055,0.323584739)(2056,0.333370365)(2057,0.343881429)(2058,0.355113277)(2059,0.366950298)
+(2060,0.379157813)(2061,0.391533149)(2062,0.404069527)(2063,0.416841481)(2064,0.429743093)(2065,0.442749023)
+(2066,0.455833232)(2067,0.468744717)(2068,0.481536324)(2069,0.494305318)(2070,0.507119536)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+(2018,0.140880479)(2019,0.141508187)(2020,0.142212455)(2021,0.143162819)(2022,0.144674675)(2023,0.147007537)
+(2024,0.150170218)(2025,0.153719106)(2026,0.15776987)(2027,0.162121055)(2028,0.16621658)(2029,0.170412081)
+(2030,0.174610113)(2031,0.178769265)(2032,0.18284964)(2033,0.186822348)(2034,0.190695387)(2035,0.194425498)
+(2036,0.197976208)(2037,0.201345372)(2038,0.204610412)(2039,0.207830012)(2040,0.211087919)(2041,0.21456339)
+(2042,0.218411529)(2043,0.222651062)(2044,0.227302719)(2045,0.232356297)(2046,0.237668268)(2047,0.243142591)
+(2048,0.248754556)(2049,0.254437789)(2050,0.260197559)(2051,0.266175205)(2052,0.272443074)(2053,0.279089636)
+(2054,0.286310794)(2055,0.294181979)(2056,0.302732959)(2057,0.311999562)(2058,0.321986564)(2059,0.332615654)
+(2060,0.343702258)(2061,0.355089411)(2062,0.36677602)(2063,0.378823124)(2064,0.391125948)(2065,0.403663453)
+(2066,0.416412856)(2067,0.429178654)(2068,0.441992991)(2069,0.454919678)(2070,0.468002373)
+};
+\addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Dependencia senil en los escenarios base y alternativo, 2018--2070.}
+\caption{Dependencia senil en los escenarios base, emigración constante e inmigración constante, 2018--2070.}
 \label{fig:res_dep_sen}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:res_dep_sen} muestra la tasa de dependencia senil, definida como la relación entre la población de 65 años o más y la población de 15 a 64 años. Se trata de uno de los indicadores más directos de la presión asociada al envejecimiento. En ambos escenarios la dependencia senil crece de manera sostenida, lo que indica que el envejecimiento es una fuerza estructural del proceso demográfico. El escenario alternativo intensifica este resultado, pues la mayor emigración reduce con más fuerza la población en edades centrales de trabajo, haciendo que el peso relativo de la población mayor aumente todavía más. En el largo plazo, por tanto, la emigración agrava la carga asociada a la vejez y refuerza los desafíos para el sistema pensional, el gasto en salud y las necesidades de cuidado. En 2070, la dependencia senil es 0,4817 en el escenario base y 0,5071 en el alternativo. 
+La dependencia senil crece de forma sostenida en todos los escenarios, reflejando el envejecimiento estructural de la población. La inmigración constante no elimina esa tendencia, pero reduce la presión relativa sobre la población en edades de trabajo frente al escenario base y, especialmente, frente al escenario de emigración constante. En 2070, los valores correspondientes al escenario base, al escenario de emigración constante y al escenario de inmigración constante son, respectivamente, 0.4817, 0.5071 y 0.4680.
 
 \subsection{Índice de envejecimiento}
 
@@ -1206,63 +1272,74 @@ La Figura \ref{fig:res_dep_sen} muestra la tasa de dependencia senil, definida c
     xlabel={Año},
     ylabel={Índice de envejecimiento},
     xmin=2018, xmax=2070,
-    ymin=0.35, ymax=2.70,
+    ymin=0.35, ymax=3.25,
     xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
+    scaled y ticks=false,
     grid=both,
     major grid style={dashed, gray!50},
     minor grid style={gray!20},
-    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
 \addplot[blue, mark=none] coordinates {
-(2018,0.366933409)(2019,0.377808764)(2020,0.388893721)(2021,0.400624516)(2022,0.414156782)
-(2023,0.430029308)(2024,0.44859166)(2025,0.468582172)(2026,0.490562995)(2027,0.514056172)
-(2028,0.538997306)(2029,0.565161662)(2030,0.592349755)(2031,0.620481542)(2032,0.649504739)
-(2033,0.679268351)(2034,0.70962653)(2035,0.741040892)(2036,0.772667012)(2037,0.804706678)
-(2038,0.837518846)(2039,0.87128592)(2040,0.90613368)(2041,0.942578175)(2042,0.981245583)
-(2043,1.02221054)(2044,1.065537927)(2045,1.111182853)(2046,1.158553395)(2047,1.20721554)
-(2048,1.257011033)(2049,1.307604732)(2050,1.358957221)(2051,1.411636767)(2052,1.465943132)
-(2053,1.522271382)(2054,1.581282158)(2055,1.643343516)(2056,1.708622292)(2057,1.77730733)
-(2058,1.849434809)(2059,1.924643154)(2060,2.002062021)(2061,2.080936555)(2062,2.161224728)
-(2063,2.243170497)(2064,2.326348477)(2065,2.410613409)(2066,2.495794787)(2067,2.580924825)
-(2068,2.66608785)(2069,2.751499009)(2070,2.83727959)
+(2018,0.366933409)(2019,0.377808764)(2020,0.388893721)(2021,0.400624516)(2022,0.414156782)(2023,0.430029308)
+(2024,0.44859166)(2025,0.468582172)(2026,0.490562995)(2027,0.514056172)(2028,0.538997306)(2029,0.565161662)
+(2030,0.592349755)(2031,0.620481542)(2032,0.649504739)(2033,0.679268351)(2034,0.70962653)(2035,0.741040892)
+(2036,0.772667012)(2037,0.804706678)(2038,0.837518846)(2039,0.87128592)(2040,0.90613368)(2041,0.942578175)
+(2042,0.981245583)(2043,1.02221054)(2044,1.065537927)(2045,1.111182853)(2046,1.158553395)(2047,1.20721554)
+(2048,1.257011033)(2049,1.307604732)(2050,1.358957221)(2051,1.411636767)(2052,1.465943132)(2053,1.522271382)
+(2054,1.581282158)(2055,1.643343516)(2056,1.708622292)(2057,1.77730733)(2058,1.849434809)(2059,1.924643154)
+(2060,2.002062021)(2061,2.080936555)(2062,2.161224728)(2063,2.243170497)(2064,2.326348477)(2065,2.410613409)
+(2066,2.495794787)(2067,2.580924825)(2068,2.66608785)(2069,2.751499009)(2070,2.83727959)
 };
 \addlegendentry{Escenario base}
 \addplot[red, dashed, mark=none] coordinates {
-(2018,0.366933409)(2019,0.377808764)(2020,0.388893721)(2021,0.400624516)(2022,0.414156782)
-(2023,0.430029308)(2024,0.44859166)(2025,0.468582172)(2026,0.490562995)(2027,0.514056172)
-(2028,0.538985644)(2029,0.56511261)(2030,0.592220673)(2031,0.620205427)(2032,0.648978378)
-(2033,0.678333723)(2034,0.708223222)(2035,0.739108273)(2036,0.770137263)(2037,0.801503512)
-(2038,0.8335567)(2039,0.866469527)(2040,0.900358936)(2041,0.935732595)(2042,0.973206913)
-(2043,1.012845581)(2044,1.054701666)(2045,1.098717095)(2046,1.144284262)(2047,1.190952457)
-(2048,1.238545555)(2049,1.286707817)(2050,1.335379515)(2051,1.385108806)(2052,1.436173392)
-(2053,1.488945518)(2054,1.544057229)(2055,1.601839038)(2056,1.662410651)(2057,1.725901444)
-(2058,1.792269036)(2059,1.861043982)(2060,1.931308321)(2061,2.002267643)(2062,2.073846999)
-(2063,2.14626187)(2064,2.219061008)(2065,2.292082898)(2066,2.36514807)(2067,2.437283694)
-(2068,2.508592318)(2069,2.579319436)(2070,2.649594436)
+(2018,0.366933409)(2019,0.377808764)(2020,0.388893721)(2021,0.400624516)(2022,0.414156782)(2023,0.430029308)
+(2024,0.44859166)(2025,0.468582172)(2026,0.490562995)(2027,0.514056172)(2028,0.538985644)(2029,0.56511261)
+(2030,0.592220673)(2031,0.620205427)(2032,0.648978378)(2033,0.678333723)(2034,0.708223222)(2035,0.739108273)
+(2036,0.770137263)(2037,0.801503512)(2038,0.8335567)(2039,0.866469527)(2040,0.900358936)(2041,0.935732595)
+(2042,0.973206913)(2043,1.012845581)(2044,1.054701666)(2045,1.098717095)(2046,1.144284262)(2047,1.190952457)
+(2048,1.238545555)(2049,1.286707817)(2050,1.335379515)(2051,1.385108806)(2052,1.436173392)(2053,1.488945518)
+(2054,1.544057229)(2055,1.601839038)(2056,1.662410651)(2057,1.725901444)(2058,1.792269036)(2059,1.861043982)
+(2060,1.931308321)(2061,2.002267643)(2062,2.073846999)(2063,2.14626187)(2064,2.219061008)(2065,2.292082898)
+(2066,2.36514807)(2067,2.437283694)(2068,2.508592318)(2069,2.579319436)(2070,2.649594436)
 };
-\addlegendentry{Escenario alternativo}
+\addlegendentry{Emigración constante}
+\addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
+(2018,0.366933409)(2019,0.377808764)(2020,0.388893721)(2021,0.400624516)(2022,0.414156782)(2023,0.430029308)
+(2024,0.44859166)(2025,0.468582172)(2026,0.490562995)(2027,0.514056172)(2028,0.539488376)(2029,0.566191813)
+(2030,0.59397578)(2031,0.622767743)(2032,0.652524017)(2033,0.683102559)(2034,0.71437018)(2035,0.746801414)
+(2036,0.779560754)(2037,0.812863012)(2038,0.847080301)(2039,0.882409252)(2040,0.918989119)(2041,0.957348976)
+(2042,0.998130324)(2043,1.04142501)(2044,1.087322255)(2045,1.13579947)(2046,1.186289988)(2047,1.238385503)
+(2048,1.291953843)(2049,1.346687986)(2050,1.402576079)(2051,1.460212935)(2052,1.519926509)(2053,1.582139752)
+(2054,1.647778118)(2055,1.717256995)(2056,1.790788379)(2057,1.868602914)(2058,1.950776056)(2059,2.036983423)
+(2060,2.126388627)(2061,2.218262775)(2062,2.312577573)(2063,2.409583184)(2064,2.508752741)(2065,2.609934151)
+(2066,2.712945564)(2067,2.816810235)(2068,2.921578829)(2069,3.027437258)(2070,3.1344668)
+};
+\addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Índice de envejecimiento en los escenarios base y alternativo, 2018--2070.}
+\caption{Índice de envejecimiento en los escenarios base, emigración constante e inmigración constante, 2018--2070.}
 \label{fig:res_ind_env}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios.}}
 \end{figure}
 
-La Figura \ref{fig:res_ind_env} reporta el índice de envejecimiento, definido como la relación entre la población de 65 años o más y la población menor de 15 años. Este indicador resume el tránsito desde una estructura relativamente joven hacia una estructura demográfica envejecida. La gráfica revela un incremento continuo y acelerado en ambos escenarios, lo que indica que la población mayor gana peso relativo frente a la población infantil a lo largo de todo el horizonte de proyección. Sin embargo, a diferencia de otros indicadores de dependencia, el escenario alternativo no profundiza el envejecimiento medido por este cociente, sino que lo modera ligeramente en el largo plazo. Esto sugiere que la mayor emigración reduce tanto la población en edades laborales como otros grupos etarios, de modo que el efecto neto sobre la relación entre mayores y menores de 15 años resulta algo menos pronunciado que en el escenario base. En 2070, el índice de envejecimiento es 2,8373 en el escenario base y 2,6496 en el alternativo.
+El índice de envejecimiento relaciona la población de 65 años o más con la población menor de 15 años. En contraste con las tasas de dependencia, la inmigración constante puede elevar este cociente en el largo plazo porque las cohortes adicionales incorporadas durante el horizonte de proyección también envejecen y terminan aumentando el numerador del indicador. En 2070, los valores correspondientes al escenario base, al escenario de emigración constante y al escenario de inmigración constante son, respectivamente, 2.8373, 2.6496 y 3.1345.
 
 \subsection{Síntesis}
 
-En conjunto, los resultados muestran que una mayor emigración no solo reduce el tamaño de la población total, la PET y la PEA, sino que además tiende a empeorar la mayor parte de los indicadores de dependencia y envejecimiento en el largo plazo. El escenario alternativo no altera la dirección general de la transición demográfica, pero sí la vuelve más exigente desde el punto de vista económico, laboral y fiscal. 
+En conjunto, los resultados muestran que los supuestos migratorios alteran tanto el tamaño de la población como la composición de las cohortes que sostienen el mercado laboral y la carga demográfica. El escenario de emigración constante reduce la población total, la PET y la PEA, y aumenta las tasas de dependencia total, juvenil y senil frente al escenario base. El escenario de inmigración constante opera en la dirección opuesta para esos indicadores: incrementa la población y la fuerza laboral potencial, y reduce la presión relativa sobre la población de 15 a 64 años.
+
+Sin embargo, el índice de envejecimiento muestra que una mayor inmigración no equivale necesariamente a una estructura permanentemente más joven. Bajo el supuesto operativo utilizado, las cohortes adicionales también envejecen dentro del horizonte de proyección, por lo que el cociente entre población mayor y población infantil puede terminar siendo más alto en el escenario de inmigración constante. Este resultado subraya que el efecto de la migración depende no solo del volumen neto de personas, sino de su distribución por edad y de la dinámica acumulada de las cohortes.
 
 \section{Conclusiones}
 
-Los resultados muestran que Colombia enfrenta una transición demográfica profunda, caracterizada por la pérdida gradual del peso relativo de la población joven y el aumento sostenido de la población mayor. En una primera etapa, esta transformación reduce la tasa de dependencia total, debido a la caída de la dependencia juvenil. Sin embargo, esa mejora es transitoria: a medida que avanza el horizonte de proyección, el aumento de la dependencia senil más que compensa la reducción del componente juvenil, y la carga demográfica total vuelve a incrementarse.
+Los resultados muestran que Colombia enfrenta una transición demográfica profunda, caracterizada por la pérdida gradual del peso relativo de la población joven y el aumento sostenido de la población mayor. En una primera etapa, esta transformación reduce la tasa de dependencia total debido a la caída de la dependencia juvenil. Sin embargo, esa mejora es transitoria: a medida que avanza el horizonte de proyección, el aumento de la dependencia senil más que compensa la reducción del componente juvenil, y la carga demográfica total vuelve a incrementarse.
 
-En este contexto, el principal rasgo estructural no es simplemente la reducción de la fecundidad o el cambio en la composición etaria, sino el avance persistente del envejecimiento poblacional. Esto se refleja con claridad en la trayectoria ascendente del índice de envejecimiento. En otras palabras, la población en edad de trabajar deberá sostener, de manera creciente, a una población mayor cada vez más numerosa. Desde una perspectiva económica y fiscal, este cambio tiene implicaciones importantes para el mercado laboral, el sistema pensional, el gasto en salud y las necesidades de cuidado de largo plazo.
+La comparación entre escenarios permite identificar la sensibilidad de esta trayectoria a diferentes supuestos migratorios. Una emigración neta persistentemente alta reduce la población total, la población en edad de trabajar y la población económicamente activa, al tiempo que eleva las tasas de dependencia. En contraste, una inmigración neta positiva y sostenida aumenta la base demográfica y laboral, y modera parte de la presión sobre la población de 15 a 64 años.
 
-La comparación entre escenarios indica que el escenario alternativo agrava estas tendencias, pero no modifica el diagnóstico de fondo. Las diferencias entre ambos escenarios son en general moderadas al inicio y se amplían gradualmente hacia el final del período. Esto sugiere que la dinámica central está determinada por el proceso de envejecimiento demográfico, mientras que el escenario alternativo actúa principalmente como un factor que intensifica una trayectoria ya desfavorable.
+No obstante, ninguno de los escenarios elimina el proceso de envejecimiento. La migración cambia el nivel y la velocidad de algunos indicadores, pero la dinámica central sigue determinada por la estructura etaria acumulada de la población. Desde una perspectiva económica y fiscal, esto implica que las políticas de mercado laboral, pensiones, salud y cuidado deberán considerar no solo el volumen agregado de la migración, sino también su composición por edad y sexo y su persistencia en el tiempo.
 
 \end{document}
