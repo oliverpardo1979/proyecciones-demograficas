@@ -308,6 +308,78 @@ La presente sección compara la evolución de los principales indicadores demogr
         )
 
     sections.append(
+        r"""\subsection{Indicadores seleccionados por escenario}
+
+Las Tablas \ref{tab:indicadores_niveles} y \ref{tab:indicadores_tasas} resumen los principales resultados para cuatro años de referencia: 2028, cuando los escenarios comienzan a separarse; 2034, cuando el escenario de emigración constante alcanza el piso de $-140{.}000$ personas anuales; 2050, como punto intermedio del horizonte; y 2070, como año final de la proyección.
+
+\begin{table}[htbp]
+\centering
+\caption{Indicadores de población y mercado laboral por escenario en años seleccionados.}
+\label{tab:indicadores_niveles}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrr}
+\toprule
+Año & Escenario & Población total & PET & PEA \\
+\midrule
+2028 & Base & 54.001.502 & 42.685.464 & 27.645.200 \\
+2028 & Emigración constante & 53.997.502 & 42.681.567 & 27.642.213 \\
+2028 & Inmigración constante & 54.170.002 & 42.849.642 & 27.771.037 \\
+\addlinespace
+2034 & Base & 55.322.674 & 44.997.385 & 29.655.682 \\
+2034 & Emigración constante & 54.910.609 & 44.593.843 & 29.339.176 \\
+2034 & Inmigración constante & 56.484.827 & 46.140.573 & 30.554.390 \\
+\addlinespace
+2050 & Base & 55.653.490 & 48.072.673 & 32.678.562 \\
+2050 & Emigración constante & 53.282.719 & 45.719.871 & 30.777.594 \\
+2050 & Inmigración constante & 59.252.555 & 51.649.254 & 35.533.245 \\
+\addlinespace
+2070 & Base & 50.592.097 & 45.390.881 & 27.844.721 \\
+2070 & Emigración constante & 45.988.329 & 40.806.187 & 24.531.948 \\
+2070 & Inmigración constante & 56.571.614 & 51.348.981 & 31.965.465 \\
+\bottomrule
+\end{tabular}%
+}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Indicadores de dependencia y envejecimiento por escenario en años seleccionados.}
+\label{tab:indicadores_tasas}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrr}
+\toprule
+Año & Escenario & Dep. total & Dep. juvenil & Dep. senil & Índice de envejecimiento \\
+\midrule
+2028 & Base & 0,4760 & 0,3093 & 0,1667 & 0,5390 \\
+2028 & Emigración constante & 0,4760 & 0,3093 & 0,1667 & 0,5390 \\
+2028 & Inmigración constante & 0,4743 & 0,3081 & 0,1662 & 0,5395 \\
+\addlinespace
+2034 & Base & 0,4686 & 0,2741 & 0,1945 & 0,7096 \\
+2034 & Emigración constante & 0,4726 & 0,2767 & 0,1960 & 0,7082 \\
+2034 & Inmigración constante & 0,4576 & 0,2669 & 0,1907 & 0,7144 \\
+\addlinespace
+2050 & Base & 0,4735 & 0,2007 & 0,2728 & 1,3590 \\
+2050 & Emigración constante & 0,4958 & 0,2123 & 0,2835 & 1,3354 \\
+2050 & Inmigración constante & 0,4457 & 0,1855 & 0,2602 & 1,4026 \\
+\addlinespace
+2070 & Base & 0,6515 & 0,1698 & 0,4817 & 2,8373 \\
+2070 & Emigración constante & 0,6985 & 0,1914 & 0,5071 & 2,6496 \\
+2070 & Inmigración constante & 0,6173 & 0,1493 & 0,4680 & 3,1345 \\
+\bottomrule
+\end{tabular}%
+}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{table}
+
+"""
+    )
+
+    sections.append(
         r"""\subsection{Síntesis}
 
 En conjunto, los resultados muestran que los supuestos migratorios alteran tanto el tamaño de la población como la composición de las cohortes que sostienen el mercado laboral y la carga demográfica. El escenario de emigración constante reduce la población total, la PET y la PEA, y aumenta las tasas de dependencia total, juvenil y senil frente al escenario base. El escenario de inmigración constante opera en la dirección opuesta para esos indicadores: incrementa la población y la fuerza laboral potencial, y reduce la presión relativa sobre la población de 15 a 64 años.
