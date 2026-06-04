@@ -1,14 +1,1268 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[12pt,a4paper]{article}
 
-\title{proyecciones-demograficas}
-\author{oliverpardo }
-\date{June 2026}
+% --- Paquetes ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathpazo} % Palatino
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue!60!black, citecolor=blue!60!black, urlcolor=blue!60!black}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\footnotesize\textit{Proyecciones demográficas con escenarios migratorios}}
+%\lhead{\footnotesize\textit{CJC -- PUJ}}
+\rfoot{\thepage}
+
+\title{\textbf{Proyecciones demográficas de Colombia con escenarios de migración internacional} \\ 
+\vspace{0.3cm} \large Nota metodológica}
+\author{Oliver Pardo \\ 
+Facultad de Ciencias Económicas y Administrativas \\ 
+Pontificia Universidad Javeriana}
+\date{Abril de 2026 \\ \vspace{0.2cm} \small \textit{Documento de trabajo -- versión preliminar}}
 
 \begin{document}
 
 \maketitle
+\thispagestyle{fancy}
 
-\section{Introduction}
+\begin{abstract}
+\noindent Las proyecciones oficiales de población del DANE asumen que el saldo migratorio internacional de Colombia converge a cero después de 2030. Este supuesto trata la migración como un fenómeno transitorio que se extingue. El presente documento propone un escenario alternativo donde la inmigración se extingue pero la emigración anual se mantiene en niveles similares a los del quinquenio 2020-2025. A partir de la descomposición de esta emigración por edades, se cuantifica su impacto sobre la población total, la población en edad de trabajar, la fuerza laboral, tasa de dependencia, el índice de envejecimiento y otras variables sociodemográficas en el horizonte 2025--2070. \\[0.3cm]
+\noindent \textbf{Palabras clave:} proyecciones de población, migración internacional, tasa de dependencia, envejecimiento, bono demográfico, Colombia.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Motivación}
+% ============================================================
+
+Las proyecciones de población constituyen un insumo fundamental para la planificación fiscal, el diseño del sistema pensional y la formulación de política migratoria. No obstante, estas dinámicas se ven afectadas por la migración internacional. Colombia alberga aproximadamente 2,8 millones de migrantes venezolanos, al tiempo que alrededor de 5 millones de colombianos residen en el exterior. El efecto neto de la migración sobre la población residente en Colombia afecta variables sociales económicas y demográficas como las remesas, la tasa de participación laboral y la tasa de dependencia, entre otros.
+
+Las proyecciones oficiales del DANE asumen que el saldo migratorio internacional converge gradualmente a cero después de 2030. Esta proyección implica que la migración deja de ser un factor relevante en la dinámica poblacional a partir de la próxima década. Sin embargo, vale la pena evaluar un escenario de riesgo donde la inmigración se reduce a cero pero las tendencias de emigración se mantienen.  Ese es el objetivo del presente trabajo.
+
+% ============================================================
+\section{Modelo demográfico}
+% ============================================================
+
+\subsection{Ecuación de componentes por cohorte}
+
+Para ambos escenarios se asume que la población de cada edad y sexo se actualiza anualmente en función de la población del año anterior, la sobrevivencia y la migración neta:
+
+\begin{equation}
+\label{eq:cohorte}
+P_{x+1,\, s}(t+1) = P_{x,\, s}(t) \cdot \theta_{x,\, s}(t) + M_{x,\, s}(t)
+%P_{x+1}(t+1) = P_{x}(t) \cdot S_{x}(t) + M_{x}(t)
+\end{equation}
+
+\noindent donde:
+\begin{itemize}[nosep]
+    \item $P_{x,s}(t)$ es la población con $x$ años de edad, sexo $s$, al inicio del período $t$;
+%    \item $P_{x}(t)$ es la población con $x$ años de edad al inicio del período $t$
+    \item $\theta_{x,s}(t)$ es la razón de sobrevivencia de la población de sexo $s$ y edad $x$ durante el año $t$;
+%    \item $S_{x}(t)$ es la razón de sobrevivencia de la población de edad $x$ durante el año $t$;
+    \item $M_{x,s}(t)$ es la migración neta (inmigrantes menos emigrantes) de edad $x$ y sexo $s$, durante el año $t$.
+%    \item $M_{x}(t)$ es la migración neta (inmigrantes menos emigrantes) de edad $x$ durante el año $t$.
+\end{itemize}
+
+Para el grupo más joven ($x = 0$), la entrada a la población proviene de los nacimientos:
+
+\begin{equation}
+\label{eq:nacimientos}
+P_{0,\, s}(t+1) = B_s(t) \cdot \theta_{0,\, s}(t) + M_{0,\, s}(t)
+%P_{0}(t+1) = N_{0}(t) + M_{0}(t)
+\end{equation}
+
+\noindent donde $B_s(t)$ son los nacimientos de sexo $s$ durante el período, que resultan de la aplicación de las tasas específicas de fecundidad $f_x(t)$ a la población femenina en edad reproductiva:
+
+\begin{equation}
+\label{eq:fecundidad}
+B(t) = \sum_{x=15}^{49} P_{x,\, f}(t) \cdot f_x(t)
+\end{equation}
+
+%\noindent donde $N_{0}(t)$ son los nacimientos durante el año $t$.
+
+Finalmente,  los nacimientos masculinos $B_m(t)$ y  los nacimientos femeninos $B_f(t)$ dependen de la razón de masculinidad al nacer $\rho$. Así, la ecuación distribuye el total de nacimientos entre hombres y mujeres de acuerdo con esa razón.
+
+\begin{equation}
+B_m(t) = B(t) \cdot \frac{\rho}{1 + \rho}, \qquad B_f(t) = B(t) \cdot \frac{1}{1 + \rho}
+\end{equation}
+
+%Diferenciando con respecto a $M_{x,s}(t)$ se obtiene que:
+
+
+%\begin{equation}
+%\label{eq:dcohorte}
+%\Delta P_{x+1,\, s}(t+1) = \Delta M_{x,\, s}(t)
+%\end{equation}
+
+%\begin{equation}
+%\label{eq:dnacimientos}
+%\Delta P_{0,\, s}(t+1) = \Delta M_{0,\, s}(t)
+%\end{equation}
+
+%El ejercicio consiste en comparar el escenario base de las proyecciones de población hechas por el DANE con un escenario de riesgo alternativo. 
+
+%\begin{equation}
+%\label{eq:defdelta}
+%\Delta M_{x,\, s}(t) = M^{alt}_{x,\, s}(t) - M^{base}_{x,\, s}(t)  
+%\end{equation}
+
+% ============================================================
+\subsection{Escenarios para la migración neta}
+% ============================================================
+
+
+El ejercicio consiste en tomar como escenario base las proyecciones de población del DANE y construir un escenario alternativo donde la población se ve afectada por una emigración mayor a la proyectada por el DANE. En el escenario alternativo, la migración neta es la misma que la del escenario base hasta el 2028. A partir de ese año, la migración neta continúa cayendo al mismo ritmo anual observado entre 2027 y 2028 (50\%): 
+
+\begin{equation}
+\label{eq:ascmig}
+\sum_s \sum_x M_{x,\, s}(t+1)= (1+0.5)\times \sum_s \sum_x M_{x,\, s}(t)
+%\sum_x M_{x}(t+1)= (1+0.5)\times \sum_x M_{x}(t)
+\end{equation}
+
+La caída en la migración neta se frena cuando la emigración neta alcanza las 140 mil personas, lo cual corresponde al negativo del saldo migratorio neto si la inmigración fuese cero y la emigración anual fuese cercana a la observada entre 2019 y 2024 según la ENDS 2025. %La Figura \ref{fig:saldo_migratorio_escenarios} presenta la migración neta anual bajo los dos escenarios.
+
+
+\begin{figure}[htbp]
+\centering
+\caption{Saldo neto migratorio en los escenarios base y alternativo, 2018--2070.}
+\label{fig:saldo_migratorio_escenarios}
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={Saldo neto migratorio},
+    xmin=2018, xmax=2070,
+    ymin=-200000, ymax=800000,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    yticklabel style={
+        /pgf/number format/.cd,
+        fixed,
+        precision=0,
+        1000 sep={,}
+    },
+    scaled y ticks=false,
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={
+        at={(0.5,-0.18)},
+        anchor=north,
+        legend columns=2,
+        draw=none
+    },
+    line width=1pt
+]
+
+\addplot[
+    blue,
+    mark=none
+] coordinates {
+    (2018,630000)
+    (2019,740000)
+    (2020,370000)
+    (2021,190000)
+    (2022,130000)
+    (2023,132000)
+    (2024,100000)
+    (2025,5000)
+    (2026,-8000)
+    (2027,-12000)
+    (2028,-14000)
+    (2029,-14500)
+    (2030,-14500)
+    (2031,-14300)
+    (2032,-14100)
+    (2033,-13900)
+    (2034,-13600)
+    (2035,-13300)
+    (2036,-13000)
+    (2037,-12700)
+    (2038,-12300)
+    (2039,-12000)
+    (2040,-11700)
+    (2041,-11400)
+    (2042,-11000)
+    (2043,-10600)
+    (2044,-10200)
+    (2045,-9800)
+    (2046,-9400)
+    (2047,-9000)
+    (2048,-8600)
+    (2049,-8200)
+    (2050,-7800)
+    (2051,-7400)
+    (2052,-7000)
+    (2053,-6600)
+    (2054,-6200)
+    (2055,-5800)
+    (2056,-5400)
+    (2057,-5000)
+    (2058,-4600)
+    (2059,-4200)
+    (2060,-3800)
+    (2061,-3400)
+    (2062,-3000)
+    (2063,-2600)
+    (2064,-2200)
+    (2065,-1800)
+    (2066,-1400)
+    (2067,-1000)
+    (2068,-700)
+    (2069,-300)
+    (2070,0)
+};
+\addlegendentry{Escenario base}
+
+\addplot[
+    red,
+    dashed,
+    mark=none
+] coordinates {
+    (2018,630000)
+    (2019,740000)
+    (2020,370000)
+    (2021,190000)
+    (2022,130000)
+    (2023,132000)
+    (2024,100000)
+    (2025,5000)
+    (2026,-8000)
+    (2027,-12000)
+    (2028,-18000)
+    (2029,-27000)
+    (2030,-40500)
+    (2031,-60750)
+    (2032,-91125)
+    (2033,-136688)
+    (2034,-140000)
+    (2035,-140000)
+    (2036,-140000)
+    (2037,-140000)
+    (2038,-140000)
+    (2039,-140000)
+    (2040,-140000)
+    (2041,-140000)
+    (2042,-140000)
+    (2043,-140000)
+    (2044,-140000)
+    (2045,-140000)
+    (2046,-140000)
+    (2047,-140000)
+    (2048,-140000)
+    (2049,-140000)
+    (2050,-140000)
+    (2051,-140000)
+    (2052,-140000)
+    (2053,-140000)
+    (2054,-140000)
+    (2055,-140000)
+    (2056,-140000)
+    (2057,-140000)
+    (2058,-140000)
+    (2059,-140000)
+    (2060,-140000)
+    (2061,-140000)
+    (2062,-140000)
+    (2063,-140000)
+    (2064,-140000)
+    (2065,-140000)
+    (2066,-140000)
+    (2067,-140000)
+    (2068,-140000)
+    (2069,-140000)
+    (2070,-140000)
+};
+\addlegendentry{Escenario alternativo}
+
+\end{axis}
+\end{tikzpicture}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: DANE y cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:saldo_migratorio_escenarios} compara la trayectoria del saldo neto migratorio en el escenario base y en el escenario alternativo. En ambos casos se mantiene la misma trayectoria observada y proyectada hasta 2027. A partir de 2028, sin embargo, el escenario alternativo introduce un supuesto de deterioro progresivo del saldo migratorio frente al escenario base: en lugar de converger gradualmente hacia valores cercanos a cero al final del horizonte, el saldo neto migratorio se vuelve crecientemente más negativo hasta alcanzar un piso de $-140{,}000$ personas anuales en 2034, nivel que se mantiene constante hasta 2070. En este sentido, el escenario alternativo no representa simplemente una variación puntual, sino un régimen migratorio persistentemente más adverso, caracterizado por una emigración neta significativamente mayor en el largo plazo. Este supuesto busca capturar un escenario en el que Colombia enfrente, de manera sostenida, una salida neta de población muy superior a la incorporada en la trayectoria base.
+
+
+% ============================================================
+\subsection{Descomposición de la migración neta}
+% ============================================================
+
+El efecto de la migración neta depende de la composición por edad y género de la migración. Con este fin se toma le información de la emigración internacional según la ENDS 2025 por grupos de edad y género y se extrapola para cada edad buscando un suavizamiento de la curva para cada género. El resultado se presenta en la Figura \ref{fig:dist_emigracion_edad_genero}. 
+
+% En el preámbulo:
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.18}
+% \usepackage{xcolor}
+
+La migración neta de cada grupo etario para cada instante del tiempo se obtiene de aplicar estas proporciones sobre el saldo migratorio neto de cada escenario:
+
+\begin{equation}
+\label{eq:descmig}
+M_{x,s}(t) = \pi_{x,s} \sum_s \sum_x M_{x}(t)
+\end{equation}
+
+
+\begin{figure}[htbp]
+\centering
+\caption{Distribución por edad de la tasa de emigración por género.}
+\label{fig:dist_emigracion_edad_genero}
+
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Edad},
+    ylabel={Proporción},
+    xmin=0, xmax=100,
+    ymin=0, ymax=0.045,
+    grid=both,
+    major grid style={dashed, gray!40},
+    minor grid style={gray!20},
+    legend style={
+        at={(0.5,-0.18)},
+        anchor=north,
+        legend columns=2,
+        draw=none
+    },
+    yticklabel style={
+        /pgf/number format/fixed,
+        /pgf/number format/precision=3
+    }
+]
+
+\addplot[
+    only marks,
+    mark=*,
+    mark size=1.6pt,
+    color=blue
+] coordinates {
+(0,0.000381603) (1,0.000458522) (2,0.000548882) (3,0.000654784) (4,0.000778586)
+(5,0.000922885) (6,0.001090486) (7,0.001284347) (8,0.001507398) (9,0.001762687)
+(10,0.002053036) (11,0.002380957) (12,0.002748491) (13,0.003157047) (14,0.003607232)
+(15,0.004098704) (16,0.004630039) (17,0.005198627) (18,0.005800582) (19,0.006430769)
+(20,0.017115302) (21,0.018725131) (22,0.020348163) (23,0.021961019) (24,0.023538508)
+(25,0.025054200) (26,0.026481109) (27,0.027792438) (28,0.028962426) (29,0.029967142)
+(30,0.040021861) (31,0.040820229) (32,0.041335801) (33,0.041557475) (34,0.041481032)
+(35,0.041109388) (36,0.040452563) (37,0.039527326) (38,0.038356530) (39,0.036968176)
+(40,0.021522639) (41,0.020473833) (42,0.019355266) (43,0.018188932) (44,0.016996120)
+(45,0.015796780) (46,0.014609002) (47,0.013448646) (48,0.012329104) (49,0.011261198)
+(50,0.007099315) (51,0.006446892) (52,0.005842464) (53,0.005287052) (54,0.004780604)
+(55,0.004321963) (56,0.003909149) (57,0.003539552) (58,0.003210099) (59,0.002917424)
+(60,0.003859513) (61,0.003525989) (62,0.003230577) (63,0.002968412) (64,0.002735160)
+(65,0.002526772) (66,0.002339649) (67,0.002170658) (68,0.002017119) (69,0.001876785)
+(70,0.001747798) (71,0.001628648) (72,0.001518115) (73,0.001415347) (74,0.001319388)
+(75,0.001229630) (76,0.001145572) (77,0.001066791) (78,0.000992920) (79,0.000923631)
+(80,0.000858625) (81,0.000797621) (82,0.000740356) (83,0.000686604) (84,0.000636086)
+(85,0.000588579) (86,0.000543870) (87,0.000501762) (88,0.000462070) (89,0.000424625)
+(90,0.000389276) (91,0.000355889) (92,0.000324351) (93,0.000294557) (94,0.000266447)
+(95,0.000239961) (96,0.000215056) (97,0.000191705) (98,0.000169891) (99,0.000149604)
+(100,0.000130838)
+};
+\addlegendentry{Hombres}
+
+\addplot[
+    only marks,
+    mark=square*,
+    mark size=1.6pt,
+    color=red
+] coordinates {
+(0,0.000445560) (1,0.000533330) (2,0.000635889) (3,0.000755418) (4,0.000894326)
+(5,0.001055210) (6,0.001240798) (7,0.001453866) (8,0.001697063) (9,0.001972902)
+(10,0.002283479) (11,0.002630327) (12,0.003014233) (13,0.003435063) (14,0.003891615)
+(15,0.004381506) (16,0.004901114) (17,0.005445575) (18,0.006008874) (19,0.006583928)
+(20,0.019090287) (21,0.020620676) (22,0.022115040) (23,0.023549763) (24,0.024901981)
+(25,0.026150341) (26,0.027275689) (27,0.028261648) (28,0.029095023) (29,0.029766208)
+(30,0.028763303) (31,0.029079478) (32,0.029235160) (33,0.029234972) (34,0.029086531)
+(35,0.028800060) (36,0.028387971) (37,0.027864370) (38,0.027244535) (39,0.026544366)
+(40,0.019158479) (41,0.018553993) (42,0.017924012) (43,0.017278330) (44,0.016625476)
+(45,0.015972544) (46,0.015325117) (47,0.014687274) (48,0.014061687) (49,0.013449786)
+(50,0.015057409) (51,0.014373140) (52,0.013704019) (53,0.013048696) (54,0.012406135)
+(55,0.011775366) (56,0.011155835) (57,0.010547500) (58,0.009950852) (59,0.009366882)
+(60,0.006862863) (61,0.006430587) (62,0.006012057) (63,0.005608736) (64,0.005221960)
+(65,0.004852902) (66,0.004502484) (67,0.004171337) (68,0.003859783) (69,0.003567835)
+(70,0.003295230) (71,0.003041457) (72,0.002805805) (73,0.002587463) (74,0.002385387)
+(75,0.002198556) (76,0.002025925) (77,0.001866455) (78,0.001719136) (79,0.001583004)
+(80,0.001457153) (81,0.001340740) (82,0.001232982) (83,0.001133142) (84,0.001040585)
+(85,0.000954704) (86,0.000874942) (87,0.000800793) (88,0.000731796) (89,0.000667536)
+(90,0.000607637) (91,0.000551768) (92,0.000499636) (93,0.000451003) (94,0.000405630)
+(95,0.000363337) (96,0.000323977) (97,0.000287429) (98,0.000253596) (99,0.000222396)
+(100,0.000193759)
+};
+\addlegendentry{Mujeres}
+
+\end{axis}
+\end{tikzpicture}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: Cálculos propios con base en la ENDS 2025.}}
+\end{figure}
+
+\begin{comment}
+\begin{figure}[htbp]
+\caption{Distribución de la emigración por edad.}
+\label{fig:distribucion_emigracion_edad}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Edad},
+    ylabel={Proporción},
+    xmin=0, xmax=100,
+    ymin=0, ymax=0.04,
+    xtick={0,10,20,30,40,50,60,70,80,90,100},
+    yticklabel style={
+        /pgf/number format/.cd,
+        fixed,
+        precision=3
+    },
+    scaled y ticks=false,
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    line width=1pt
+]
+
+\addplot[
+    blue,
+    only marks,
+    mark=none
+] coordinates {
+    (0,0.000432145)
+    (1,0.000518191)
+    (2,0.000618987)
+    (3,0.000736773)
+    (4,0.000874038)
+    (5,0.001033497)
+    (6,0.001218044)
+    (7,0.001430675)
+    (8,0.001674306)
+    (9,0.001951847)
+    (10,0.002265869)
+    (11,0.002618488)
+    (12,0.003011188)
+    (13,0.003444638)
+    (14,0.003918532)
+    (15,0.004431452)
+    (16,0.004980766)
+    (17,0.005562575)
+    (18,0.006171709)
+    (19,0.006801788)
+    (20,0.01891761)
+    (21,0.020559085)
+    (22,0.022188767)
+    (23,0.023782096)
+    (24,0.025313948)
+    (25,0.026759337)
+    (26,0.028094125)
+    (27,0.029295717)
+    (28,0.030343718)
+    (29,0.031220561)
+    (30,0.035982145)
+    (31,0.036566002)
+    (32,0.036917833)
+    (33,0.037034208)
+    (34,0.03691687)
+    (35,0.036572667)
+    (36,0.036013315)
+    (37,0.03525496)
+    (38,0.034317551)
+    (39,0.033224067)
+    (40,0.02126878)
+    (41,0.020403447)
+    (42,0.019488206)
+    (43,0.018539704)
+    (44,0.017573561)
+    (45,0.016603947)
+    (46,0.015643271)
+    (47,0.014701986)
+    (48,0.013788516)
+    (49,0.012909293)
+    (50,0.011558328)
+    (51,0.010859786)
+    (52,0.010194337)
+    (53,0.009561816)
+    (54,0.008961656)
+    (55,0.008392744)
+    (56,0.007853755)
+    (57,0.007343293)
+    (58,0.006860001)
+    (59,0.006402623)
+    (60,0.005595806)
+    (61,0.005195829)
+    (62,0.004823023)
+    (63,0.004475594)
+    (64,0.004151957)
+    (65,0.003850596)
+    (66,0.003570099)
+    (67,0.003309147)
+    (68,0.0030665)
+    (69,0.002840985)
+    (70,0.002631488)
+    (71,0.00243695)
+    (72,0.00225636)
+    (73,0.00208885)
+    (74,0.001933374)
+    (75,0.001789082)
+    (76,0.001655167)
+    (77,0.001530867)
+    (78,0.001415463)
+    (79,0.001308284)
+    (80,0.0012087)
+    (81,0.001116125)
+    (82,0.001030014)
+    (83,0.000949866)
+    (84,0.000875203)
+    (85,0.000805593)
+    (86,0.000740635)
+    (87,0.000679961)
+    (88,0.000623235)
+    (89,0.000570152)
+    (90,0.000520439)
+    (91,0.000473851)
+    (92,0.000430177)
+    (93,0.000389239)
+    (94,0.00035088)
+    (95,0.000314976)
+    (96,0.000281427)
+    (97,0.000250158)
+    (98,0.000221106)
+    (99,0.000194226)
+    (100,0.000169479)
+};
+
+\end{axis}
+\end{tikzpicture}
+
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos con base en la ENDS 2025.}}
+\end{figure}
+\end{comment}
+
+
+%\[
+%P_{x+1,g}^{A}(t+1)-P_{x+1,g}^{B}(t+1)
+%=
+%s_{x,g}(t)\Bigl[P_{x,g}^{A}(t)-P_{x,g}^{B}(t)\Bigr]
+%+
+%\Delta M_{x+1,g}(t+1),
+%\qquad x\geq 0,
+%\]
+
+%\[
+%\Delta P_{x+1,g}(t+1)
+%=
+%s_{x,g}(t)\,\Delta P_{x,g}(t)
+%+
+%\Delta M_{x+1,g}(t,t+1)
+%\]
+
+% ============================================================
+\subsection{Participación laboral}
+% ============================================================
+
+
+Con el fin de extender los impactos demográficos a la participación laboral, se hace necesario estimar la participación laboral $\lambda_{x,s}(t)$ por edad y género para cada año. Con este fin se toman los resultados de Parra y Ladino (2025), presentados el la Figura \ref{fig:lambdas_edad}.
+
+A partir de la matriz anual de tasas de participación laboral por edad para el total de la población, se construyeron matrices separadas para hombres y mujeres con el fin de obtener perfiles por sexo consistentes con los agregados observados. En particular, se tomó como referencia que la tasa de participación laboral masculina se ubicó en 76,7\%, mientras que la femenina fue de 52,6\%. Para reconciliar estos agregados con la matriz total, se aplicó una transformación logística por sexo a las tasas específicas por edad y año. Así, para cada edad $x$ y año $t$, se definieron tasas de participación $\lambda_{x,s}(t)$ por cada género %sexo a partir de la expresión
+%\begin{equation}
+%\lambda_{x,s}(t)=\frac{1}{1+\exp\left[-\left(\operatorname{logit}(\lambda_x(t))+\delta_s\right)\right]},    
+%\end{equation}
+%donde $\lambda_x(t)$ corresponde a la tasa total previamente estimada, $s\in\{h,m\}$ denota el sexo, y $\delta_s$ es un parámetro de ajuste específico para hombres y mujeres. Estos parámetros se calibraron 
+de manera que, al ponderar las tasas resultantes con la estructura poblacional por edad correspondiente, reprodujeran en 2023 las tasas agregadas observadas para cada sexo.
+
+\begin{figure}[htbp]
+\centering
+\caption{Tasas de participación laboral por grupo de edad para 2023, 2050 y 2070.}
+\label{fig:lambdas_edad}
+
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Edad},
+    ylabel={$\lambda$},
+    xmin=15, xmax=85,
+    ymin=0, ymax=1,
+    xtick={15,20,25,30,35,40,45,50,55,60,65,70,75,80,85},
+    ytick={0,0.2,0.4,0.6,0.8,1.0},
+    yticklabel style={
+        /pgf/number format/.cd,
+        fixed,
+        precision=1
+    },
+    scaled y ticks=false,
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={
+        at={(0.5,-0.18)},
+        anchor=north,
+        legend columns=3,
+        draw=none
+    },
+    line width=1pt
+]
+
+\addplot[
+    blue,
+    mark=*,
+    mark size=1.8pt
+] coordinates {
+    (15,0.04)
+    (17,0.15)
+    (20,0.55)
+    (22,0.70)
+    (25,0.82)
+    (28,0.85)
+    (30,0.85)
+    (33,0.85)
+    (35,0.85)
+    (38,0.85)
+    (40,0.85)
+    (43,0.84)
+    (45,0.84)
+    (48,0.82)
+    (50,0.80)
+    (53,0.78)
+    (55,0.75)
+    (58,0.67)
+    (60,0.60)
+    (63,0.50)
+    (65,0.43)
+    (68,0.35)
+    (70,0.30)
+    (73,0.22)
+    (75,0.18)
+    (78,0.15)
+    (80,0.13)
+    (85,0.10)
+};
+\addlegendentry{$2023$}
+
+\addplot[
+    red,
+    mark=square*,
+    mark size=1.8pt
+] coordinates {
+    (15,0.05)
+    (17,0.18)
+    (20,0.60)
+    (22,0.78)
+    (25,0.88)
+    (28,0.90)
+    (30,0.91)
+    (33,0.91)
+    (35,0.91)
+    (38,0.90)
+    (40,0.90)
+    (43,0.90)
+    (45,0.90)
+    (48,0.89)
+    (50,0.88)
+    (53,0.86)
+    (55,0.83)
+    (58,0.78)
+    (60,0.73)
+    (63,0.65)
+    (65,0.57)
+    (68,0.47)
+    (70,0.40)
+    (73,0.30)
+    (75,0.24)
+    (78,0.18)
+    (80,0.15)
+    (85,0.12)
+};
+\addlegendentry{$2050$}
+
+\addplot[
+    green!60!black,
+    mark=triangle*,
+    mark size=2pt
+] coordinates {
+    (15,0.05)
+    (17,0.18)
+    (20,0.62)
+    (22,0.80)
+    (25,0.90)
+    (28,0.93)
+    (30,0.93)
+    (33,0.93)
+    (35,0.93)
+    (38,0.93)
+    (40,0.93)
+    (43,0.93)
+    (45,0.93)
+    (48,0.92)
+    (50,0.91)
+    (53,0.88)
+    (55,0.85)
+    (58,0.77)
+    (60,0.70)
+    (63,0.58)
+    (65,0.48)
+    (68,0.38)
+    (70,0.30)
+    (73,0.22)
+    (75,0.18)
+    (78,0.14)
+    (80,0.12)
+    (85,0.08)
+};
+\addlegendentry{$2070$}
+
+\end{axis}
+\end{tikzpicture}
+
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: Parra y Ladino (2025).}}
+\end{figure}
+
+
+%Este procedimiento tiene la ventaja de preservar la forma general del perfil por edad y su evolución temporal, al tiempo que introduce una brecha sistemática entre hombres y mujeres coherente con los agregados disponibles. Sin embargo, conviene subrayar que las matrices resultantes no provienen de una estimación directa de tasas de participación laboral por edad y sexo a partir de microdatos, sino de una desagregación calibrada de la matriz total. En consecuencia, deben interpretarse como una aproximación consistente y operativa, útil para ejercicios de proyección y simulación, más que como una medición observada de la participación laboral por sexo a cada edad. Esta cautela es especialmente importante en edades extremas, donde pequeñas variaciones en los supuestos pueden generar diferencias relativamente mayores en las tasas resultantes.
+
+
+
+% ============================================================
+\section{Indicadores de impacto}
+% ============================================================
+
+A partir de la pirámide poblacional $P_{x,s}(t)$ resultante de cada escenario, se calculan los siguientes indicadores para todos los años entre 2023 y 2070.
+
+%\subsection{Tasas de dependencia}
+
+\begin{align}
+\text{Población Total }(t) &= \sum_s\sum_{x=0}^{+100} P_{x,s}(t) \label{eq:pop_total} \\[10pt]
+\text{PET }(t) &= \sum_s\sum_{x=15}^{+100} P_{x,s}(t) \label{eq:pet} \\[10pt]
+\text{PEA }(t) &= \sum_s\sum_{x=15}^{+100} \lambda_{x,s}(t)P_{x,s}(t) \label{eq:pet} \\[10pt]
+\text{Dependencia total }(t) &= \frac{\displaystyle\sum_s\sum_{x=0}^{14} P_{x,s}(t) + \sum_s\sum_{x=65}^{+100} P_{x,s}(t)}{\displaystyle\sum_s\sum_{x=15}^{64} P_{x,s}(t)} \times 100 \label{eq:dep_total} \\[10pt]
+\text{Dependencia juvenil}(t) &= \frac{\displaystyle\sum_s\sum_{x=0}^{14} P_{x,s}(t)}{\displaystyle\sum_s\sum_{x=15}^{64} P_{x,s}(t)} \times 100 \label{eq:dep_juv} \\[10pt]
+\text{Dependencia senil }(t) &= \frac{\displaystyle\sum_s\sum_{x=65}^{+100} P_{x,s}(t)}{\displaystyle\sum_s\sum_{x=15}^{64} P_{x,s}(t)} \times 100 \label{eq:dep_sen}
+\end{align}
+
+%\subsection{Índice de envejecimiento y razón de soporte}
+
+\begin{align}
+\text{Índice de envejecimiento }(t) &= \frac{\displaystyle\sum_{x=65}^{+100} P_x(t)}{\displaystyle\sum_{x=0}^{14} P_x(t)} \times 100 \\[10pt]
+%\text{Razón de soporte }(t) &= \frac{\displaystyle\sum_{x=15}^{64} P_x(t)}{\displaystyle\sum_{x=65}^{\omega} P_x(t)}
+\end{align}
+
+%\subsection{Razón de masculinidad}
+
+%\begin{equation}
+%\text{Razón de masculinidad}(t) = \frac{\displaystyle\sum_{x} P_{x,m}(t)}{\displaystyle\sum_{x} P_{x,f}(t)} \times 100
+%\end{equation}
+
+%\subsection{Tasa de participación laboral ajustada}
+
+%La tasa de participación laboral agregada depende no solo del tamaño de la PET sino de la composición de la población por origen migratorio, dado que las tasas de participación difieren entre nativos, inmigrantes venezolanos y colombianos retornados:
+
+%\begin{equation}
+%\label{eq:pea}
+%\text{PEA}(t) = \sum_{x,s} P^{\text{nat}}_{x,s}(t) \cdot \lambda^{\text{nat}}_{x,s} + \sum_{x,s} P^{\text{ven}}_{x,s}(t) \cdot \lambda^{\text{ven}}_{x,s} + \sum_{x,s} P^{\text{ret}}_{x,s}(t) \cdot \lambda^{\text{ret}}_{x,s}
+%\end{equation}
+
+%\noindent donde $\lambda^o_{x,s}$ es la tasa de participación del grupo de edad $x$, sexo $s$, y origen $o$, estimada a partir de la GEIH.
+
+%\subsection{Bono demográfico}
+
+%\begin{equation}
+%\text{Tasa de Participación Laboral }(t)=\frac{\sum_x \lambda_x(t)\,P_x(t)}{\sum_x P_x(t)}
+%\end{equation}
+
+El bono demográfico se define como el período durante el cual la tasa de dependencia total se mantiene por debajo de un umbral. Siguiendo la convención del DANE, el bono finaliza cuando la relación de personas dependientes por cada tres personas en edad de trabajar supera la unidad, es decir:
+
+\begin{equation}
+\frac{\displaystyle\sum_{x=0}^{14} P_x(t) + \sum_{x=65}^{+100} P_x(t)}{\displaystyle\sum_{x=15}^{64} P_x(t)} > \frac{2}{3} 
+\end{equation}
+
+%El año en que esta condición se cumple varía entre escenarios, lo que constituye uno de los resultados más relevantes del ejercicio.
+
+\section{Resultados}
+
+La presente sección compara la evolución de un conjunto de indicadores demográficos y laborales bajo el escenario base y el escenario alternativo. En todos los casos, la comparación sugiere que una mayor emigración reduce el tamaño de la población y de la fuerza laboral potencial, y además acelera el deterioro de varios indicadores de envejecimiento y dependencia en el largo plazo. %Los valores reportados a continuación provienen de la matriz consolidada de resultados por escenario. :contentReference[oaicite:0]{index=0}
+
+\subsection{Población total}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={Población total},
+    xmin=2018, xmax=2070,
+    ymin=45500000, ymax=56200000,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    yticklabel style={/pgf/number format/.cd,fixed,precision=0,1000 sep={,}},
+    scaled y ticks=false,
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2018,48258494)(2019,49266526)(2020,50390790)(2021,51115637)(2022,51643565)(2023,52117067)
+(2024,52613753)(2025,53057212)(2026,53399171)(2027,53712233)(2028,54001502)(2029,54269406)
+(2030,54518223)(2031,54747818)(2032,54958383)(2033,55149988)(2034,55322674)(2035,55476504)
+(2036,55611578)(2037,55728042)(2038,55826079)(2039,55905896)(2040,55967762)(2041,56011924)
+(2042,56038651)(2043,56048194)(2044,56040786)(2045,56016662)(2046,55976045)(2047,55919179)
+(2048,55846298)(2049,55757657)(2050,55653490)(2051,55534043)(2052,55399539)(2053,55250202)
+(2054,55086260)(2055,54907921)(2056,54715374)(2057,54508782)(2058,54288293)(2059,54054043)
+(2060,53806118)(2061,53544613)(2062,53269610)(2063,52981169)(2064,52679381)(2065,52364311)
+(2066,52036013)(2067,51694579)(2068,51340058)(2069,50972537)(2070,50592097)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2018,48258494)(2019,49266526)(2020,50390790)(2021,51115637)(2022,51643565)(2023,52117067)
+(2024,52613753)(2025,53057212)(2026,53399171)(2027,53712233)(2028,53997502)(2029,54252928)
+(2030,54475832)(2031,54659200)(2032,54793200)(2033,54862865)(2034,54910609)(2035,54939807)
+(2036,54950554)(2037,54942994)(2038,54917213)(2039,54873522)(2040,54812199)(2041,54733502)
+(2042,54637612)(2043,54524797)(2044,54395309)(2045,54249403)(2046,54087328)(2047,53909352)
+(2048,53715738)(2049,53506771)(2050,53282719)(2051,53043864)(2052,52790465)(2053,52522787)
+(2054,52241101)(2055,51945659)(2056,51636697)(2057,51314429)(2058,50979053)(2059,50630761)
+(2060,50269696)(2061,49896011)(2062,49509852)(2063,49111340)(2064,48700633)(2065,48277864)
+(2066,47843156)(2067,47396672)(2068,46938633)(2069,46469100)(2070,45988329)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Población total en los escenarios base y alternativo, 2018--2070.}
+\label{fig:res_pob_total}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_pob_total} muestra la trayectoria de la población total en ambos escenarios. Este indicador resume el tamaño agregado de la población y permite identificar si un mayor flujo emigratorio altera únicamente la composición por edades o también el volumen total de habitantes. La gráfica sugiere que la mayor emigración del escenario alternativo termina reduciendo de forma persistente el tamaño de la población, sin modificar la forma general del ciclo demográfico: en ambos casos la población sigue creciendo durante varias décadas, alcanza un máximo hacia mediados del siglo y luego entra en una fase de descenso. La diferencia clave es que en el escenario alternativo ese descenso parte de un nivel más bajo y se vuelve más pronunciado en el largo plazo. Hacia 2070, la población total es de 50.592.097 personas en el escenario base y de 45.988.329 en el alternativo. 
+
+\subsection{Población en edad de trabajar (PET)}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={PET},
+    xmin=2018, xmax=2070,
+    ymin=40000000, ymax=48500000,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    yticklabel style={/pgf/number format/.cd,fixed,precision=0,1000 sep={,}},
+    scaled y ticks=false,
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2018,36107311)(2019,37094982)(2020,38170369)(2021,38942373)(2022,39568377)(2023,40150571)
+(2024,40752623)(2025,41310792)(2026,41790456)(2027,42247198)(2028,42685464)(2029,43107513)
+(2030,43515438)(2031,43908888)(2032,44288156)(2033,44651788)(2034,44997385)(2035,45331632)
+(2036,45645818)(2037,45942500)(2038,46222676)(2039,46485932)(2040,46730583)(2041,46955385)
+(2042,47160529)(2043,47345659)(2044,47510504)(2045,47654914)(2046,47778838)(2047,47882359)
+(2048,47965648)(2049,48028982)(2050,48072673)(2051,48097132)(2052,48102773)(2053,48090049)
+(2054,48059435)(2055,48011397)(2056,47946373)(2057,47864751)(2058,47766872)(2059,47653032)
+(2060,47523447)(2061,47378314)(2062,47217784)(2063,47041974)(2064,46851010)(2065,46644980)
+(2066,46423931)(2067,46187956)(2068,45937077)(2069,45671367)(2070,45390881)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2018,36107311)(2019,37094982)(2020,38170369)(2021,38942373)(2022,39568377)(2023,40150571)
+(2024,40752623)(2025,41310792)(2026,41790456)(2027,42247198)(2028,42681567)(2029,43091442)
+(2030,43474059)(2031,43822316)(2032,44126676)(2033,44370936)(2034,44593843)(2035,44805348)
+(2036,44996782)(2037,45170742)(2038,45328169)(2039,45468784)(2040,45590941)(2041,45693431)
+(2042,45776383)(2043,45839477)(2044,45882477)(2045,45905272)(2046,45907850)(2047,45890337)
+(2048,45852948)(2049,45796010)(2050,45719871)(2051,45624976)(2052,45511778)(2053,45380769)
+(2054,45232467)(2055,45067381)(2056,44885998)(2057,44688755)(2058,44476045)(2059,44248219)
+(2060,44005550)(2061,43748293)(2062,43476662)(2063,43190837)(2064,42891011)(2065,42577337)
+(2066,42249934)(2067,41908965)(2068,41554622)(2069,41186953)(2070,40806187)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Población en edad de trabajar (PET) en los escenarios base y alternativo, 2018--2070.}
+\label{fig:res_pet}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_pet} presenta la evolución de la población en edad de trabajar, definida aquí como la población de 15 años o más en sentido laboral. Este indicador es relevante porque aproxima el universo potencial de personas que podrían participar en el mercado de trabajo, independientemente de que efectivamente lo hagan. La gráfica muestra que en ambos escenarios la PET continúa creciendo durante varias décadas, pero en el escenario alternativo lo hace a un ritmo menor y luego comienza a reducirse antes y con mayor intensidad. En otras palabras, una mayor emigración no solo reduce la población total, sino que erosiona de forma persistente la base demográfica potencial del mercado laboral. En el largo plazo, este efecto se vuelve especialmente relevante porque disminuye la capacidad potencial de sostener económicamente a una población más envejecida. En 2070, la PET asciende a 45.390.881 personas en el escenario base y a 40.806.187 en el alternativo. 
+
+\subsection{Población económicamente activa (PEA)}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={PEA},
+    xmin=2023, xmax=2070,
+    ymin=24000000, ymax=33000000,
+    xtick={2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    yticklabel style={/pgf/number format/.cd,fixed,precision=0,1000 sep={,}},
+    scaled y ticks=false,
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2023,25518483)(2024,26006738)(2025,26467393)(2026,26876351)(2027,27267966)(2028,27645200)
+(2029,28009315)(2030,28362959)(2031,28703798)(2032,29033243)(2033,29350346)(2034,29655682)
+(2035,29949544)(2036,30230519)(2037,30498399)(2038,30753527)(2039,30996553)(2040,31225373)
+(2041,31439665)(2042,31640626)(2043,31826531)(2044,31998548)(2045,32153624)(2046,32292718)
+(2047,32414938)(2048,32521074)(2049,32608291)(2050,32678562)(2051,32605179)(2052,32511051)
+(2053,32396529)(2054,32261596)(2055,32106849)(2056,31932512)(2057,31739516)(2058,31528125)
+(2059,31299275)(2060,31053330)(2061,30791308)(2062,30513417)(2063,30220643)(2064,29913790)
+(2065,29594251)(2066,29262883)(2067,28921322)(2068,28570366)(2069,28211304)(2070,27844721)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2023,25518483)(2024,26006738)(2025,26467393)(2026,26876351)(2027,27267966)(2028,27642213)
+(2029,27996945)(2030,28330978)(2031,28636635)(2032,28907517)(2033,29130941)(2034,29339176)
+(2035,29535172)(2036,29717693)(2037,29886668)(2038,30042472)(2039,30185913)(2040,30315027)
+(2041,30429573)(2042,30530723)(2043,30616861)(2044,30689159)(2045,30744749)(2046,30784602)
+(2047,30807927)(2048,30815507)(2049,30804747)(2050,30777594)(2051,30612260)(2052,30427640)
+(2053,30224215)(2054,30002126)(2055,29762108)(2056,29504544)(2057,29230499)(2058,28940401)
+(2059,28635306)(2060,28315720)(2061,27982761)(2062,27636762)(2063,27278780)(2064,26909719)
+(2065,26531002)(2066,26143542)(2067,25748967)(2068,25348163)(2069,24942277)(2070,24531948)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Población económicamente activa (PEA) en los escenarios base y alternativo, 2023--2070.}
+\label{fig:res_pea}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_pea} muestra la evolución de la población económicamente activa, es decir, la fuerza de trabajo compuesta por ocupados y desocupados que buscan empleo. Este indicador es central porque aproxima la oferta laboral efectiva y, por tanto, la capacidad productiva potencial de la economía. En ambos escenarios la PEA crece durante un período largo y luego se reduce, pero el escenario alternativo conduce a un punto máximo más bajo y a una caída posterior más acelerada. Esto sugiere que una mayor emigración termina afectando no solo el tamaño de la población, sino también el número de personas efectivamente vinculadas o disponibles para vincularse al mercado laboral. En el largo plazo, este efecto puede traducirse en menores posibilidades de crecimiento y en mayores presiones sobre el financiamiento de pensiones, salud y cuidado. En 2070, la PEA es de 27.844.721 personas en el escenario base y de 24.531.948 en el alternativo. 
+
+\begin{comment}
+\subsection{Razón de masculinidad}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={Razón de masculinidad},
+    xmin=2018, xmax=2070,
+    ymin=0.95, ymax=0.99,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2018,0.96)(2019,0.96)(2020,0.96)(2021,0.96)(2022,0.96)(2023,0.96)(2024,0.96)(2025,0.96)
+(2026,0.96)(2027,0.96)(2028,0.96)(2029,0.96)(2030,0.96)(2031,0.96)(2032,0.96)(2033,0.96)
+(2034,0.96)(2035,0.96)(2036,0.97)(2037,0.97)(2038,0.97)(2039,0.97)(2040,0.97)(2041,0.97)
+(2042,0.97)(2043,0.97)(2044,0.97)(2045,0.97)(2046,0.97)(2047,0.97)(2048,0.97)(2049,0.97)
+(2050,0.97)(2051,0.97)(2052,0.97)(2053,0.97)(2054,0.97)(2055,0.97)(2056,0.97)(2057,0.98)
+(2058,0.98)(2059,0.98)(2060,0.98)(2061,0.98)(2062,0.98)(2063,0.98)(2064,0.98)(2065,0.98)
+(2066,0.98)(2067,0.98)(2068,0.98)(2069,0.98)(2070,0.98)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2018,0.96)(2019,0.96)(2020,0.96)(2021,0.96)(2022,0.96)(2023,0.96)(2024,0.96)(2025,0.96)
+(2026,0.96)(2027,0.96)(2028,0.96)(2029,0.96)(2030,0.96)(2031,0.96)(2032,0.96)(2033,0.96)
+(2034,0.96)(2035,0.96)(2036,0.96)(2037,0.96)(2038,0.96)(2039,0.96)(2040,0.96)(2041,0.96)
+(2042,0.96)(2043,0.96)(2044,0.96)(2045,0.96)(2046,0.96)(2047,0.96)(2048,0.96)(2049,0.96)
+(2050,0.96)(2051,0.96)(2052,0.96)(2053,0.96)(2054,0.96)(2055,0.96)(2056,0.96)(2057,0.96)
+(2058,0.96)(2059,0.96)(2060,0.96)(2061,0.96)(2062,0.96)(2063,0.96)(2064,0.96)(2065,0.96)
+(2066,0.96)(2067,0.96)(2068,0.96)(2069,0.96)(2070,0.96)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Razón de masculinidad en los escenarios base y alternativo, 2018--2070.}
+\label{fig:res_masc}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_masc} presenta la razón de masculinidad, entendida como la relación entre la población masculina y la femenina. Este indicador permite identificar cambios en la composición por sexo de la población total y es útil para evaluar si la emigración altera de manera diferenciada a hombres y mujeres. La gráfica muestra que las diferencias entre escenarios son pequeñas en comparación con otros indicadores, lo que sugiere que el principal efecto de una mayor emigración en este ejercicio no opera a través de una fuerte modificación de la estructura por sexo, sino a través del tamaño y la estructura por edades de la población. Aun así, en el largo plazo el escenario alternativo mantiene una razón de masculinidad ligeramente menor que el escenario base, lo que indica una composición relativamente más femenina. En 2070, la razón de masculinidad es 0,98 en el escenario base y 0,96 en el alternativo. :contentReference[oaicite:4]{index=4}
+\end{comment}
+
+\subsection{Dependencia total}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={Dependencia total},
+    xmin=2018, xmax=2070,
+    ymin=0.45, ymax=0.71,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2018,0.524820659)(2019,0.516057962)(2020,0.507897079)(2021,0.500511941)(2022,0.493998124)
+(2023,0.48886223)(2024,0.484929492)(2025,0.481770652)(2026,0.479379676)(2027,0.477497203)
+(2028,0.476009419)(2029,0.474742616)(2030,0.473547487)(2031,0.472367337)(2032,0.471135701)
+(2033,0.469855261)(2034,0.468602442)(2035,0.467094175)(2036,0.46556049)(2037,0.46390745)
+(2038,0.462194816)(2039,0.460505741)(2040,0.45899596)(2041,0.457926699)(2042,0.457483438)
+(2043,0.457696569)(2044,0.458591534)(2045,0.460155795)(2046,0.462205177)(2047,0.464612573)
+(2048,0.467338634)(2049,0.470288741)(2050,0.473457961)(2051,0.47701185)(2052,0.48102839)
+(2053,0.485605743)(2054,0.490911481)(2055,0.497024446)(2056,0.503966759)(2057,0.511770021)
+(2058,0.520427966)(2059,0.529829818)(2060,0.539730635)(2061,0.549922587)(2062,0.560400204)
+(2063,0.571239473)(2064,0.582334601)(2065,0.593660474)(2066,0.605191403)(2067,0.61667942)
+(2068,0.628175911)(2069,0.63976851)(2070,0.651524306)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2018,0.524820659)(2019,0.516057962)(2020,0.507897079)(2021,0.500511941)(2022,0.493998124)
+(2023,0.48886223)(2024,0.484929492)(2025,0.481770652)(2026,0.479379676)(2027,0.477497203)
+(2028,0.476049771)(2029,0.474907766)(2030,0.473969785)(2031,0.473245272)(2032,0.472763997)
+(2033,0.472674175)(2034,0.472636894)(2035,0.472329512)(2036,0.471981423)(2037,0.471493679)
+(2038,0.470924939)(2039,0.47035691)(2040,0.469949212)(2041,0.469973656)(2042,0.470627898)
+(2043,0.471948887)(2044,0.473968651)(2045,0.476679233)(2046,0.479890208)(2047,0.483468521)
+(2048,0.487372151)(2049,0.491498133)(2050,0.495840075)(2051,0.500575617)(2052,0.505789846)
+(2053,0.511590979)(2054,0.518162973)(2055,0.525593013)(2056,0.533904671)(2057,0.54312886)
+(2058,0.553249422)(2059,0.564124734)(2060,0.575479554)(2061,0.587078011)(2062,0.598910096)
+(2063,0.611058918)(2064,0.623402975)(2065,0.635913512)(2066,0.648562489)(2067,0.661067309)
+(2068,0.673491119)(2069,0.685947079)(2070,0.69851469)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Dependencia total en los escenarios base y alternativo, 2018--2070.}
+\label{fig:res_dep_total}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_dep_total} muestra la tasa de dependencia total, definida como la relación entre la población en edades potencialmente dependientes y la población de 15 a 64 años. Este indicador resume la carga demográfica agregada sobre la población en edades centrales de trabajo. La gráfica sugiere una dinámica de dos etapas: primero, una reducción asociada a la caída del peso relativo de la población joven, y posteriormente un aumento sostenido impulsado por el envejecimiento. La mayor emigración del escenario alternativo hace que este deterioro posterior sea más fuerte, porque reduce en mayor medida la base poblacional que sostiene a los grupos dependientes. En el largo plazo, por tanto, la emigración agrava la carga demográfica total. En 2070, la dependencia total es 0,6515 en el escenario base y 0,6985 en el alternativo.
+
+\subsection{Dependencia juvenil}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={Dependencia juvenil},
+    xmin=2018, xmax=2070,
+    ymin=0.16, ymax=0.39,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2018,0.38394018)(2019,0.374549774)(2020,0.365684625)(2021,0.357349122)(2022,0.349323448)
+(2023,0.341854693)(2024,0.334759274)(2025,0.328051546)(2026,0.321609806)(2027,0.315376148)
+(2028,0.309298409)(2029,0.303318582)(2030,0.297389117)(2031,0.291498129)(2032,0.285622521)
+(2033,0.279797604)(2034,0.274096379)(2035,0.268284437)(2036,0.262632794)(2037,0.257054211)
+(2038,0.251532014)(2039,0.246090529)(2040,0.24079946)(2041,0.235731413)(2042,0.230906982)
+(2043,0.226334776)(2044,0.222020389)(2045,0.217961127)(2046,0.214127284)(2047,0.210497147)
+(2048,0.207060855)(2049,0.203799522)(2050,0.200706464)(2051,0.197795894)(2052,0.195068728)
+(2053,0.192527159)(2054,0.190181255)(2055,0.1880287)(2056,0.186060183)(2057,0.184268415)
+(2058,0.182642524)(2059,0.181160501)(2060,0.179786637)(2061,0.178492019)(2062,0.17727313)
+(2063,0.176136121)(2064,0.175067226)(2065,0.174062669)(2066,0.173119831)(2067,0.172212333)
+(2068,0.171347752)(2069,0.170536766)(2070,0.169788073)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2018,0.38394018)(2019,0.374549774)(2020,0.365684625)(2021,0.357349122)(2022,0.349323448)
+(2023,0.341854693)(2024,0.334759274)(2025,0.328051546)(2026,0.321609806)(2027,0.315376148)
+(2028,0.309326973)(2029,0.303433608)(2030,0.297678452)(2031,0.292089672)(2032,0.28670115)
+(2033,0.281633008)(2034,0.276683333)(2035,0.27159293)(2036,0.266635494)(2037,0.26172232)
+(2038,0.256836857)(2039,0.252003531)(2040,0.247294973)(2041,0.242788522)(2042,0.238509147)
+(2043,0.234468502)(2044,0.230675168)(2045,0.227128866)(2046,0.223799716)(2047,0.220665912)
+(2048,0.217718219)(2049,0.214937007)(2050,0.212316701)(2051,0.20987538)(2052,0.207616522)
+(2053,0.20554527)(2054,0.203675832)(2055,0.202008274)(2056,0.200534305)(2057,0.199247431)
+(2058,0.198136145)(2059,0.197174436)(2060,0.196321741)(2061,0.195544862)(2062,0.194840568)
+(2063,0.194217438)(2064,0.193659882)(2065,0.193164489)(2066,0.192729258)(2067,0.192322592)
+(2068,0.191954795)(2069,0.191641761)(2070,0.191395154)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Dependencia juvenil en los escenarios base y alternativo, 2018--2070.}
+\label{fig:res_dep_juv}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_dep_juv} presenta la tasa de dependencia juvenil, que relaciona la población de 0 a 14 años con la población de 15 a 64 años. Este indicador capta la carga asociada a la población infantil y adolescente. En ambos escenarios, la tendencia es claramente descendente, lo que refleja la pérdida de peso relativo de las cohortes jóvenes dentro de la estructura demográfica. La mayor emigración del escenario alternativo no revierte esta tendencia, pero sí la hace menos pronunciada: al reducir la población de 15 a 64 años en mayor medida que la población infantil, el cociente termina siendo más alto que en el escenario base. Por ello, incluso cuando la presión juvenil cae en términos generales, una mayor emigración puede impedir que esa reducción se traduzca plenamente en una mejora de la carga demográfica. En 2070, la dependencia juvenil es 0,1698 en el escenario base y 0,1914 en el alternativo. 
+
+\subsection{Dependencia senil}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={Dependencia senil},
+    xmin=2018, xmax=2070,
+    ymin=0.14, ymax=0.52,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2018,0.140880479)(2019,0.141508187)(2020,0.142212455)(2021,0.143162819)(2022,0.144674675)
+(2023,0.147007537)(2024,0.150170218)(2025,0.153719106)(2026,0.15776987)(2027,0.162121055)
+(2028,0.166711009)(2029,0.171424034)(2030,0.176158371)(2031,0.180869208)(2032,0.185513181)
+(2033,0.190057657)(2034,0.194506062)(2035,0.198809738)(2036,0.202927696)(2037,0.20685324)
+(2038,0.210662802)(2039,0.214415213)(2040,0.2181965)(2041,0.222195285)(2042,0.226576456)
+(2043,0.231361793)(2044,0.236571145)(2045,0.242194667)(2046,0.248077892)(2047,0.254115427)
+(2048,0.260277779)(2049,0.266489219)(2050,0.272751498)(2051,0.279215956)(2052,0.285959662)
+(2053,0.293078584)(2054,0.300730225)(2055,0.308995745)(2056,0.317906576)(2057,0.327501605)
+(2058,0.337785442)(2059,0.348669317)(2060,0.359943998)(2061,0.371430568)(2062,0.383127073)
+(2063,0.395103351)(2064,0.407267375)(2065,0.419597805)(2066,0.432071572)(2067,0.444467087)
+(2068,0.456828159)(2069,0.469231743)(2070,0.481736233)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2018,0.140880479)(2019,0.141508187)(2020,0.142212455)(2021,0.143162819)(2022,0.144674675)
+(2023,0.147007537)(2024,0.150170218)(2025,0.153719106)(2026,0.15776987)(2027,0.162121055)
+(2028,0.166722798)(2029,0.171474158)(2030,0.176291333)(2031,0.1811556)(2032,0.186062847)
+(2033,0.191041167)(2034,0.195953561)(2035,0.200736582)(2036,0.205345929)(2037,0.209771359)
+(2038,0.214088083)(2039,0.21835338)(2040,0.222654239)(2041,0.227185134)(2042,0.232118751)
+(2043,0.237480386)(2044,0.243293483)(2045,0.249550368)(2046,0.256090492)(2047,0.26280261)
+(2048,0.269653932)(2049,0.276561127)(2050,0.283523374)(2051,0.290700237)(2052,0.298173324)
+(2053,0.306045709)(2054,0.314487141)(2055,0.323584739)(2056,0.333370365)(2057,0.343881429)
+(2058,0.355113277)(2059,0.366950298)(2060,0.379157813)(2061,0.391533149)(2062,0.404069527)
+(2063,0.416841481)(2064,0.429743093)(2065,0.442749023)(2066,0.455833232)(2067,0.468744717)
+(2068,0.481536324)(2069,0.494305318)(2070,0.507119536)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Dependencia senil en los escenarios base y alternativo, 2018--2070.}
+\label{fig:res_dep_sen}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_dep_sen} muestra la tasa de dependencia senil, definida como la relación entre la población de 65 años o más y la población de 15 a 64 años. Se trata de uno de los indicadores más directos de la presión asociada al envejecimiento. En ambos escenarios la dependencia senil crece de manera sostenida, lo que indica que el envejecimiento es una fuerza estructural del proceso demográfico. El escenario alternativo intensifica este resultado, pues la mayor emigración reduce con más fuerza la población en edades centrales de trabajo, haciendo que el peso relativo de la población mayor aumente todavía más. En el largo plazo, por tanto, la emigración agrava la carga asociada a la vejez y refuerza los desafíos para el sistema pensional, el gasto en salud y las necesidades de cuidado. En 2070, la dependencia senil es 0,4817 en el escenario base y 0,5071 en el alternativo. 
+
+\subsection{Índice de envejecimiento}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=15cm,
+    height=8cm,
+    xlabel={Año},
+    ylabel={Índice de envejecimiento},
+    xmin=2018, xmax=2070,
+    ymin=0.35, ymax=2.70,
+    xtick={2018,2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
+    xticklabel style={rotate=45, anchor=east},
+    grid=both,
+    major grid style={dashed, gray!50},
+    minor grid style={gray!20},
+    legend style={at={(0.5,-0.18)},anchor=north,legend columns=2,draw=none},
+    line width=1pt
+]
+\addplot[blue, mark=none] coordinates {
+(2018,0.366933409)(2019,0.377808764)(2020,0.388893721)(2021,0.400624516)(2022,0.414156782)
+(2023,0.430029308)(2024,0.44859166)(2025,0.468582172)(2026,0.490562995)(2027,0.514056172)
+(2028,0.538997306)(2029,0.565161662)(2030,0.592349755)(2031,0.620481542)(2032,0.649504739)
+(2033,0.679268351)(2034,0.70962653)(2035,0.741040892)(2036,0.772667012)(2037,0.804706678)
+(2038,0.837518846)(2039,0.87128592)(2040,0.90613368)(2041,0.942578175)(2042,0.981245583)
+(2043,1.02221054)(2044,1.065537927)(2045,1.111182853)(2046,1.158553395)(2047,1.20721554)
+(2048,1.257011033)(2049,1.307604732)(2050,1.358957221)(2051,1.411636767)(2052,1.465943132)
+(2053,1.522271382)(2054,1.581282158)(2055,1.643343516)(2056,1.708622292)(2057,1.77730733)
+(2058,1.849434809)(2059,1.924643154)(2060,2.002062021)(2061,2.080936555)(2062,2.161224728)
+(2063,2.243170497)(2064,2.326348477)(2065,2.410613409)(2066,2.495794787)(2067,2.580924825)
+(2068,2.66608785)(2069,2.751499009)(2070,2.83727959)
+};
+\addlegendentry{Escenario base}
+\addplot[red, dashed, mark=none] coordinates {
+(2018,0.366933409)(2019,0.377808764)(2020,0.388893721)(2021,0.400624516)(2022,0.414156782)
+(2023,0.430029308)(2024,0.44859166)(2025,0.468582172)(2026,0.490562995)(2027,0.514056172)
+(2028,0.538985644)(2029,0.56511261)(2030,0.592220673)(2031,0.620205427)(2032,0.648978378)
+(2033,0.678333723)(2034,0.708223222)(2035,0.739108273)(2036,0.770137263)(2037,0.801503512)
+(2038,0.8335567)(2039,0.866469527)(2040,0.900358936)(2041,0.935732595)(2042,0.973206913)
+(2043,1.012845581)(2044,1.054701666)(2045,1.098717095)(2046,1.144284262)(2047,1.190952457)
+(2048,1.238545555)(2049,1.286707817)(2050,1.335379515)(2051,1.385108806)(2052,1.436173392)
+(2053,1.488945518)(2054,1.544057229)(2055,1.601839038)(2056,1.662410651)(2057,1.725901444)
+(2058,1.792269036)(2059,1.861043982)(2060,1.931308321)(2061,2.002267643)(2062,2.073846999)
+(2063,2.14626187)(2064,2.219061008)(2065,2.292082898)(2066,2.36514807)(2067,2.437283694)
+(2068,2.508592318)(2069,2.579319436)(2070,2.649594436)
+};
+\addlegendentry{Escenario alternativo}
+\end{axis}
+\end{tikzpicture}
+\caption{Índice de envejecimiento en los escenarios base y alternativo, 2018--2070.}
+\label{fig:res_ind_env}
+\vspace{0.2cm}
+\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\end{figure}
+
+La Figura \ref{fig:res_ind_env} reporta el índice de envejecimiento, definido como la relación entre la población de 65 años o más y la población menor de 15 años. Este indicador resume el tránsito desde una estructura relativamente joven hacia una estructura demográfica envejecida. La gráfica revela un incremento continuo y acelerado en ambos escenarios, lo que indica que la población mayor gana peso relativo frente a la población infantil a lo largo de todo el horizonte de proyección. Sin embargo, a diferencia de otros indicadores de dependencia, el escenario alternativo no profundiza el envejecimiento medido por este cociente, sino que lo modera ligeramente en el largo plazo. Esto sugiere que la mayor emigración reduce tanto la población en edades laborales como otros grupos etarios, de modo que el efecto neto sobre la relación entre mayores y menores de 15 años resulta algo menos pronunciado que en el escenario base. En 2070, el índice de envejecimiento es 2,8373 en el escenario base y 2,6496 en el alternativo.
+
+\subsection{Síntesis}
+
+En conjunto, los resultados muestran que una mayor emigración no solo reduce el tamaño de la población total, la PET y la PEA, sino que además tiende a empeorar la mayor parte de los indicadores de dependencia y envejecimiento en el largo plazo. El escenario alternativo no altera la dirección general de la transición demográfica, pero sí la vuelve más exigente desde el punto de vista económico, laboral y fiscal. 
+
+\section{Conclusiones}
+
+Los resultados muestran que Colombia enfrenta una transición demográfica profunda, caracterizada por la pérdida gradual del peso relativo de la población joven y el aumento sostenido de la población mayor. En una primera etapa, esta transformación reduce la tasa de dependencia total, debido a la caída de la dependencia juvenil. Sin embargo, esa mejora es transitoria: a medida que avanza el horizonte de proyección, el aumento de la dependencia senil más que compensa la reducción del componente juvenil, y la carga demográfica total vuelve a incrementarse.
+
+En este contexto, el principal rasgo estructural no es simplemente la reducción de la fecundidad o el cambio en la composición etaria, sino el avance persistente del envejecimiento poblacional. Esto se refleja con claridad en la trayectoria ascendente del índice de envejecimiento. En otras palabras, la población en edad de trabajar deberá sostener, de manera creciente, a una población mayor cada vez más numerosa. Desde una perspectiva económica y fiscal, este cambio tiene implicaciones importantes para el mercado laboral, el sistema pensional, el gasto en salud y las necesidades de cuidado de largo plazo.
+
+La comparación entre escenarios indica que el escenario alternativo agrava estas tendencias, pero no modifica el diagnóstico de fondo. Las diferencias entre ambos escenarios son en general moderadas al inicio y se amplían gradualmente hacia el final del período. Esto sugiere que la dinámica central está determinada por el proceso de envejecimiento demográfico, mientras que el escenario alternativo actúa principalmente como un factor que intensifica una trayectoria ya desfavorable.
 
 \end{document}
