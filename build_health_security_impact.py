@@ -10,8 +10,8 @@ OUT = ROOT / "outputs"
 
 SMLMV_2026 = 1_750_905
 HEALTH_CONTRIBUTION_RATE = 0.125
-EFFECTIVE_CONTRIBUTION_RATES = [0.4, 0.5, 0.6]
-CENTRAL_EFFECTIVE_CONTRIBUTION_RATE = 0.5
+FORMALITY_RATE = 0.447
+EFFECTIVE_CONTRIBUTION_RATE = FORMALITY_RATE
 
 # UPC-C 2026, annual value, normal zone, by age/sex group.
 # Source: Resolucion 2764 de 2025, Ministerio de Salud y Proteccion Social.
@@ -209,8 +209,8 @@ def main():
             "smlmv_2026": SMLMV_2026,
             "health_contribution_rate": HEALTH_CONTRIBUTION_RATE,
             "annual_contribution_per_worker": annual_contribution_per_worker,
-            "effective_contribution_rates": EFFECTIVE_CONTRIBUTION_RATES,
-            "central_effective_contribution_rate": CENTRAL_EFFECTIVE_CONTRIBUTION_RATE,
+            "formality_rate": FORMALITY_RATE,
+            "effective_contribution_rate": EFFECTIVE_CONTRIBUTION_RATE,
             "upc_regime": "UPC-C 2026, zona normal",
             "upc_c_2026": UPC_C_2026,
             "max_emigration_rebuild_error": max_rebuild_error,
@@ -226,28 +226,19 @@ def main():
             if pea is None:
                 continue
             cost = upc_cost(pop[year])
-            revenue_by_rate = {}
-            balance_by_rate = {}
-            balance_ratio_by_rate = {}
-            contributors_by_rate = {}
-            for rate in EFFECTIVE_CONTRIBUTION_RATES:
-                contributors = pea * rate
-                revenue = contributors * annual_contribution_per_worker
-                balance = revenue - cost
-                contributors_by_rate[str(rate)] = contributors
-                revenue_by_rate[str(rate)] = revenue
-                balance_by_rate[str(rate)] = balance
-                balance_ratio_by_rate[str(rate)] = balance / cost
+            contributors = pea * EFFECTIVE_CONTRIBUTION_RATE
+            revenue = contributors * annual_contribution_per_worker
+            balance = revenue - cost
             rows.append(
                 {
                     "year": year,
                     "population_total": indicator_by_year[year]["total"],
                     "pea": pea,
                     "upc_cost": cost,
-                    "contributors_by_rate": contributors_by_rate,
-                    "revenue_by_rate": revenue_by_rate,
-                    "balance_by_rate": balance_by_rate,
-                    "balance_ratio_by_rate": balance_ratio_by_rate,
+                    "contributors": contributors,
+                    "revenue": revenue,
+                    "balance": balance,
+                    "balance_ratio": balance / cost,
                 }
             )
         result["scenarios"][scenario] = rows
@@ -263,13 +254,12 @@ def main():
         print(scenario)
         for year in [2028, 2034, 2050, 2070]:
             row = indexed[year]
-            rate_key = str(CENTRAL_EFFECTIVE_CONTRIBUTION_RATE)
             print(
                 year,
-                round(row["revenue_by_rate"][rate_key] / 1e12, 2),
+                round(row["revenue"] / 1e12, 2),
                 round(row["upc_cost"] / 1e12, 2),
-                round(row["balance_by_rate"][rate_key] / 1e12, 2),
-                round(row["balance_ratio_by_rate"][rate_key], 3),
+                round(row["balance"] / 1e12, 2),
+                round(row["balance_ratio"], 3),
             )
 
 
