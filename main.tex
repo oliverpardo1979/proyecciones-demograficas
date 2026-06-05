@@ -1406,7 +1406,7 @@ Como extensión del ejercicio demográfico, se construye una cuenta simplificada
 Por el lado de los ingresos, se supone que una fracción $\phi$ de la PEA realiza cotizaciones efectivas sobre un ingreso base igual a un salario mínimo mensual legal vigente de 2026. La cotización total a salud se fija en 12,5\% del ingreso base de cotización:
 
 \begin{equation}
-\text{Ingresos}_{j}(t;\phi)=\text{PEA}_{j}(t)\cdot \phi \cdot \text{SMLMV}_{2026}\cdot 12 \cdot 0{,}125,
+\text{Ingresos}_{j}(t)=\text{PEA}_{j}(t)\cdot \phi \cdot \text{SMLMV}_{2026}\cdot 12 \cdot 0{,}125,
 \end{equation}
 
 \noindent donde $j$ denota el escenario migratorio. La PEA ya incorpora la tasa de participación laboral, por lo que $\phi$ se interpreta como la proporción de esa PEA que realiza cotizaciones efectivas. En el ejercicio se usa $\phi=0{,}447$, correspondiente a una tasa de formalidad de 44,7\%. El salario mínimo utilizado es $1.750.905$ pesos mensuales, de acuerdo con el Decreto 159 de 2026.
@@ -1420,7 +1420,7 @@ Por el lado del gasto, se aplica a toda la población proyectada la UPC contribu
 \noindent La UPC utilizada corresponde a la estructura de costo por grupo etario de la UPC-C de la Resolución 2764 de 2025 del Ministerio de Salud y Protección Social. Finalmente, el balance simplificado se define como:
 
 \begin{equation}
-\text{Balance}_{j}(t;\phi)=\text{Ingresos}_{j}(t;\phi)-\text{Gasto}_{j}(t).
+\text{Balance}_{j}(t)=\text{Ingresos}_{j}(t;\phi)-\text{Gasto}_{j}(t).
 \end{equation}
 
 La Figura \ref{fig:balance_salud} muestra la evolución del balance bajo el supuesto de cotización efectiva del 44,7\% de la PEA. Los valores están expresados en billones de pesos de 2026.
