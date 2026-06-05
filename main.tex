@@ -1401,7 +1401,7 @@ Año & Escenario & Dep. total & Dep. juvenil & Dep. senil & Índice de envejecim
 
 \subsection{Impacto simplificado sobre el aseguramiento en salud}
 
-Como extensión del ejercicio demográfico, se construye una cuenta simplificada de ingresos y gastos del aseguramiento en salud. El objetivo no es reproducir la contabilidad completa del Sistema General de Seguridad Social en Salud, sino aproximar la presión financiera asociada a los cambios en tamaño y composición por edad de la población bajo cada escenario migratorio.
+Como extensión del ejercicio demográfico, se construye una cuenta parcial de ingresos y gastos del aseguramiento en salud. El objetivo no es reproducir la contabilidad completa del Sistema General de Seguridad Social en Salud, pues el sistema cuenta con fuentes adicionales de financiación que no se modelan en este ejercicio. El objetivo es más acotado: estimar cómo cambian los ingresos potenciales por cotización, el gasto esperado por UPC y el balance parcial frente al escenario base cuando cambia la trayectoria migratoria.
 
 Por el lado de los ingresos, se supone que una fracción $\phi$ de la PEA realiza cotizaciones efectivas sobre un ingreso base igual a un salario mínimo mensual legal vigente de 2026. La cotización total a salud se fija en 12,5\% del ingreso base de cotización:
 
@@ -1420,10 +1420,16 @@ Por el lado del gasto, se aplica a toda la población proyectada la UPC contribu
 \noindent La UPC utilizada corresponde a la estructura de costo por grupo etario de la UPC-C de la Resolución 2764 de 2025 del Ministerio de Salud y Protección Social. Finalmente, el balance simplificado se define como:
 
 \begin{equation}
-\text{Balance}_{j}(t;\phi)=\text{Ingresos}_{j}(t;\phi)-\text{Gasto}_{j}(t).
+\text{Balance parcial}_{j}(t;\phi)=\text{Ingresos}_{j}(t;\phi)-\text{Gasto}_{j}(t).
 \end{equation}
 
-La Figura \ref{fig:balance_salud} muestra la evolución del balance bajo el supuesto de cotización efectiva del 44,7\% de la PEA. Los valores están expresados en billones de pesos de 2026.
+El indicador de interés es la variación frente al escenario base:
+
+\begin{equation}
+\Delta \text{Balance}_{j}(t)=\text{Balance parcial}_{j}(t)-\text{Balance parcial}_{base}(t).
+\end{equation}
+
+La Figura \ref{fig:balance_salud} muestra esta variación bajo el supuesto de cotización efectiva del 44,7\% de la PEA. Los valores están expresados en billones de pesos de 2026.
 
 \begin{figure}[htbp]
 \centering
@@ -1432,9 +1438,9 @@ La Figura \ref{fig:balance_salud} muestra la evolución del balance bajo el supu
     width=15cm,
     height=8cm,
     xlabel={Año},
-    ylabel={Balance salud, billones de pesos de 2026},
+    ylabel={Variación del balance parcial, billones de pesos de 2026},
     xmin=2023, xmax=2070,
-    ymin=-130, ymax=-60,
+    ymin=-14, ymax=10,
     xtick={2023,2028,2033,2038,2043,2048,2053,2058,2063,2068},
     xticklabel style={rotate=45, anchor=east},
     grid=both,
@@ -1443,42 +1449,35 @@ La Figura \ref{fig:balance_salud} muestra la evolución del balance bajo el supu
     legend style={at={(0.5,-0.18)},anchor=north,legend columns=3,draw=none},
     line width=1pt
 ]
-\addplot[blue, mark=none] coordinates {
-(2023,-68.3491)(2024,-69.4033)(2025,-70.4330)(2026,-71.3995)(2027,-72.3681)(2028,-73.3393)
-(2029,-74.3137)(2030,-75.2912)(2031,-76.2733)(2032,-77.2579)(2033,-78.2453)(2034,-79.2349)
-(2035,-80.2263)(2036,-81.2214)(2037,-82.2197)(2038,-83.2201)(2039,-84.2233)(2040,-85.2208)
-(2041,-86.2102)(2042,-87.1911)(2043,-88.1667)(2044,-89.1343)(2045,-90.0953)(2046,-91.0472)
-(2047,-91.9900)(2048,-92.9283)(2049,-93.8671)(2050,-94.8050)(2051,-95.8933)(2052,-96.9894)
-(2053,-98.0919)(2054,-99.2002)(2055,-100.3103)(2056,-101.4163)(2057,-102.5130)(2058,-103.5988)
-(2059,-104.6695)(2060,-105.7214)(2061,-106.7531)(2062,-107.7621)(2063,-108.7479)(2064,-109.7083)
-(2065,-110.6414)(2066,-111.5380)(2067,-112.3924)(2068,-113.1980)(2069,-113.9470)(2070,-114.6352)
+\addplot[blue, dotted, mark=none] coordinates {
+(2023,0)(2070,0)
 };
 \addlegendentry{Escenario base}
 \addplot[red, dashed, mark=none] coordinates {
-(2023,-68.3491)(2024,-69.4033)(2025,-70.4330)(2026,-71.3995)(2027,-72.3681)(2028,-73.3362)
-(2029,-74.3009)(2030,-75.2582)(2031,-76.2042)(2032,-77.1288)(2033,-78.0205)(2034,-78.9103)
-(2035,-79.7996)(2036,-80.6898)(2037,-81.5798)(2038,-82.4678)(2039,-83.3538)(2040,-84.2289)
-(2041,-85.0902)(2042,-85.9370)(2043,-86.7718)(2044,-87.5915)(2045,-88.3970)(2046,-89.1857)
-(2047,-89.9572)(2048,-90.7162)(2049,-91.4670)(2050,-92.2082)(2051,-93.0852)(2052,-93.9600)
-(2053,-94.8309)(2054,-95.6967)(2055,-96.5534)(2056,-97.3951)(2057,-98.2164)(2058,-99.0155)
-(2059,-99.7884)(2060,-100.5315)(2061,-101.2433)(2062,-101.9218)(2063,-102.5666)(2064,-103.1759)
-(2065,-103.7482)(2066,-104.2746)(2067,-104.7502)(2068,-105.1686)(2069,-105.5231)(2070,-105.8100)
+(2023,0.0000)(2024,0.0000)(2025,0.0000)(2026,0.0000)(2027,0.0000)(2028,0.0031)
+(2029,0.0128)(2030,0.0330)(2031,0.0691)(2032,0.1291)(2033,0.2248)(2034,0.3246)
+(2035,0.4267)(2036,0.5316)(2037,0.6399)(2038,0.7523)(2039,0.8695)(2040,0.9919)
+(2041,1.1199)(2042,1.2541)(2043,1.3949)(2044,1.5428)(2045,1.6983)(2046,1.8615)
+(2047,2.0327)(2048,2.2121)(2049,2.4001)(2050,2.5968)(2051,2.8081)(2052,3.0294)
+(2053,3.2611)(2054,3.5035)(2055,3.7569)(2056,4.0212)(2057,4.2967)(2058,4.5833)
+(2059,4.8811)(2060,5.1899)(2061,5.5098)(2062,5.8403)(2063,6.1813)(2064,6.5324)
+(2065,6.8932)(2066,7.2634)(2067,7.6423)(2068,8.0293)(2069,8.4239)(2070,8.8252)
 };
 \addlegendentry{Emigración constante}
 \addplot[green!60!black, dash pattern=on 5pt off 2pt on 1pt off 2pt, mark=none] coordinates {
-(2023,-68.3491)(2024,-69.4033)(2025,-70.4330)(2026,-71.3995)(2027,-72.3681)(2028,-73.4702)
-(2029,-74.5764)(2030,-75.6875)(2031,-76.8055)(2032,-77.9288)(2033,-79.0584)(2034,-80.1953)
-(2035,-81.3396)(2036,-82.4938)(2037,-83.6578)(2038,-84.8308)(2039,-86.0148)(2040,-87.2020)
-(2041,-88.3901)(2042,-89.5791)(2043,-90.7723)(2044,-91.9674)(2045,-93.1662)(2046,-94.3663)
-(2047,-95.5678)(2048,-96.7753)(2049,-97.9953)(2050,-99.2260)(2051,-100.6284)(2052,-102.0514)
-(2053,-103.4938)(2054,-104.9552)(2055,-106.4315)(2056,-107.9168)(2057,-109.4055)(2058,-110.8955)
-(2059,-112.3824)(2060,-113.8620)(2061,-115.3323)(2062,-116.7901)(2063,-118.2341)(2064,-119.6615)
-(2065,-121.0698)(2066,-122.4485)(2067,-123.7908)(2068,-125.0886)(2069,-126.3312)(2070,-127.5128)
+(2023,0.0000)(2024,0.0000)(2025,0.0000)(2026,0.0000)(2027,0.0000)(2028,-0.1309)
+(2029,-0.2627)(2030,-0.3963)(2031,-0.5322)(2032,-0.6709)(2033,-0.8131)(2034,-0.9604)
+(2035,-1.1133)(2036,-1.2724)(2037,-1.4381)(2038,-1.6107)(2039,-1.7916)(2040,-1.9812)
+(2041,-2.1800)(2042,-2.3880)(2043,-2.6056)(2044,-2.8331)(2045,-3.0709)(2046,-3.3191)
+(2047,-3.5779)(2048,-3.8471)(2049,-4.1282)(2050,-4.4211)(2051,-4.7351)(2052,-5.0620)
+(2053,-5.4019)(2054,-5.7550)(2055,-6.1212)(2056,-6.5005)(2057,-6.8924)(2058,-7.2967)
+(2059,-7.7129)(2060,-8.1406)(2061,-8.5792)(2062,-9.0280)(2063,-9.4861)(2064,-9.9533)
+(2065,-10.4284)(2066,-10.9105)(2067,-11.3983)(2068,-11.8907)(2069,-12.3842)(2070,-12.8776)
 };
 \addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Balance simplificado de ingresos por cotización y gasto UPC bajo cotización efectiva del 44,7\% de la PEA.}
+\caption{Variación del balance parcial de salud frente al escenario base bajo cotización efectiva del 44,7\% de la PEA.}
 \label{fig:balance_salud}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios con base en Decreto 159 de 2026 y Resolución 2764 de 2025.}}
@@ -1486,38 +1485,34 @@ La Figura \ref{fig:balance_salud} muestra la evolución del balance bajo el supu
 
 \begin{table}[htbp]
 \centering
-\caption{Ingresos, gasto UPC y balance simplificado bajo cotización efectiva del 44,7\% de la PEA.}
+\caption{Variación de ingresos, gasto UPC y balance parcial frente al escenario base.}
 \label{tab:balance_salud_central}
 \small
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrr}
+\begin{tabular}{llrrr}
 \toprule
-Año & Escenario & Ingresos & Gasto UPC & Balance & Balance / gasto \\
- & & \multicolumn{3}{c}{Billones de pesos de 2026} & \% \\
+Año & Escenario & $\Delta$ ingresos & $\Delta$ gasto UPC & $\Delta$ balance parcial \\
+ & & \multicolumn{3}{c}{Billones de pesos de 2026} \\
 \midrule
-2028 & Base & 32,45 & 105,79 & -73,34 & -69,3 \\
-2028 & Emigración constante & 32,45 & 105,79 & -73,34 & -69,3 \\
-2028 & Inmigración constante & 32,60 & 106,07 & -73,47 & -69,3 \\
+2028 & Emigración constante & -0,00 & -0,01 & 0,00 \\
+2028 & Inmigración constante & 0,15 & 0,28 & -0,13 \\
 \addlinespace
-2034 & Base & 34,82 & 114,05 & -79,23 & -69,5 \\
-2034 & Emigración constante & 34,44 & 113,35 & -78,91 & -69,6 \\
-2034 & Inmigración constante & 35,87 & 116,07 & -80,20 & -69,1 \\
+2034 & Emigración constante & -0,37 & -0,70 & 0,32 \\
+2034 & Inmigración constante & 1,06 & 2,02 & -0,96 \\
 \addlinespace
-2050 & Base & 38,36 & 133,17 & -94,80 & -71,2 \\
-2050 & Emigración constante & 36,13 & 128,34 & -92,21 & -71,8 \\
-2050 & Inmigración constante & 41,72 & 140,94 & -99,23 & -70,4 \\
+2050 & Emigración constante & -2,23 & -4,83 & 2,60 \\
+2050 & Inmigración constante & 3,35 & 7,77 & -4,42 \\
 \addlinespace
-2070 & Base & 32,69 & 147,32 & -114,64 & -77,8 \\
-2070 & Emigración constante & 28,80 & 134,61 & -105,81 & -78,6 \\
-2070 & Inmigración constante & 37,53 & 165,04 & -127,51 & -77,3 \\
+2070 & Emigración constante & -3,89 & -12,71 & 8,83 \\
+2070 & Inmigración constante & 4,84 & 17,72 & -12,88 \\
 \bottomrule
 \end{tabular}%
 }
 \vspace{0.2cm}
-\par\footnotesize{\textit{Fuente: cálculos propios.}}
+\par\footnotesize{\textit{Nota: variaciones frente al escenario base. Valores en billones de pesos de 2026. Fuente: cálculos propios.}}
 \end{table}
 
-El ejercicio muestra que una mayor inmigración mejora la capacidad potencial de recaudo al aumentar la PEA, pero también eleva el gasto esperado en UPC al incrementar la población cubierta y modificar su estructura etaria. En términos absolutos, el escenario de inmigración constante presenta un déficit mayor al final del horizonte porque involucra una población más numerosa. En términos relativos, sin embargo, el balance como proporción del gasto es ligeramente menos negativo que en los otros escenarios. El escenario de emigración constante reduce el gasto total esperado, pero también reduce la base de cotizantes, por lo que no necesariamente mejora la sostenibilidad relativa del aseguramiento.
+La Tabla \ref{tab:balance_salud_central} muestra que el signo del efecto depende de si el cambio migratorio aumenta más la base de cotizantes o el costo esperado por UPC. En el escenario de emigración constante, los ingresos por cotización caen frente al escenario base, pero el gasto UPC cae todavía más; por ello, el balance parcial mejora en $8{,}83$ billones de pesos de 2026 en 2070. En el escenario de inmigración constante ocurre lo contrario: los ingresos aumentan, pero el gasto UPC aumenta más, de modo que el balance parcial se deteriora en $12{,}88$ billones de pesos frente al escenario base en 2070. Esta lectura debe interpretarse como una variación marginal frente al escenario base, no como el balance financiero total del sistema de salud.
 
 \subsection{Síntesis}
 
@@ -1525,7 +1520,7 @@ En conjunto, los resultados muestran que los supuestos migratorios alteran tanto
 
 Sin embargo, el índice de envejecimiento muestra que una mayor inmigración no equivale necesariamente a una estructura permanentemente más joven. Bajo el supuesto operativo utilizado, las cohortes adicionales también envejecen dentro del horizonte de proyección, por lo que el cociente entre población mayor y población infantil puede terminar siendo más alto en el escenario de inmigración constante. Este resultado subraya que el efecto de la migración depende no solo del volumen neto de personas, sino de su distribución por edad y de la dinámica acumulada de las cohortes.
 
-La extensión al aseguramiento en salud refuerza esta lectura. Una población más grande puede elevar la PEA y, por tanto, los ingresos potenciales por cotización, pero también aumenta el gasto esperado en UPC. Por ello, los escenarios migratorios deben evaluarse tanto por su efecto sobre la base laboral como por su impacto sobre la estructura de edades que determina el costo esperado del aseguramiento.
+La extensión al aseguramiento en salud refuerza esta lectura. Una población más grande puede elevar la PEA y, por tanto, los ingresos potenciales por cotización, pero también aumenta el gasto esperado en UPC. Por ello, la comparación relevante es la variación frente al escenario base: cuánto cambian ingresos, gasto esperado y balance parcial cuando cambia la trayectoria migratoria.
 
 \section{Conclusiones}
 
@@ -1533,6 +1528,6 @@ Los resultados muestran que Colombia enfrenta una transición demográfica profu
 
 La comparación entre escenarios permite identificar la sensibilidad de esta trayectoria a diferentes supuestos migratorios. Una emigración neta persistentemente alta reduce la población total, la población en edad de trabajar y la población económicamente activa, al tiempo que eleva las tasas de dependencia. En contraste, una inmigración neta positiva y sostenida aumenta la base demográfica y laboral, y modera parte de la presión sobre la población de 15 a 64 años.
 
-No obstante, ninguno de los escenarios elimina el proceso de envejecimiento. La migración cambia el nivel y la velocidad de algunos indicadores, pero la dinámica central sigue determinada por la estructura etaria acumulada de la población. La cuenta simplificada de salud muestra, además, que el efecto fiscal de la migración no depende únicamente del número de cotizantes potenciales: también depende del costo esperado por edad y sexo de la población cubierta. Desde una perspectiva económica y fiscal, esto implica que las políticas de mercado laboral, pensiones, salud y cuidado deberán considerar no solo el volumen agregado de la migración, sino también su composición por edad y sexo y su persistencia en el tiempo.
+No obstante, ninguno de los escenarios elimina el proceso de envejecimiento. La migración cambia el nivel y la velocidad de algunos indicadores, pero la dinámica central sigue determinada por la estructura etaria acumulada de la población. La cuenta parcial de salud muestra, además, que el efecto fiscal de la migración no depende únicamente del número de cotizantes potenciales: también depende del costo esperado por edad y sexo de la población cubierta. Desde una perspectiva económica y fiscal, esto implica que las políticas de mercado laboral, pensiones, salud y cuidado deberán considerar no solo el volumen agregado de la migración, sino también su composición por edad y sexo y su persistencia en el tiempo.
 
 \end{document}

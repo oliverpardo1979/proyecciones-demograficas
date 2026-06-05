@@ -243,6 +243,16 @@ def main():
             )
         result["scenarios"][scenario] = rows
 
+    base_by_year = {row["year"]: row for row in result["scenarios"]["base"]}
+    for scenario, rows in result["scenarios"].items():
+        for row in rows:
+            base_row = base_by_year[row["year"]]
+            row["delta_vs_base"] = {
+                "revenue": row["revenue"] - base_row["revenue"],
+                "upc_cost": row["upc_cost"] - base_row["upc_cost"],
+                "balance": row["balance"] - base_row["balance"],
+            }
+
     OUT.mkdir(exist_ok=True)
     output_path = OUT / "health_security_impact_results.json"
     output_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")

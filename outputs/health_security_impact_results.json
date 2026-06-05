@@ -34,7 +34,12 @@
         "contributors": 11406761.997625278,
         "revenue": 29958234923178.133,
         "balance": -68349130685512.65,
-        "balance_ratio": -0.6952595084032066
+        "balance_ratio": -0.6952595084032066,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2024,
@@ -44,7 +49,12 @@
         "contributors": 11625012.043877069,
         "revenue": 30531437569026.867,
         "balance": -69403309016053.04,
-        "balance_ratio": -0.6944862661653544
+        "balance_ratio": -0.6944862661653544,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2025,
@@ -54,7 +64,12 @@
         "contributors": 11830924.48898595,
         "revenue": 31072237263581.918,
         "balance": -70433031683668.77,
-        "balance_ratio": -0.6938854742631217
+        "balance_ratio": -0.6938854742631217,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2026,
@@ -64,7 +79,12 @@
         "contributors": 12013728.73594026,
         "revenue": 31552346568602.223,
         "balance": -71399542617637.44,
-        "balance_ratio": -0.6935233843885651
+        "balance_ratio": -0.6935233843885651,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2027,
@@ -74,7 +94,12 @@
         "contributors": 12188780.818760226,
         "revenue": 32012095919207.06,
         "balance": -72368076227261.61,
-        "balance_ratio": -0.6933124820460447
+        "balance_ratio": -0.6933124820460447,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2028,
@@ -84,7 +109,12 @@
         "contributors": 12357404.361994551,
         "revenue": 32454961626657.105,
         "balance": -73339349223170.88,
-        "balance_ratio": -0.6932258325995808
+        "balance_ratio": -0.6932258325995808,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2029,
@@ -94,7 +124,12 @@
         "contributors": 12520163.788842818,
         "revenue": 32882426068055.75,
         "balance": -74313700476781.3,
-        "balance_ratio": -0.693249867062109
+        "balance_ratio": -0.693249867062109,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2030,
@@ -104,7 +139,12 @@
         "contributors": 12678242.483592264,
         "revenue": 33297597233601.17,
         "balance": -75291150277305.2,
-        "balance_ratio": -0.6933605184988726
+        "balance_ratio": -0.6933605184988726,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2031,
@@ -114,7 +154,12 @@
         "contributors": 12830597.590658879,
         "revenue": 33697736211708.875,
         "balance": -76273297695777.45,
-        "balance_ratio": -0.6935762535427532
+        "balance_ratio": -0.6935762535427532,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2032,
@@ -124,7 +169,12 @@
         "contributors": 12977859.71136538,
         "revenue": 34084499186892.3,
         "balance": -77257885192461.23,
-        "balance_ratio": -0.693876690562299
+        "balance_ratio": -0.693876690562299,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2033,
@@ -134,7 +184,12 @@
         "contributors": 13119604.492142703,
         "revenue": 34456771654972.68,
         "balance": -78245287961311.5,
-        "balance_ratio": -0.6942667084143149
+        "balance_ratio": -0.6942667084143149,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2034,
@@ -144,7 +199,12 @@
         "contributors": 13256089.793498483,
         "revenue": 34815230849828.19,
         "balance": -79234887362553.83,
-        "balance_ratio": -0.6947374417885661
+        "balance_ratio": -0.6947374417885661,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2035,
@@ -154,7 +214,12 @@
         "contributors": 13387445.99153147,
         "revenue": 35160219185703.613,
         "balance": -80226298704779.98,
-        "balance_ratio": -0.6952831246794785
+        "balance_ratio": -0.6952831246794785,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2036,
@@ -164,7 +229,12 @@
         "contributors": 13513041.81567136,
         "revenue": 35490078720402.09,
         "balance": -81221380556268.88,
-        "balance_ratio": -0.6959160742196625
+        "balance_ratio": -0.6959160742196625,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2037,
@@ -174,7 +244,12 @@
         "contributors": 13632784.33269069,
         "revenue": 35804565378044.69,
         "balance": -82219674654498.16,
-        "balance_ratio": -0.6966337985470418
+        "balance_ratio": -0.6966337985470418,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2038,
@@ -184,7 +259,12 @@
         "contributors": 13746826.529139234,
         "revenue": 36104080956003.8,
         "balance": -83220133774995.61,
-        "balance_ratio": -0.697428715224352
+        "balance_ratio": -0.697428715224352,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2039,
@@ -194,7 +274,12 @@
         "contributors": 13855459.23287642,
         "revenue": 36389389272209.234,
         "balance": -84223281869404.81,
-        "balance_ratio": -0.6982954698890331
+        "balance_ratio": -0.6982954698890331,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2040,
@@ -204,7 +289,12 @@
         "contributors": 13957741.827878347,
         "revenue": 36658019932712.01,
         "balance": -85220802597912.78,
-        "balance_ratio": -0.6992256802981432
+        "balance_ratio": -0.6992256802981432,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2041,
@@ -214,7 +304,12 @@
         "contributors": 14053530.428903861,
         "revenue": 36909595043429.875,
         "balance": -86210164056795.75,
-        "balance_ratio": -0.7002138786400351
+        "balance_ratio": -0.7002138786400351,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2042,
@@ -224,7 +319,12 @@
         "contributors": 14143359.604826815,
         "revenue": 37145518573333.945,
         "balance": -87191078379317.1,
-        "balance_ratio": -0.701250319827561
+        "balance_ratio": -0.701250319827561,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2043,
@@ -234,7 +334,12 @@
         "contributors": 14226459.352198418,
         "revenue": 37363768218091.46,
         "balance": -88166656136983.56,
-        "balance_ratio": -0.702352888472643
+        "balance_ratio": -0.702352888472643,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2044,
@@ -244,7 +349,12 @@
         "contributors": 14303351.176060649,
         "revenue": 37565713636380.7,
         "balance": -89134311211381.38,
-        "balance_ratio": -0.7035066592803101
+        "balance_ratio": -0.7035066592803101,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2045,
@@ -254,7 +364,12 @@
         "contributors": 14372669.70670234,
         "revenue": 37747768879220.49,
         "balance": -90095331833807.56,
-        "balance_ratio": -0.7047336252900056
+        "balance_ratio": -0.7047336252900056,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2046,
@@ -264,7 +379,12 @@
         "contributors": 14434845.019686235,
         "revenue": 37911063478790.59,
         "balance": -91047175900547.8,
-        "balance_ratio": -0.7060206182927721
+        "balance_ratio": -0.7060206182927721,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2047,
@@ -274,7 +394,12 @@
         "contributors": 14489477.264563823,
         "revenue": 38054547284866.68,
         "balance": -91989959696560.1,
-        "balance_ratio": -0.7073728974165614
+        "balance_ratio": -0.7073728974165614,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2048,
@@ -284,7 +409,12 @@
         "contributors": 14536920.295982484,
         "revenue": 38179149646255.81,
         "balance": -92928260381763.67,
-        "balance_ratio": -0.7087948756054566
+        "balance_ratio": -0.7087948756054566,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2049,
@@ -294,7 +424,12 @@
         "contributors": 14575905.923944905,
         "revenue": 38281539842647.13,
         "balance": -93867116961340.12,
-        "balance_ratio": -0.7103145747487304
+        "balance_ratio": -0.7103145747487304,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2050,
@@ -304,7 +439,12 @@
         "contributors": 14607317.321392693,
         "revenue": 38364037401919.61,
         "balance": -94804971388471.94,
-        "balance_ratio": -0.7119146733133328
+        "balance_ratio": -0.7119146733133328,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2051,
@@ -314,7 +454,12 @@
         "contributors": 14574515.043794788,
         "revenue": 38277886894133.27,
         "balance": -95893303484315.34,
-        "balance_ratio": -0.7147085988715973
+        "balance_ratio": -0.7147085988715973,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2052,
@@ -324,7 +469,12 @@
         "contributors": 14532439.830778057,
         "revenue": 38167382342862.68,
         "balance": -96989388780390.19,
-        "balance_ratio": -0.7176065836312642
+        "balance_ratio": -0.7176065836312642,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2053,
@@ -334,7 +484,12 @@
         "contributors": 14481248.293130238,
         "revenue": 38032935064024.8,
         "balance": -98091940797971.61,
-        "balance_ratio": -0.7206026097494286
+        "balance_ratio": -0.7206026097494286,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2054,
@@ -344,7 +499,12 @@
         "contributors": 14420933.267842555,
         "revenue": 37874526244997.805,
         "balance": -99200199019350.22,
-        "balance_ratio": -0.7236943121939005
+        "balance_ratio": -0.7236943121939005,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2055,
@@ -354,7 +514,12 @@
         "contributors": 14351761.676803732,
         "revenue": 37692856918086.055,
         "balance": -100310280204582.94,
-        "balance_ratio": -0.7268695646782187
+        "balance_ratio": -0.7268695646782187,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2056,
@@ -364,7 +529,12 @@
         "contributors": 14273832.977284042,
         "revenue": 37488188293637.27,
         "balance": -101416295156569.03,
-        "balance_ratio": -0.7301153471617363
+        "balance_ratio": -0.7301153471617363,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2057,
@@ -374,7 +544,12 @@
         "contributors": 14187563.70116161,
         "revenue": 37261614333273.555,
         "balance": -102513043268345.03,
-        "balance_ratio": -0.7334165221890547
+        "balance_ratio": -0.7334165221890547,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2058,
@@ -384,7 +559,12 @@
         "contributors": 14093071.94266099,
         "revenue": 37013445194647.26,
         "balance": -103598790641135.12,
-        "balance_ratio": -0.7367693858600303
+        "balance_ratio": -0.7367693858600303,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2059,
@@ -394,7 +574,12 @@
         "contributors": 13990775.901032561,
         "revenue": 36744779218496.125,
         "balance": -104669504382719.81,
-        "balance_ratio": -0.7401621796415183
+        "balance_ratio": -0.7401621796415183,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2060,
@@ -404,7 +589,12 @@
         "contributors": 13880838.491102062,
         "revenue": 36456044277394.586,
         "balance": -105721400915087.6,
-        "balance_ratio": -0.7435877102163442
+        "balance_ratio": -0.7435877102163442,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2061,
@@ -414,7 +604,12 @@
         "contributors": 13763714.526553994,
         "revenue": 36148434874674.03,
         "balance": -106753071397846.56,
-        "balance_ratio": -0.7470395112159484
+        "balance_ratio": -0.7470395112159484,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2062,
@@ -424,7 +619,12 @@
         "contributors": 13639497.45464884,
         "revenue": 35822196436247.89,
         "balance": -107762103575361.55,
-        "balance_ratio": -0.750514530952538
+        "balance_ratio": -0.750514530952538,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2063,
@@ -434,7 +634,12 @@
         "contributors": 13508627.209039383,
         "revenue": 35478484385164.65,
         "balance": -108747920119057.47,
-        "balance_ratio": -0.7540083973727152
+        "balance_ratio": -0.7540083973727152,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2064,
@@ -444,7 +649,12 @@
         "contributors": 13371464.301037325,
         "revenue": 35118245553011.637,
         "balance": -109708272379949.8,
-        "balance_ratio": -0.7575150873318139
+        "balance_ratio": -0.7575150873318139,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2065,
@@ -454,7 +664,12 @@
         "contributors": 13228630.081884714,
         "revenue": 34743111830283.53,
         "balance": -110641407091933.44,
-        "balance_ratio": -0.7610260563652472
+        "balance_ratio": -0.7610260563652472,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2066,
@@ -464,7 +679,12 @@
         "contributors": 13080508.621566417,
         "revenue": 34354091922065.62,
         "balance": -111537997858071.28,
-        "balance_ratio": -0.7645239575782476
+        "balance_ratio": -0.7645239575782476,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2067,
@@ -474,7 +694,12 @@
         "contributors": 12927830.86096294,
         "revenue": 33953105540421.477,
         "balance": -112392444407241.44,
-        "balance_ratio": -0.7679935908364551
+        "balance_ratio": -0.7679935908364551,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2068,
@@ -484,7 +709,12 @@
         "contributors": 12770953.64353184,
         "revenue": 33541089883842.176,
         "balance": -113197968741532.7,
-        "balance_ratio": -0.7714235718966097
+        "balance_ratio": -0.7714235718966097,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2069,
@@ -494,7 +724,12 @@
         "contributors": 12610452.67716305,
         "revenue": 33119556967062.254,
         "balance": -113947048484602.66,
-        "balance_ratio": -0.7747989296050805
+        "balance_ratio": -0.7747989296050805,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2070,
@@ -504,7 +739,12 @@
         "contributors": 12446590.420968134,
         "revenue": 32689196101537.816,
         "balance": -114635193311307.1,
-        "balance_ratio": -0.7781141586140679
+        "balance_ratio": -0.7781141586140679,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       }
     ],
     "emigration_constant": [
@@ -516,7 +756,12 @@
         "contributors": 11406761.997625278,
         "revenue": 29958234923178.133,
         "balance": -68349130685512.65,
-        "balance_ratio": -0.6952595084032066
+        "balance_ratio": -0.6952595084032066,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2024,
@@ -526,7 +771,12 @@
         "contributors": 11625012.043877069,
         "revenue": 30531437569026.867,
         "balance": -69403309016053.04,
-        "balance_ratio": -0.6944862661653544
+        "balance_ratio": -0.6944862661653544,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2025,
@@ -536,7 +786,12 @@
         "contributors": 11830924.48898595,
         "revenue": 31072237263581.918,
         "balance": -70433031683668.77,
-        "balance_ratio": -0.6938854742631217
+        "balance_ratio": -0.6938854742631217,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2026,
@@ -546,7 +801,12 @@
         "contributors": 12013728.73594026,
         "revenue": 31552346568602.223,
         "balance": -71399542617637.44,
-        "balance_ratio": -0.6935233843885651
+        "balance_ratio": -0.6935233843885651,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2027,
@@ -556,7 +816,12 @@
         "contributors": 12188780.818760226,
         "revenue": 32012095919207.06,
         "balance": -72368076227261.61,
-        "balance_ratio": -0.6933124820460447
+        "balance_ratio": -0.6933124820460447,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2028,
@@ -566,7 +831,12 @@
         "contributors": 12356069.074121075,
         "revenue": 32451454683335.94,
         "balance": -73336242585828.42,
-        "balance_ratio": -0.6932398046176672
+        "balance_ratio": -0.6932398046176672,
+        "delta_vs_base": {
+          "revenue": -3506943321.1640625,
+          "upc_cost": -6613580663.625,
+          "balance": 3106637342.453125
+        }
       },
       {
         "year": 2029,
@@ -576,7 +846,12 @@
         "contributors": 12514634.321080413,
         "revenue": 32867903708926.95,
         "balance": -74300892941501.73,
-        "balance_ratio": -0.6933071496908007
+        "balance_ratio": -0.6933071496908007,
+        "delta_vs_base": {
+          "revenue": -14522359128.800781,
+          "upc_cost": -27329894408.359375,
+          "balance": 12807535279.5625
+        }
       },
       {
         "year": 2030,
@@ -586,7 +861,12 @@
         "contributors": 12663947.01988091,
         "revenue": 33260052235266.875,
         "balance": -75258154626446.9,
-        "balance_ratio": -0.6935071708505964
+        "balance_ratio": -0.6935071708505964,
+        "delta_vs_base": {
+          "revenue": -37544998334.296875,
+          "upc_cost": -70540649192.59375,
+          "balance": 32995650858.296875
+        }
       },
       {
         "year": 2031,
@@ -596,7 +876,12 @@
         "contributors": 12800575.730090538,
         "revenue": 33618888073041.26,
         "balance": -76204189518246.95,
-        "balance_ratio": -0.6938813880434535
+        "balance_ratio": -0.6938813880434535,
+        "delta_vs_base": {
+          "revenue": -78848138667.61328,
+          "upc_cost": -147956316198.10938,
+          "balance": 69108177530.5
+        }
       },
       {
         "year": 2032,
@@ -606,7 +891,12 @@
         "contributors": 12921660.243595807,
         "revenue": 33936899293219.676,
         "balance": -77128814959421.06,
-        "balance_ratio": -0.6944430644363971
+        "balance_ratio": -0.6944430644363971,
+        "delta_vs_base": {
+          "revenue": -147599893672.625,
+          "upc_cost": -276670126712.7969,
+          "balance": 129070233040.17188
+        }
       },
       {
         "year": 2033,
@@ -616,7 +906,12 @@
         "contributors": 13021530.789112812,
         "revenue": 34199195049467.35,
         "balance": -78020522605715.22,
-        "balance_ratio": -0.6952478961446759
+        "balance_ratio": -0.6952478961446759,
+        "delta_vs_base": {
+          "revenue": -257576605505.32812,
+          "upc_cost": -482341961101.6094,
+          "balance": 224765355596.28125
+        }
       },
       {
         "year": 2034,
@@ -626,7 +921,12 @@
         "contributors": 13114611.826637445,
         "revenue": 34443659130477.953,
         "balance": -78910303119346.23,
-        "balance_ratio": -0.6961406690436939
+        "balance_ratio": -0.6961406690436939,
+        "delta_vs_base": {
+          "revenue": -371571719350.2383,
+          "upc_cost": -696155962557.8281,
+          "balance": 324584243207.59375
+        }
       },
       {
         "year": 2035,
@@ -636,7 +936,12 @@
         "contributors": 13202221.715095455,
         "revenue": 34673754018103.812,
         "balance": -79799638471415.8,
-        "balance_ratio": -0.6971020665673178
+        "balance_ratio": -0.6971020665673178,
+        "delta_vs_base": {
+          "revenue": -486465167599.8008,
+          "upc_cost": -913125400963.9844,
+          "balance": 426660233364.1875
+        }
       },
       {
         "year": 2036,
@@ -646,7 +951,12 @@
         "contributors": 13283808.851659225,
         "revenue": 34888031006121.594,
         "balance": -80689805732894.23,
-        "balance_ratio": -0.6981425505921035
+        "balance_ratio": -0.6981425505921035,
+        "delta_vs_base": {
+          "revenue": -602047714280.5,
+          "upc_cost": -1133622537655.1406,
+          "balance": 531574823374.6406
+        }
       },
       {
         "year": 2037,
@@ -656,7 +966,12 @@
         "contributors": 13359340.709325287,
         "revenue": 35086404666991.79,
         "balance": -81579775967232.34,
-        "balance_ratio": -0.6992581356803313
+        "balance_ratio": -0.6992581356803313,
+        "delta_vs_base": {
+          "revenue": -718160711052.8984,
+          "upc_cost": -1358059398318.7188,
+          "balance": 639898687265.8125
+        }
       },
       {
         "year": 2038,
@@ -666,7 +981,12 @@
         "contributors": 13428984.872532915,
         "revenue": 35269315137363.37,
         "balance": -82467813633005.44,
-        "balance_ratio": -0.7004401627106803
+        "balance_ratio": -0.7004401627106803,
+        "delta_vs_base": {
+          "revenue": -834765818640.4297,
+          "upc_cost": -1587085960630.6094,
+          "balance": 752320141990.1719
+        }
       },
       {
         "year": 2039,
@@ -676,7 +996,12 @@
         "contributors": 13493103.271222387,
         "revenue": 35437712974649.445,
         "balance": -83353794637832.12,
-        "balance_ratio": -0.701681427512029
+        "balance_ratio": -0.701681427512029,
+        "delta_vs_base": {
+          "revenue": -951676297559.7891,
+          "upc_cost": -1821163529132.4844,
+          "balance": 869487231572.6875
+        }
       },
       {
         "year": 2040,
@@ -686,7 +1011,12 @@
         "contributors": 13550817.184719238,
         "revenue": 35589290344216.26,
         "balance": -84228916464476.06,
-        "balance_ratio": -0.7029726008081569
+        "balance_ratio": -0.7029726008081569,
+        "delta_vs_base": {
+          "revenue": -1068729588495.75,
+          "upc_cost": -2060615721932.4531,
+          "balance": 991886133436.7188
+        }
       },
       {
         "year": 2041,
@@ -696,7 +1026,12 @@
         "contributors": 13602019.057066357,
         "revenue": 35723764765669.16,
         "balance": -85090237378897.03,
-        "balance_ratio": -0.70430774470229
+        "balance_ratio": -0.70430774470229,
+        "delta_vs_base": {
+          "revenue": -1185830277760.7188,
+          "upc_cost": -2305756955659.4375,
+          "balance": 1119926677898.7188
+        }
       },
       {
         "year": 2042,
@@ -706,7 +1041,12 @@
         "contributors": 13647233.23426552,
         "revenue": 35842513359062.5,
         "balance": -85936989914838.75,
-        "balance_ratio": -0.7056769620873962
+        "balance_ratio": -0.7056769620873962,
+        "delta_vs_base": {
+          "revenue": -1303005214271.4453,
+          "upc_cost": -2557093678749.797,
+          "balance": 1254088464478.3438
+        }
       },
       {
         "year": 2043,
@@ -716,7 +1056,12 @@
         "contributors": 13685736.64852585,
         "revenue": 35943637089880.734,
         "balance": -86771768187637.38,
-        "balance_ratio": -0.707097597008338
+        "balance_ratio": -0.707097597008338,
+        "delta_vs_base": {
+          "revenue": -1420131128210.7266,
+          "upc_cost": -2815019077556.922,
+          "balance": 1394887949346.1875
+        }
       },
       {
         "year": 2044,
@@ -726,7 +1071,12 @@
         "contributors": 13718054.109433051,
         "revenue": 36028514295715.31,
         "balance": -87591501503401.2,
-        "balance_ratio": -0.7085543626344303
+        "balance_ratio": -0.7085543626344303,
+        "delta_vs_base": {
+          "revenue": -1537199340665.3906,
+          "upc_cost": -3080009048645.5625,
+          "balance": 1542809707980.1719
+        }
       },
       {
         "year": 2045,
@@ -736,7 +1086,12 @@
         "contributors": 13742902.859159283,
         "revenue": 36093775995924.43,
         "balance": -88397048257941.4,
-        "balance_ratio": -0.7100687844887202
+        "balance_ratio": -0.7100687844887202,
+        "delta_vs_base": {
+          "revenue": -1653992883296.0625,
+          "upc_cost": -3352276459162.2188,
+          "balance": 1698283575866.1562
+        }
       },
       {
         "year": 2046,
@@ -746,7 +1101,12 @@
         "contributors": 13760717.04666059,
         "revenue": 36140562420874.89,
         "balance": -89185682644149.48,
-        "balance_ratio": -0.7116281398032496
+        "balance_ratio": -0.7116281398032496,
+        "delta_vs_base": {
+          "revenue": -1770501057915.7031,
+          "upc_cost": -3631994314314.0156,
+          "balance": 1861493256398.3125
+        }
       },
       {
         "year": 2047,
@@ -756,7 +1116,12 @@
         "contributors": 13771143.262072887,
         "revenue": 36167945389919.59,
         "balance": -89957235158859.78,
-        "balance_ratio": -0.7132377116722421
+        "balance_ratio": -0.7132377116722421,
+        "delta_vs_base": {
+          "revenue": -1886601894947.086,
+          "upc_cost": -3919326432647.3906,
+          "balance": 2032724537700.3125
+        }
       },
       {
         "year": 2048,
@@ -766,7 +1131,12 @@
         "contributors": 13774531.413246883,
         "revenue": 36176843886166.55,
         "balance": -90716156777425.95,
-        "balance_ratio": -0.7149027629815816
+        "balance_ratio": -0.7149027629815816,
+        "delta_vs_base": {
+          "revenue": -2002305760089.2656,
+          "upc_cost": -4214409364426.9844,
+          "balance": 2212103604337.7188
+        }
       },
       {
         "year": 2049,
@@ -776,7 +1146,12 @@
         "contributors": 13769722.075768774,
         "revenue": 36164212846610.89,
         "balance": -91467026072215.55,
-        "balance_ratio": -0.7166507733297852
+        "balance_ratio": -0.7166507733297852,
+        "delta_vs_base": {
+          "revenue": -2117326996036.2422,
+          "upc_cost": -4517417885160.8125,
+          "balance": 2400090889124.578
+        }
       },
       {
         "year": 2050,
@@ -786,7 +1161,12 @@
         "contributors": 13757584.635965958,
         "revenue": 36132335590553.96,
         "balance": -92208192631862.56,
-        "balance_ratio": -0.7184651170522226
+        "balance_ratio": -0.7184651170522226,
+        "delta_vs_base": {
+          "revenue": -2231701811365.6484,
+          "upc_cost": -4828480567975.031,
+          "balance": 2596778756609.375
+        }
       },
       {
         "year": 2051,
@@ -796,7 +1176,12 @@
         "contributors": 13683680.280232204,
         "revenue": 35938236331589.95,
         "balance": -93085233351870.4,
-        "balance_ratio": -0.7214596970631855
+        "balance_ratio": -0.7214596970631855,
+        "delta_vs_base": {
+          "revenue": -2339650562543.3203,
+          "upc_cost": -5147720694988.25,
+          "balance": 2808070132444.9375
+        }
       },
       {
         "year": 2052,
@@ -806,7 +1191,12 @@
         "contributors": 13601155.207444472,
         "revenue": 35721495987735.84,
         "balance": -93960000964945.17,
-        "balance_ratio": -0.724544388928745
+        "balance_ratio": -0.724544388928745,
+        "delta_vs_base": {
+          "revenue": -2445886355126.836,
+          "upc_cost": -5475274170571.859,
+          "balance": 3029387815445.0156
+        }
       },
       {
         "year": 2053,
@@ -816,7 +1206,12 @@
         "contributors": 13510224.1181419,
         "revenue": 35482678439362.87,
         "balance": -94830888692060.75,
-        "balance_ratio": -0.7277130906594097
+        "balance_ratio": -0.7277130906594097,
+        "delta_vs_base": {
+          "revenue": -2550256624661.9297,
+          "upc_cost": -5811308730572.781,
+          "balance": 3261052105910.8594
+        }
       },
       {
         "year": 2054,
@@ -826,7 +1221,12 @@
         "contributors": 13410950.35520417,
         "revenue": 35221950047518.14,
         "balance": -95696699521419.94,
-        "balance_ratio": -0.7309630815511028
+        "balance_ratio": -0.7309630815511028,
+        "delta_vs_base": {
+          "revenue": -2652576197479.664,
+          "upc_cost": -6156075695409.953,
+          "balance": 3503499497930.2812
+        }
       },
       {
         "year": 2055,
@@ -836,7 +1236,12 @@
         "contributors": 13303662.236153873,
         "revenue": 34940173091389.496,
         "balance": -96553420089285.83,
-        "balance_ratio": -0.7342823156153253
+        "balance_ratio": -0.7342823156153253,
+        "delta_vs_base": {
+          "revenue": -2752683826696.5586,
+          "upc_cost": -6509543941993.656,
+          "balance": 3756860115297.1094
+        }
       },
       {
         "year": 2056,
@@ -846,7 +1251,12 @@
         "contributors": 13188531.117780112,
         "revenue": 34637797615165.18,
         "balance": -97395054836721.25,
-        "balance_ratio": -0.7376577346324666
+        "balance_ratio": -0.7376577346324666,
+        "delta_vs_base": {
+          "revenue": -2850390678472.0938,
+          "upc_cost": -6871630998319.891,
+          "balance": 4021240319847.7812
+        }
       },
       {
         "year": 2057,
@@ -856,7 +1266,12 @@
         "contributors": 13066032.955520662,
         "revenue": 34316073647978.855,
         "balance": -98216353710067.48,
-        "balance_ratio": -0.7410741330853965
+        "balance_ratio": -0.7410741330853965,
+        "delta_vs_base": {
+          "revenue": -2945540685294.699,
+          "upc_cost": -7242230243572.25,
+          "balance": 4296689558277.547
+        }
       },
       {
         "year": 2058,
@@ -866,7 +1281,12 @@
         "contributors": 12936359.041550111,
         "revenue": 33975503591467.945,
         "balance": -99015508989989.97,
-        "balance_ratio": -0.7445278223544789
+        "balance_ratio": -0.7445278223544789,
+        "delta_vs_base": {
+          "revenue": -3037941603179.3125,
+          "upc_cost": -7621223254324.469,
+          "balance": 4583281651145.156
+        }
       },
       {
         "year": 2059,
@@ -876,7 +1296,12 @@
         "contributors": 12799981.908777207,
         "revenue": 33617328485981.332,
         "balance": -99788444297490.95,
-        "balance_ratio": -0.7480069431437213
+        "balance_ratio": -0.7480069431437213,
+        "delta_vs_base": {
+          "revenue": -3127450732514.793,
+          "upc_cost": -8008510817743.656,
+          "balance": 4881060085228.859
+        }
       },
       {
         "year": 2060,
@@ -886,7 +1311,12 @@
         "contributors": 12657126.718002584,
         "revenue": 33242139684276.473,
         "balance": -100531452550644.44,
-        "balance_ratio": -0.7515044701356328
+        "balance_ratio": -0.7515044701356328,
+        "delta_vs_base": {
+          "revenue": -3213904593118.1133,
+          "upc_cost": -8403852957561.281,
+          "balance": 5189948364443.156
+        }
       },
       {
         "year": 2061,
@@ -896,7 +1326,12 @@
         "contributors": 12508294.284193153,
         "revenue": 32851252505497.816,
         "balance": -101243299277180.72,
-        "balance_ratio": -0.7550142636761374
+        "balance_ratio": -0.7550142636761374,
+        "delta_vs_base": {
+          "revenue": -3297182369176.215,
+          "upc_cost": -8806954489842.062,
+          "balance": 5509772120665.844
+        }
       },
       {
         "year": 2062,
@@ -906,7 +1341,12 @@
         "contributors": 12353632.652607273,
         "revenue": 32445055769420.008,
         "balance": -101921775323794.28,
-        "balance_ratio": -0.758533742997095
+        "balance_ratio": -0.758533742997095,
+        "delta_vs_base": {
+          "revenue": -3377140666827.883,
+          "upc_cost": -9217468918395.14,
+          "balance": 5840328251567.266
+        }
       },
       {
         "year": 2063,
@@ -916,7 +1356,12 @@
         "contributors": 12193614.584270624,
         "revenue": 32024791115508.535,
         "balance": -102566615742933.38,
-        "balance_ratio": -0.7620591695784042
+        "balance_ratio": -0.7620591695784042,
+        "delta_vs_base": {
+          "revenue": -3453693269656.1133,
+          "upc_cost": -9634997645780.219,
+          "balance": 6181304376124.094
+        }
       },
       {
         "year": 2064,
@@ -926,7 +1371,12 @@
         "contributors": 12028644.459416483,
         "revenue": 31591520590821.926,
         "balance": -103175860221508.61,
-        "balance_ratio": -0.7655848143638371
+        "balance_ratio": -0.7655848143638371,
+        "delta_vs_base": {
+          "revenue": -3526724962189.711,
+          "upc_cost": -10059137120630.906,
+          "balance": 6532412158441.1875
+        }
       },
       {
         "year": 2065,
@@ -936,7 +1386,12 @@
         "contributors": 11859357.829748217,
         "revenue": 31146913381342.953,
         "balance": -103748175522514.11,
-        "balance_ratio": -0.7691026883599736
+        "balance_ratio": -0.7691026883599736,
+        "delta_vs_base": {
+          "revenue": -3596198448940.578,
+          "upc_cost": -10489430018359.906,
+          "balance": 6893231569419.328
+        }
       },
       {
         "year": 2066,
@@ -946,7 +1401,12 @@
         "contributors": 11686163.177684516,
         "revenue": 30692042307935.56,
         "balance": -104274630006992.39,
-        "balance_ratio": -0.7725953986898373
+        "balance_ratio": -0.7725953986898373,
+        "delta_vs_base": {
+          "revenue": -3662049614130.0625,
+          "upc_cost": -10925417465208.953,
+          "balance": 7263367851078.891
+        }
       },
       {
         "year": 2067,
@@ -956,7 +1416,12 @@
         "contributors": 11509788.0358368,
         "revenue": 30228818131330.246,
         "balance": -104750176295520.55,
-        "balance_ratio": -0.7760479824309836
+        "balance_ratio": -0.7760479824309836,
+        "delta_vs_base": {
+          "revenue": -3724287409091.2305,
+          "upc_cost": -11366555520812.11,
+          "balance": 7642268111720.891
+        }
       },
       {
         "year": 2068,
@@ -966,7 +1431,12 @@
         "contributors": 11330628.791528843,
         "revenue": 29758281906347.715,
         "balance": -105168648163448.05,
-        "balance_ratio": -0.779448906967985
+        "balance_ratio": -0.779448906967985,
+        "delta_vs_base": {
+          "revenue": -3782807977494.461,
+          "upc_cost": -11812128555579.11,
+          "balance": 8029320578084.656
+        }
       },
       {
         "year": 2069,
@@ -976,7 +1446,12 @@
         "contributors": 11149198.003004696,
         "revenue": 29281779794176.406,
         "balance": -105523119026582.95,
-        "balance_ratio": -0.7827840082198323
+        "balance_ratio": -0.7827840082198323,
+        "delta_vs_base": {
+          "revenue": -3837777172885.8477,
+          "upc_cost": -12261706630905.547,
+          "balance": 8423929458019.703
+        }
       },
       {
         "year": 2070,
@@ -986,7 +1461,12 @@
         "contributors": 10965780.72209726,
         "revenue": 28800060442835.56,
         "balance": -105810021857942.02,
-        "balance_ratio": -0.7860482665890979
+        "balance_ratio": -0.7860482665890979,
+        "delta_vs_base": {
+          "revenue": -3889135658702.258,
+          "upc_cost": -12714307112067.328,
+          "balance": 8825171453365.078
+        }
       }
     ],
     "inmigration_constant": [
@@ -998,7 +1478,12 @@
         "contributors": 11406761.997625278,
         "revenue": 29958234923178.133,
         "balance": -68349130685512.65,
-        "balance_ratio": -0.6952595084032066
+        "balance_ratio": -0.6952595084032066,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2024,
@@ -1008,7 +1493,12 @@
         "contributors": 11625012.043877069,
         "revenue": 30531437569026.867,
         "balance": -69403309016053.04,
-        "balance_ratio": -0.6944862661653544
+        "balance_ratio": -0.6944862661653544,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2025,
@@ -1018,7 +1508,12 @@
         "contributors": 11830924.48898595,
         "revenue": 31072237263581.918,
         "balance": -70433031683668.77,
-        "balance_ratio": -0.6938854742631217
+        "balance_ratio": -0.6938854742631217,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2026,
@@ -1028,7 +1523,12 @@
         "contributors": 12013728.73594026,
         "revenue": 31552346568602.223,
         "balance": -71399542617637.44,
-        "balance_ratio": -0.6935233843885651
+        "balance_ratio": -0.6935233843885651,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2027,
@@ -1038,7 +1538,12 @@
         "contributors": 12188780.818760226,
         "revenue": 32012095919207.06,
         "balance": -72368076227261.61,
-        "balance_ratio": -0.6933124820460447
+        "balance_ratio": -0.6933124820460447,
+        "delta_vs_base": {
+          "revenue": 0.0,
+          "upc_cost": 0.0,
+          "balance": 0.0
+        }
       },
       {
         "year": 2028,
@@ -1048,7 +1553,12 @@
         "contributors": 12413653.363664752,
         "revenue": 32602691614061.15,
         "balance": -73470216321224.56,
-        "balance_ratio": -0.692638843898276
+        "balance_ratio": -0.692638843898276,
+        "delta_vs_base": {
+          "revenue": 147729987404.04297,
+          "upc_cost": 278597085457.71875,
+          "balance": -130867098053.6875
+        }
       },
       {
         "year": 2029,
@@ -1058,7 +1568,12 @@
         "contributors": 12633383.593701033,
         "revenue": 33179781751693.66,
         "balance": -74576424486080.03,
-        "balance_ratio": -0.692084726159721
+        "balance_ratio": -0.692084726159721,
+        "delta_vs_base": {
+          "revenue": 297355683637.91016,
+          "upc_cost": 560079692936.6406,
+          "balance": -262724009298.73438
+        }
       },
       {
         "year": 2030,
@@ -1068,7 +1583,12 @@
         "contributors": 12848870.76627833,
         "revenue": 33745728103545.84,
         "balance": -75687461202923.83,
-        "balance_ratio": -0.691631685803835
+        "balance_ratio": -0.691631685803835,
+        "delta_vs_base": {
+          "revenue": 448130869944.66797,
+          "upc_cost": 844441795563.2969,
+          "balance": -396310925618.625
+        }
       },
       {
         "year": 2031,
@@ -1078,7 +1598,12 @@
         "contributors": 13058867.070841063,
         "revenue": 34297253473006.457,
         "balance": -76805490794804.44,
-        "balance_ratio": -0.6913014732531392
+        "balance_ratio": -0.6913014732531392,
+        "delta_vs_base": {
+          "revenue": 599517261297.582,
+          "upc_cost": 1131710360324.5625,
+          "balance": -532193099026.9844
+        }
       },
       {
         "year": 2032,
@@ -1088,7 +1613,12 @@
         "contributors": 13263922.034877958,
         "revenue": 34835801115716.984,
         "balance": -77928810040197.4,
-        "balance_ratio": -0.6910750566279066
+        "balance_ratio": -0.6910750566279066,
+        "delta_vs_base": {
+          "revenue": 751301928824.6836,
+          "upc_cost": 1422226776560.8594,
+          "balance": -670924847736.1719
+        }
       },
       {
         "year": 2033,
@@ -1098,7 +1628,12 @@
         "contributors": 13463521.315046376,
         "revenue": 35360020182181.914,
         "balance": -79058358498828.47,
-        "balance_ratio": -0.6909585628654735
+        "balance_ratio": -0.6909585628654735,
+        "delta_vs_base": {
+          "revenue": 903248527209.2344,
+          "upc_cost": 1716319064726.2188,
+          "balance": -813070537516.9688
+        }
       },
       {
         "year": 2034,
@@ -1108,7 +1643,12 @@
         "contributors": 13657812.502146836,
         "revenue": 35870298298607.11,
         "balance": -80195271936649.02,
-        "balance_ratio": -0.690947985471482
+        "balance_ratio": -0.690947985471482,
+        "delta_vs_base": {
+          "revenue": 1055067448778.918,
+          "upc_cost": 2015452022874.1094,
+          "balance": -960384574095.1875
+        }
       },
       {
         "year": 2035,
@@ -1118,7 +1658,12 @@
         "contributors": 13846877.892711734,
         "revenue": 36366851605107.66,
         "balance": -81339631789963.19,
-        "balance_ratio": -0.6910378208900719
+        "balance_ratio": -0.6910378208900719,
+        "delta_vs_base": {
+          "revenue": 1206632419404.043,
+          "upc_cost": 2319965504587.25,
+          "balance": -1113333085183.2031
+        }
       },
       {
         "year": 2036,
@@ -1128,7 +1673,12 @@
         "contributors": 14030009.470963849,
         "revenue": 36847820599136.94,
         "balance": -82493812550267.36,
-        "balance_ratio": -0.6912408551254952
+        "balance_ratio": -0.6912408551254952,
+        "delta_vs_base": {
+          "revenue": 1357741878734.8438,
+          "upc_cost": 2630173872733.328,
+          "balance": -1272431993998.4844
+        }
       },
       {
         "year": 2037,
@@ -1138,7 +1688,12 @@
         "contributors": 14207060.866366083,
         "revenue": 37312820859337.06,
         "balance": -83657791285325.25,
-        "balance_ratio": -0.6915546660645426
+        "balance_ratio": -0.6915546660645426,
+        "delta_vs_base": {
+          "revenue": 1508255481292.375,
+          "upc_cost": 2946372112119.4688,
+          "balance": -1438116630827.0938
+        }
       },
       {
         "year": 2038,
@@ -1148,7 +1703,12 @@
         "contributors": 14378112.906988852,
         "revenue": 37762064669116.98,
         "balance": -84830812767148.06,
-        "balance_ratio": -0.6919717893990281
+        "balance_ratio": -0.6919717893990281,
+        "delta_vs_base": {
+          "revenue": 1657983713113.1797,
+          "upc_cost": 3268662705265.6406,
+          "balance": -1610678992152.4531
+        }
       },
       {
         "year": 2039,
@@ -1158,7 +1718,12 @@
         "contributors": 14543461.254129888,
         "revenue": 38196328540743.44,
         "balance": -86014832042172.61,
-        "balance_ratio": -0.6924887557487572
+        "balance_ratio": -0.6924887557487572,
+        "delta_vs_base": {
+          "revenue": 1806939268534.2031,
+          "upc_cost": 3598489441302.0,
+          "balance": -1791550172767.7969
+        }
       },
       {
         "year": 2040,
@@ -1168,7 +1733,12 @@
         "contributors": 14702080.0304381,
         "revenue": 38612918153541.336,
         "balance": -87202016367897.88,
-        "balance_ratio": -0.6930974983183606
+        "balance_ratio": -0.6930974983183606,
+        "delta_vs_base": {
+          "revenue": 1954898220829.3281,
+          "upc_cost": 3936111990814.4375,
+          "balance": -1981213769985.0938
+        }
       },
       {
         "year": 2041,
@@ -1178,7 +1748,12 @@
         "contributors": 14853788.748461645,
         "revenue": 39011359482937.85,
         "balance": -88390146378355.0,
-        "balance_ratio": -0.6937920064664613
+        "balance_ratio": -0.6937920064664613,
+        "delta_vs_base": {
+          "revenue": 2101764439507.9766,
+          "upc_cost": 4281746761067.2188,
+          "balance": -2179982321559.25
+        }
       },
       {
         "year": 2042,
@@ -1188,7 +1763,12 @@
         "contributors": 14999066.215823222,
         "revenue": 39392910048923.94,
         "balance": -89579086364199.97,
-        "balance_ratio": -0.6945622992239313
+        "balance_ratio": -0.6945622992239313,
+        "delta_vs_base": {
+          "revenue": 2247391475589.992,
+          "upc_cost": 4635399460472.859,
+          "balance": -2388007984882.875
+        }
       },
       {
         "year": 2043,
@@ -1198,7 +1778,12 @@
         "contributors": 15137072.285035508,
         "revenue": 39755363323845.14,
         "balance": -90772265786156.36,
-        "balance_ratio": -0.6954256842408322
+        "balance_ratio": -0.6954256842408322,
+        "delta_vs_base": {
+          "revenue": 2391595105753.6797,
+          "upc_cost": 4997204754926.469,
+          "balance": -2605609649172.797
+        }
       },
       {
         "year": 2044,
@@ -1208,7 +1793,12 @@
         "contributors": 15268325.438701179,
         "revenue": 40100081028373.63,
         "balance": -91967409690430.81,
-        "balance_ratio": -0.6963667530130185
+        "balance_ratio": -0.6963667530130185,
+        "delta_vs_base": {
+          "revenue": 2534367391992.9297,
+          "upc_cost": 5367465871042.359,
+          "balance": -2833098479049.4375
+        }
       },
       {
         "year": 2045,
@@ -1218,7 +1808,12 @@
         "contributors": 15391338.939368328,
         "revenue": 40423158458452.055,
         "balance": -93166236847970.62,
-        "balance_ratio": -0.6974074299405966
+        "balance_ratio": -0.6974074299405966,
+        "delta_vs_base": {
+          "revenue": 2675389579231.5625,
+          "upc_cost": 5746294593394.625,
+          "balance": -3070905014163.0625
+        }
       },
       {
         "year": 2046,
@@ -1228,7 +1823,12 @@
         "contributors": 15506538.586821057,
         "revenue": 40725713916536.88,
         "balance": -94366274125134.56,
-        "balance_ratio": -0.6985334622215024
+        "balance_ratio": -0.6985334622215024,
+        "delta_vs_base": {
+          "revenue": 2814650437746.289,
+          "upc_cost": 6133748662333.0625,
+          "balance": -3319098224586.7656
+        }
       },
       {
         "year": 2047,
@@ -1238,7 +1838,12 @@
         "contributors": 15613462.34953945,
         "revenue": 41006533942680.555,
         "balance": -95567821391922.28,
-        "balance_ratio": -0.6997493867555454
+        "balance_ratio": -0.6997493867555454,
+        "delta_vs_base": {
+          "revenue": 2951986657813.875,
+          "upc_cost": 6529848353176.0625,
+          "balance": -3577861695362.1875
+        }
       },
       {
         "year": 2048,
@@ -1248,7 +1853,12 @@
         "contributors": 15712468.476123381,
         "revenue": 41266559425780.21,
         "balance": -96775339677617.38,
-        "balance_ratio": -0.7010577245473107
+        "balance_ratio": -0.7010577245473107,
+        "delta_vs_base": {
+          "revenue": 3087409779524.3984,
+          "upc_cost": 6934489075378.109,
+          "balance": -3847079295853.703
+        }
       },
       {
         "year": 2049,
@@ -1258,7 +1868,12 @@
         "contributors": 15802130.964123588,
         "revenue": 41502045173608.22,
         "balance": -97995318728329.72,
-        "balance_ratio": -0.7024886778306234
+        "balance_ratio": -0.7024886778306234,
+        "delta_vs_base": {
+          "revenue": 3220505330961.086,
+          "upc_cost": 7348707097950.6875,
+          "balance": -4128201766989.5938
+        }
       },
       {
         "year": 2050,
@@ -1268,7 +1883,12 @@
         "contributors": 15883360.43649547,
         "revenue": 41715382807593.15,
         "balance": -99226048589068.16,
-        "balance_ratio": -0.7040232783631192
+        "balance_ratio": -0.7040232783631192,
+        "delta_vs_base": {
+          "revenue": 3351345405673.539,
+          "upc_cost": 7772422606269.766,
+          "balance": -4421077200596.219
+        }
       },
       {
         "year": 2051,
@@ -1278,7 +1898,12 @@
         "contributors": 15895894.983949028,
         "revenue": 41748303010306.91,
         "balance": -100628375213400.75,
-        "balance_ratio": -0.7067756915587651
+        "balance_ratio": -0.7067756915587651,
+        "delta_vs_base": {
+          "revenue": 3470416116173.633,
+          "upc_cost": 8205487845259.047,
+          "balance": -4735071729085.406
+        }
       },
       {
         "year": 2052,
@@ -1288,7 +1913,12 @@
         "contributors": 15897702.139096254,
         "revenue": 41753049245781.49,
         "balance": -102051414177406.5,
-        "balance_ratio": -0.7096540103702444
+        "balance_ratio": -0.7096540103702444,
+        "delta_vs_base": {
+          "revenue": 3585666902918.8125,
+          "upc_cost": 8647692299935.125,
+          "balance": -5062025397016.3125
+        }
       },
       {
         "year": 2053,
@@ -1298,7 +1928,12 @@
         "contributors": 15888860.524868218,
         "revenue": 41729828005941.58,
         "balance": -103493803716617.52,
-        "balance_ratio": -0.7126512571613423
+        "balance_ratio": -0.7126512571613423,
+        "delta_vs_base": {
+          "revenue": 3696892941916.7812,
+          "upc_cost": 9098755860562.688,
+          "balance": -5401862918645.906
+        }
       },
       {
         "year": 2054,
@@ -1308,7 +1943,12 @@
         "contributors": 15869269.532218283,
         "revenue": 41678375055462.98,
         "balance": -104955162555894.25,
-        "balance_ratio": -0.715765058018795
+        "balance_ratio": -0.715765058018795,
+        "delta_vs_base": {
+          "revenue": 3803848810465.172,
+          "upc_cost": 9558812347009.188,
+          "balance": -5754963536544.031
+        }
       },
       {
         "year": 2055,
@@ -1318,7 +1958,12 @@
         "contributors": 15839131.653324082,
         "revenue": 41599222211195.1,
         "balance": -106431501245210.9,
-        "balance_ratio": -0.7189825109282414
+        "balance_ratio": -0.7189825109282414,
+        "delta_vs_base": {
+          "revenue": 3906365293109.047,
+          "upc_cost": 10027586333737.016,
+          "balance": -6121221040627.969
+        }
       },
       {
         "year": 2056,
@@ -1328,7 +1973,12 @@
         "contributors": 15798468.305865405,
         "revenue": 41492425723621.9,
         "balance": -107916771940355.81,
-        "balance_ratio": -0.7222900171317521
+        "balance_ratio": -0.7222900171317521,
+        "delta_vs_base": {
+          "revenue": 4004237429984.625,
+          "upc_cost": 10504714213771.406,
+          "balance": -6500476783786.781
+        }
       },
       {
         "year": 2057,
@@ -1338,7 +1988,12 @@
         "contributors": 15747639.891035778,
         "revenue": 41358932135121.0,
         "balance": -109405467538744.16,
-        "balance_ratio": -0.7256717618709125
+        "balance_ratio": -0.7256717618709125,
+        "delta_vs_base": {
+          "revenue": 4097317801847.4453,
+          "upc_cost": 10989742072246.562,
+          "balance": -6892424270399.125
+        }
       },
       {
         "year": 2058,
@@ -1348,7 +2003,12 @@
         "contributors": 15686694.22051472,
         "revenue": 41198867016255.49,
         "balance": -110895493822916.62,
-        "balance_ratio": -0.729122981358789
+        "balance_ratio": -0.729122981358789,
+        "delta_vs_base": {
+          "revenue": 4185421821608.2344,
+          "upc_cost": 11482125003389.734,
+          "balance": -7296703181781.5
+        }
       },
       {
         "year": 2059,
@@ -1358,7 +2018,12 @@
         "contributors": 15616005.788768964,
         "revenue": 41013213923376.78,
         "balance": -112382424121865.31,
-        "balance_ratio": -0.7326311592297008
+        "balance_ratio": -0.7326311592297008,
+        "delta_vs_base": {
+          "revenue": 4268434704880.6562,
+          "upc_cost": 11981354444026.156,
+          "balance": -7712919739145.5
+        }
       },
       {
         "year": 2060,
@@ -1368,7 +2033,12 @@
         "contributors": 15535688.21624278,
         "revenue": 40802271264390.85,
         "balance": -113862029053205.66,
-        "balance_ratio": -0.7361881754185993
+        "balance_ratio": -0.7361881754185993,
+        "delta_vs_base": {
+          "revenue": 4346226986996.2656,
+          "upc_cost": 12486855125114.312,
+          "balance": -8140628138118.0625
+        }
       },
       {
         "year": 2061,
@@ -1378,7 +2048,12 @@
         "contributors": 15446175.164194865,
         "revenue": 40567177988796.914,
         "balance": -115332291616554.69,
-        "balance_ratio": -0.73978629887908
+        "balance_ratio": -0.73978629887908,
+        "delta_vs_base": {
+          "revenue": 4418743114122.883,
+          "upc_cost": 12997963332831.0,
+          "balance": -8579220218708.125
+        }
       },
       {
         "year": 2062,
@@ -1388,7 +2063,12 @@
         "contributors": 15347527.948615413,
         "revenue": 40308095134305.7,
         "balance": -116790127420668.89,
-        "balance_ratio": -0.7434210618124569
+        "balance_ratio": -0.7434210618124569,
+        "delta_vs_base": {
+          "revenue": 4485898698057.8125,
+          "upc_cost": 13513922543365.156,
+          "balance": -9028023845307.344
+        }
       },
       {
         "year": 2063,
@@ -1398,7 +2078,12 @@
         "contributors": 15240198.373271946,
         "revenue": 40026209299130.58,
         "balance": -118234061096895.64,
-        "balance_ratio": -0.7470861815225636
+        "balance_ratio": -0.7470861815225636,
+        "delta_vs_base": {
+          "revenue": 4547724913965.93,
+          "upc_cost": 14033865891804.094,
+          "balance": -9486140977838.172
+        }
       },
       {
         "year": 2064,
@@ -1408,7 +2093,12 @@
         "contributors": 15124542.25544495,
         "revenue": 39722454986654.76,
         "balance": -119661534058071.69,
-        "balance_ratio": -0.7507751234943191
+        "balance_ratio": -0.7507751234943191,
+        "delta_vs_base": {
+          "revenue": 4604209433643.121,
+          "upc_cost": 14557471111765.0,
+          "balance": -9953261678121.89
+        }
       },
       {
         "year": 2065,
@@ -1418,7 +2108,12 @@
         "contributors": 15001216.068445459,
         "revenue": 39398556330482.24,
         "balance": -121069793012892.5,
-        "balance_ratio": -0.7544777117001678
+        "balance_ratio": -0.7544777117001678,
+        "delta_vs_base": {
+          "revenue": 4655444500198.711,
+          "upc_cost": 15083830421157.781,
+          "balance": -10428385920959.062
+        }
       },
       {
         "year": 2066,
@@ -1428,7 +2123,12 @@
         "contributors": 14870629.51695994,
         "revenue": 39055589361589.12,
         "balance": -122448499531537.66,
-        "balance_ratio": -0.7581758478732161
+        "balance_ratio": -0.7581758478732161,
+        "delta_vs_base": {
+          "revenue": 4701497439523.496,
+          "upc_cost": 15611999112989.875,
+          "balance": -10910501673466.375
+        }
       },
       {
         "year": 2067,
@@ -1438,7 +2138,12 @@
         "contributors": 14733576.186868798,
         "revenue": 38695638320204.266,
         "balance": -123790788781758.92,
-        "balance_ratio": -0.7618531036077121
+        "balance_ratio": -0.7618531036077121,
+        "delta_vs_base": {
+          "revenue": 4742532779782.789,
+          "upc_cost": 16140877154300.281,
+          "balance": -11398344374517.484
+        }
       },
       {
         "year": 2068,
@@ -1448,7 +2153,12 @@
         "contributors": 14590503.354564276,
         "revenue": 38319877914035.05,
         "balance": -125088640644526.27,
-        "balance_ratio": -0.7654964487037913
+        "balance_ratio": -0.7654964487037913,
+        "delta_vs_base": {
+          "revenue": 4778788030192.871,
+          "upc_cost": 16669459933186.438,
+          "balance": -11890671902993.562
+        }
       },
       {
         "year": 2069,
@@ -1458,7 +2168,12 @@
         "contributors": 14442043.83852063,
         "revenue": 37929970150627.445,
         "balance": -126331209566057.78,
-        "balance_ratio": -0.7690874361425604
+        "balance_ratio": -0.7690874361425604,
+        "delta_vs_base": {
+          "revenue": 4810413183565.191,
+          "upc_cost": 17194574265020.312,
+          "balance": -12384161081455.125
+        }
       },
       {
         "year": 2070,
@@ -1468,7 +2183,12 @@
         "contributors": 14288562.899380125,
         "revenue": 37526874335008.734,
         "balance": -127512753043433.36,
-        "balance_ratio": -0.7726190071372483
+        "balance_ratio": -0.7726190071372483,
+        "delta_vs_base": {
+          "revenue": 4837678233470.918,
+          "upc_cost": 17715237965597.188,
+          "balance": -12877559732126.266
+        }
       }
     ]
   }
