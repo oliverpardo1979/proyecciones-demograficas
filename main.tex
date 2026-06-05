@@ -1406,7 +1406,7 @@ Como extensión del ejercicio demográfico, se construye una cuenta parcial de i
 Por el lado de los ingresos, se supone que una fracción $\phi$ de la PEA realiza cotizaciones efectivas sobre un ingreso base igual a un salario mínimo mensual legal vigente de 2026. La cotización total a salud se fija en 12,5\% del ingreso base de cotización:
 
 \begin{equation}
-\text{Ingresos}_{j}(t;\phi)=\text{PEA}_{j}(t)\cdot \phi \cdot \text{SMLMV}_{2026}\cdot 12 \cdot 0{,}125,
+\text{Ingresos}_{j}(t)=\text{PEA}_{j}(t)\cdot \phi \cdot \text{SMLMV}_{2026}\cdot 12 \cdot 0{,}125,
 \end{equation}
 
 \noindent donde $j$ denota el escenario migratorio. La PEA ya incorpora la tasa de participación laboral, por lo que $\phi$ se interpreta como la proporción de esa PEA que realiza cotizaciones efectivas. En el ejercicio se usa $\phi=0{,}447$, correspondiente a una tasa de formalidad de 44,7\%. El salario mínimo utilizado es $1.750.905$ pesos mensuales, de acuerdo con el Decreto 159 de 2026.
@@ -1417,7 +1417,7 @@ Por el lado del gasto, se aplica a toda la población proyectada la UPC contribu
 \text{Gasto}_{j}(t)=\sum_s\sum_x P_{x,s,j}(t)\cdot \text{UPC}_{x,s}^{2026}.
 \end{equation}
 
-\noindent La UPC utilizada corresponde a la estructura de costo por grupo etario de la UPC-C de la Resolución 2764 de 2025 del Ministerio de Salud y Protección Social. Finalmente, el balance simplificado se define como:
+\noindent La UPC utilizada corresponde a la estructura de costo por grupo etario de la UPC-C de la Resolución 2764 de 2025 del Ministerio de Salud y Protección Social. Finalmente, el balance parcial se define como:
 
 \begin{equation}
 \text{Balance parcial}_{j}(t;\phi)=\text{Ingresos}_{j}(t;\phi)-\text{Gasto}_{j}(t).
@@ -1477,7 +1477,7 @@ La Figura \ref{fig:balance_salud} muestra esta variación bajo el supuesto de co
 \addlegendentry{Inmigración constante}
 \end{axis}
 \end{tikzpicture}
-\caption{Variación del balance parcial de salud frente al escenario base bajo cotización efectiva del 44,7\% de la PEA.}
+\caption{Variación del balance parcial de salud}
 \label{fig:balance_salud}
 \vspace{0.2cm}
 \par\footnotesize{\textit{Fuente: cálculos propios con base en Decreto 159 de 2026 y Resolución 2764 de 2025.}}
